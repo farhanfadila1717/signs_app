@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:after_layout/after_layout.dart';
 import 'package:flags_app/core/redux/action_mapper.dart';
+import 'package:flags_app/core/redux/actions/app_action.dart';
 import 'package:flags_app/core/redux/actions/authentication_action.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +16,12 @@ class SplashPage extends StatefulActionMapper {
 class _SplashPageState extends State<SplashPage> with AfterLayoutMixin {
   @override
   FutureOr<void> afterFirstLayout(BuildContext context) {
-    widget.dispatch(
+    widget.dispatches([
+      const InitTtsAction(),
       const GetCurrentLoginAction(),
-    );
+      const GetQuestionsAction(),
+      const GetFlagsAction(),
+    ]);
   }
 
   @override

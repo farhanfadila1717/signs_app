@@ -14,15 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-AppState _$AppStateFromJson(Map<String, dynamic> json) {
-  return _AppState.fromJson(json);
-}
-
 /// @nodoc
 mixin _$AppState {
   AuthenticationState get authState => throw _privateConstructorUsedError;
+  List<Question> get questions => throw _privateConstructorUsedError;
+  List<Flag> get flags => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $AppStateCopyWith<AppState> get copyWith =>
       throw _privateConstructorUsedError;
@@ -33,7 +30,10 @@ abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
-  $Res call({AuthenticationState authState});
+  $Res call(
+      {AuthenticationState authState,
+      List<Question> questions,
+      List<Flag> flags});
 
   $AuthenticationStateCopyWith<$Res> get authState;
 }
@@ -52,12 +52,22 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   @override
   $Res call({
     Object? authState = null,
+    Object? questions = null,
+    Object? flags = null,
   }) {
     return _then(_value.copyWith(
       authState: null == authState
           ? _value.authState
           : authState // ignore: cast_nullable_to_non_nullable
               as AuthenticationState,
+      questions: null == questions
+          ? _value.questions
+          : questions // ignore: cast_nullable_to_non_nullable
+              as List<Question>,
+      flags: null == flags
+          ? _value.flags
+          : flags // ignore: cast_nullable_to_non_nullable
+              as List<Flag>,
     ) as $Val);
   }
 
@@ -78,7 +88,10 @@ abstract class _$$AppStateImplCopyWith<$Res>
       __$$AppStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AuthenticationState authState});
+  $Res call(
+      {AuthenticationState authState,
+      List<Question> questions,
+      List<Flag> flags});
 
   @override
   $AuthenticationStateCopyWith<$Res> get authState;
@@ -96,33 +109,61 @@ class __$$AppStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? authState = null,
+    Object? questions = null,
+    Object? flags = null,
   }) {
     return _then(_$AppStateImpl(
       authState: null == authState
           ? _value.authState
           : authState // ignore: cast_nullable_to_non_nullable
               as AuthenticationState,
+      questions: null == questions
+          ? _value._questions
+          : questions // ignore: cast_nullable_to_non_nullable
+              as List<Question>,
+      flags: null == flags
+          ? _value._flags
+          : flags // ignore: cast_nullable_to_non_nullable
+              as List<Flag>,
     ));
   }
 }
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
 class _$AppStateImpl extends _AppState {
-  const _$AppStateImpl({this.authState = const AuthenticationState()})
-      : super._();
-
-  factory _$AppStateImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AppStateImplFromJson(json);
+  const _$AppStateImpl(
+      {this.authState = const AuthenticationState(),
+      final List<Question> questions = const [],
+      final List<Flag> flags = const []})
+      : _questions = questions,
+        _flags = flags,
+        super._();
 
   @override
   @JsonKey()
   final AuthenticationState authState;
+  final List<Question> _questions;
+  @override
+  @JsonKey()
+  List<Question> get questions {
+    if (_questions is EqualUnmodifiableListView) return _questions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_questions);
+  }
+
+  final List<Flag> _flags;
+  @override
+  @JsonKey()
+  List<Flag> get flags {
+    if (_flags is EqualUnmodifiableListView) return _flags;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_flags);
+  }
 
   @override
   String toString() {
-    return 'AppState(authState: $authState)';
+    return 'AppState(authState: $authState, questions: $questions, flags: $flags)';
   }
 
   @override
@@ -131,37 +172,39 @@ class _$AppStateImpl extends _AppState {
         (other.runtimeType == runtimeType &&
             other is _$AppStateImpl &&
             (identical(other.authState, authState) ||
-                other.authState == authState));
+                other.authState == authState) &&
+            const DeepCollectionEquality()
+                .equals(other._questions, _questions) &&
+            const DeepCollectionEquality().equals(other._flags, _flags));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, authState);
+  int get hashCode => Object.hash(
+      runtimeType,
+      authState,
+      const DeepCollectionEquality().hash(_questions),
+      const DeepCollectionEquality().hash(_flags));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppStateImplCopyWith<_$AppStateImpl> get copyWith =>
       __$$AppStateImplCopyWithImpl<_$AppStateImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AppStateImplToJson(
-      this,
-    );
-  }
 }
 
 abstract class _AppState extends AppState {
-  const factory _AppState({final AuthenticationState authState}) =
-      _$AppStateImpl;
+  const factory _AppState(
+      {final AuthenticationState authState,
+      final List<Question> questions,
+      final List<Flag> flags}) = _$AppStateImpl;
   const _AppState._() : super._();
-
-  factory _AppState.fromJson(Map<String, dynamic> json) =
-      _$AppStateImpl.fromJson;
 
   @override
   AuthenticationState get authState;
+  @override
+  List<Question> get questions;
+  @override
+  List<Flag> get flags;
   @override
   @JsonKey(ignore: true)
   _$$AppStateImplCopyWith<_$AppStateImpl> get copyWith =>

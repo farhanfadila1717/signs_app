@@ -33,3 +33,9 @@ class LogoutAction {
 class GetCurrentLoginAction {
   const GetCurrentLoginAction();
 }
+
+class SubmitForgotPasswordAction {
+  final String email;
+
+  const SubmitForgotPasswordAction(this.email);
+}

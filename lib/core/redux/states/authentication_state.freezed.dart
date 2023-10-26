@@ -14,15 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-AuthenticationState _$AuthenticationStateFromJson(Map<String, dynamic> json) {
-  return _AuthenticationState.fromJson(json);
-}
-
 /// @nodoc
 mixin _$AuthenticationState {
   User? get user => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $AuthenticationStateCopyWith<AuthenticationState> get copyWith =>
       throw _privateConstructorUsedError;
@@ -113,12 +108,8 @@ class __$$AuthenticationStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
 class _$AuthenticationStateImpl extends _AuthenticationState {
   const _$AuthenticationStateImpl({this.user}) : super._();
-
-  factory _$AuthenticationStateImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthenticationStateImplFromJson(json);
 
   @override
   final User? user;
@@ -136,7 +127,6 @@ class _$AuthenticationStateImpl extends _AuthenticationState {
             (identical(other.user, user) || other.user == user));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
@@ -146,22 +136,12 @@ class _$AuthenticationStateImpl extends _AuthenticationState {
   _$$AuthenticationStateImplCopyWith<_$AuthenticationStateImpl> get copyWith =>
       __$$AuthenticationStateImplCopyWithImpl<_$AuthenticationStateImpl>(
           this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AuthenticationStateImplToJson(
-      this,
-    );
-  }
 }
 
 abstract class _AuthenticationState extends AuthenticationState {
   const factory _AuthenticationState({final User? user}) =
       _$AuthenticationStateImpl;
   const _AuthenticationState._() : super._();
-
-  factory _AuthenticationState.fromJson(Map<String, dynamic> json) =
-      _$AuthenticationStateImpl.fromJson;
 
   @override
   User? get user;

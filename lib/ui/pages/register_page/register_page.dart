@@ -212,7 +212,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: [
                     const TextSpan(text: 'Sudah mempunyai akun? '),
                     TextSpan(
-                      text: 'Login',
+                      text: 'Masuk',
                       recognizer: TapGestureRecognizer()
                         ..onTap = () => widget.dispatch(
                               const NavigateToNextAction('/login'),

@@ -1,3 +1,6 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 
 /// {@template country}
@@ -71,6 +74,19 @@ class Country {
 Country(name: $name, flag: $flag, code: $code, dialCode: $dialCode, regionCode: $regionCode, minLength: $minLength, maxLength: $maxLength)
 ''';
   }
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'name': name,
+      'flag': flag,
+      'image': '',
+      'descriptions': '',
+    };
+  }
+
+  String get id => name.trim().replaceAll(' ', '_');
+
+  String toJson() => json.encode(toMap());
 }
 
 /// A country for represent empty country

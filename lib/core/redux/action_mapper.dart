@@ -1,3 +1,4 @@
+import 'package:flags_app/core/extensions/extensions.dart';
 import 'package:flags_app/core/models/authentication/user.dart';
 import 'package:flags_app/core/redux/states/app_state.dart';
 import 'package:get_it/get_it.dart';
@@ -12,6 +13,8 @@ mixin class ActionMapper {
   User get user => store.state.authState.user!;
 
   void dispatch(dynamic action) => store.dispatch(action);
+
+  void dispatches(List<dynamic> actions) => store.dispatches(actions);
 }
 
 abstract class StatefulActionMapper extends StatefulWidget with ActionMapper {

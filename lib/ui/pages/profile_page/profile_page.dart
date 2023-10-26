@@ -26,8 +26,8 @@ class _ProfilePageState extends State<ProfilePage> {
             onPressed: () => widget.dispatch(
               ShowDialogAction(
                 destination: InfoDialogDestination(
-                  title: 'Logout',
-                  message: 'apakah Anda yakin ingin logout?',
+                  title: 'Keluar',
+                  message: 'apakah Anda yakin ingin keluar?',
                   onTap: () => widget.dispatch(
                     const LogoutAction(),
                   ),

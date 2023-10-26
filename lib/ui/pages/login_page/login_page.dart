@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 30),
             const Text(
-              'Login',
+              'Masuk Akun',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
@@ -73,8 +73,20 @@ class _LoginPageState extends State<LoginPage> {
             ),
             PasswordField(
               controller: _passwordController,
-              margin: const EdgeInsets.only(top: 20, bottom: 30),
+              margin: const EdgeInsets.only(top: 20),
             ),
+            Align(
+              alignment: Alignment.topRight,
+              child: TextButton(
+                onPressed: () => widget.dispatch(
+                  const NavigateToNextAction(
+                    '/forgot-password',
+                  ),
+                ),
+                child: const Text('Lupa password'),
+              ),
+            ),
+            const SizedBox(height: 30),
             SizedBox(
               height: 50,
               child: ElevatedButton(
@@ -86,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                child: const Text('Login'),
+                child: const Text('Masuk'),
               ),
             ),
             const SizedBox(height: 20),

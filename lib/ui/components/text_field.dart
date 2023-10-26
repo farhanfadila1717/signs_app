@@ -73,7 +73,7 @@ class _PasswordFieldState extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, bottom: 30),
+      padding: widget.margin ?? EdgeInsets.zero,
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: Colors.black12,

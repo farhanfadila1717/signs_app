@@ -20,6 +20,8 @@ class AuthenticationMiddleware extends MiddlewareClass<AppState> {
       _onSubmitLoginAction(store, action);
     } else if (action is GetCurrentLoginAction) {
       _onGetCurrentLoginAction(store, action);
+    } else if (action is SubmitForgotPasswordAction) {
+      _onSubmitForgotPasswordAction(store, action);
     }
     next(action);
   }
@@ -207,5 +209,77 @@ class AuthenticationMiddleware extends MiddlewareClass<AppState> {
     }
 
     return u.User.fromJson(user.data()!);
+  }
+
+  Future<void> _onSubmitForgotPasswordAction(
+    Store<AppState> store,
+    SubmitForgotPasswordAction action,
+  ) async {
+    try {
+      if (action.email.isEmpty) {
+        store.dispatch(
+          const ShowDialogAction(
+            destination: InfoDialogDestination(
+              title: 'Error',
+              message: 'email harus diisi.',
+            ),
+          ),
+        );
+        return;
+      }
+
+      store.dispatch(
+        const ShowDialogAction(
+          barrierDismissible: false,
+          destination: LoadingDialogDestination(),
+        ),
+      );
+
+      await auth.sendPasswordResetEmail(
+        email: action.email,
+      );
+
+      store.dispatches(
+        [
+          const NavigateBackAction(),
+          ShowDialogAction(
+            destination: InfoDialogDestination(
+              title: 'Sukses',
+              message:
+                  'Berhasil mengirim email lupa password, cek email ${action.email} untuk melanjutkan proses lupa password',
+              onTap: () => store.dispatch(
+                const NavigateToRootAction(path: '/login'),
+              ),
+            ),
+          ),
+        ],
+      );
+    } on FirebaseAuthException catch (ex) {
+      String message = ex.message ?? 'error';
+      switch (ex.code.toLowerCase()) {
+        case 'user-not-found':
+          message = 'email belum terdaftar';
+          break;
+        case 'wrong-password':
+          message = 'password salah';
+          break;
+        case 'invalid_login_credentials':
+          message = 'email atau password salah';
+          break;
+      }
+      store.dispatches(
+        [
+          const NavigateBackAction(),
+          ShowDialogAction(
+            destination: InfoDialogDestination(
+              title: 'Error',
+              message: message,
+            ),
+          ),
+        ],
+      );
+    } catch (ex) {
+      debugPrint(ex.toString());
+    }
   }
 }

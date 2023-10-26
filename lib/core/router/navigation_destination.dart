@@ -1,6 +1,7 @@
+import 'package:flags_app/ui/modals/about_dialog.dart';
 import 'package:flags_app/ui/modals/info_dialog.dart';
 import 'package:flags_app/ui/modals/loading_dialog.dart';
-import 'package:flutter/material.dart' hide NavigationDestination;
+import 'package:flutter/material.dart' hide NavigationDestination, AboutDialog;
 
 abstract class NavigationDestination {
   final Key? key;
@@ -15,6 +16,13 @@ class LoadingDialogDestination extends NavigationDestination {
 
   @override
   Widget builder(BuildContext context) => const LoadingDialog();
+}
+
+class AboutDialogDestination extends NavigationDestination {
+  const AboutDialogDestination({super.key});
+
+  @override
+  Widget builder(BuildContext context) => const AboutDialog();
 }
 
 class InfoDialogDestination extends NavigationDestination {

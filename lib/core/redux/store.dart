@@ -1,3 +1,4 @@
+import 'package:flags_app/core/redux/middlewares/app_middleware.dart';
 import 'package:flags_app/core/redux/middlewares/authentication_middleware.dart';
 import 'package:flags_app/core/redux/middlewares/navigation_middleware.dart';
 import 'package:flags_app/core/redux/states/app_state.dart';
@@ -13,6 +14,7 @@ Store<AppState> store() {
     allReducers,
     initialState: const AppState(),
     middleware: [
+      AppMiddleware(),
       AuthenticationMiddleware(),
       NavigationMiddleware(
         goRouter: getIt.get<GoRouter>(),
