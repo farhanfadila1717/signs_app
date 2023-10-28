@@ -37,7 +37,7 @@ class AppMiddleware extends MiddlewareClass<AppState> {
     try {
       final flutterTts = getIt.get<FlutterTts>();
 
-      await flutterTts.awaitSpeakCompletion(false);
+      await flutterTts.awaitSpeakCompletion(true);
       await flutterTts.setLanguage('id-ID');
     } catch (ex) {
       debugPrint(ex.toString());
