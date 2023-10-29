@@ -1,5 +1,5 @@
-import 'package:flags_app/core/models/flag/flag.dart';
-import 'package:flags_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/models/sign/sign.dart';
 
 class InitTtsAction {
   const InitTtsAction();
@@ -17,12 +17,14 @@ class SetQuestionsAction {
   );
 }
 
-class GetFlagsAction {
-  const GetFlagsAction();
+class GetSignsAction {
+  const GetSignsAction();
 }
 
-class SetFlagsAction {
-  final List<Flag> flags;
+class SetSignsAction {
+  final List<Sign> signs;
 
-  const SetFlagsAction(this.flags);
+  const SetSignsAction(
+    this.signs,
+  );
 }

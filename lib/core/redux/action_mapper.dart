@@ -1,6 +1,6 @@
-import 'package:flags_app/core/extensions/extensions.dart';
-import 'package:flags_app/core/models/authentication/user.dart';
-import 'package:flags_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
+import 'package:signs_app/core/models/authentication/user.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
 import 'package:get_it/get_it.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter/widgets.dart';

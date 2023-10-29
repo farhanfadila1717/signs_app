@@ -1,4 +1,4 @@
-import 'package:flags_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';

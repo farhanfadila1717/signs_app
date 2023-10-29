@@ -1,4 +1,4 @@
-import 'package:flags_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
 import 'package:redux/redux.dart';
 
 extension StoreExtensions on Store<AppState> {

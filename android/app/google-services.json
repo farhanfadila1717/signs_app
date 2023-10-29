@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "442558957488",
-    "project_id": "flags-app-c9641",
-    "storage_bucket": "flags-app-c9641.appspot.com"
+    "project_number": "884662031391",
+    "project_id": "signs-app-c725a",
+    "storage_bucket": "signs-app-c725a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:442558957488:android:385b12d5fa3d859d073875",
+        "mobilesdk_app_id": "1:884662031391:android:1b8b909dd032b2563d712a",
         "android_client_info": {
-          "package_name": "com.noval.flags_app"
+          "package_name": "com.giska.signs_app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAm9PZ3Cfi8HdJ_CofLAF3ADvFg3jf5vMQ"
+          "current_key": "AIzaSyASUQWUlyU17KpOhRRIxbI8RltQB6zIo0w"
         }
       ],
       "services": {

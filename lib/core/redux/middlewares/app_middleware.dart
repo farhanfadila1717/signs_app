@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flags_app/core/models/flag/flag.dart';
-import 'package:flags_app/core/models/quiz/question.dart';
-import 'package:flags_app/core/redux/actions/app_action.dart';
-import 'package:flags_app/core/redux/states/app_state.dart';
-import 'package:flags_app/core/router/router.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/redux/actions/app_action.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:redux/redux.dart';
@@ -20,8 +20,8 @@ class AppMiddleware extends MiddlewareClass<AppState> {
       case GetQuestionsAction:
         _onGetQuestionsAction(store, action);
         break;
-      case GetFlagsAction:
-        _onGetFlagsAction(store, action);
+      case GetSignsAction:
+        _onGetSignsAction(store, action);
         break;
     }
 
@@ -68,24 +68,24 @@ class AppMiddleware extends MiddlewareClass<AppState> {
     }
   }
 
-  Future<void> _onGetFlagsAction(
+  Future<void> _onGetSignsAction(
     Store<AppState> store,
-    GetFlagsAction action,
+    GetSignsAction action,
   ) async {
     try {
-      final flagsCollection = firestore.collection('flags');
+      final collection = firestore.collection('signs');
 
-      final response = await flagsCollection.get();
+      final response = await collection.get();
 
-      List<Flag> flags = [];
+      List<Sign> signs = [];
       for (var i in response.docs) {
-        flags.add(Flag.fromJson(i.data()));
+        signs.add(Sign.fromJson(i.data()));
       }
 
-      flags.sort((a, b) => a.name.compareTo(b.name));
+      signs.sort((a, b) => a.name.compareTo(b.name));
 
       store.dispatch(
-        SetFlagsAction(flags),
+        SetSignsAction(signs),
       );
     } catch (ex) {
       debugPrint(ex.toString());

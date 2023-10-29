@@ -1,6 +1,6 @@
-import 'package:flags_app/core/models/authentication/form_login.dart';
-import 'package:flags_app/core/models/authentication/form_register_user.dart';
-import 'package:flags_app/core/models/authentication/user.dart';
+import 'package:signs_app/core/models/authentication/form_login.dart';
+import 'package:signs_app/core/models/authentication/form_register_user.dart';
+import 'package:signs_app/core/models/authentication/user.dart';
 
 class SubmitRegisterAction {
   final FormRegisterUser registerUser;

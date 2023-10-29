@@ -1,5 +1,5 @@
-import 'package:flags_app/core/models/authentication/user.dart';
-import 'package:flags_app/ui/components/default_store_connector.dart';
+import 'package:signs_app/core/models/authentication/user.dart';
+import 'package:signs_app/ui/components/default_store_connector.dart';
 import 'package:flutter/material.dart';
 
 typedef UserBuilder = Widget Function(BuildContext, User);

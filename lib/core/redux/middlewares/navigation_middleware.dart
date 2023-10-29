@@ -1,5 +1,5 @@
-import 'package:flags_app/core/redux/actions/navigation_action.dart';
-import 'package:flags_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:redux/redux.dart';

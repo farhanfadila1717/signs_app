@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:after_layout/after_layout.dart';
-import 'package:flags_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 

@@ -1,6 +1,6 @@
-import 'package:flags_app/core/redux/states/app_state.dart';
-import 'package:flags_app/core/redux/store.dart';
-import 'package:flags_app/core/router/router.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/redux/store.dart';
+import 'package:signs_app/core/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:get_it/get_it.dart';

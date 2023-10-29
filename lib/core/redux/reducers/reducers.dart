@@ -1,4 +1,4 @@
-import 'package:flags_app/core/redux/reducers/app_reducer.dart';
+import 'package:signs_app/core/redux/reducers/app_reducer.dart';
 import 'package:redux/redux.dart';
 
 import 'auth_reducer.dart';

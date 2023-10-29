@@ -1,4 +1,4 @@
-import 'package:flags_app/core/models/quiz/answer.dart';
+import 'package:signs_app/core/models/quiz/answer.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'question.freezed.dart';

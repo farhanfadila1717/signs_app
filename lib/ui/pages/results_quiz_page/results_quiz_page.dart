@@ -1,12 +1,12 @@
 import 'dart:math';
 
 import 'package:confetti/confetti.dart';
-import 'package:flags_app/core/models/quiz/answer.dart';
-import 'package:flags_app/core/models/quiz/question.dart';
-import 'package:flags_app/core/redux/action_mapper.dart';
-import 'package:flags_app/core/redux/actions/navigation_action.dart';
-import 'package:flags_app/ui/components/primary_button.dart';
-import 'package:flags_app/ui/components/user_widget.dart';
+import 'package:signs_app/core/models/quiz/answer.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/user_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';

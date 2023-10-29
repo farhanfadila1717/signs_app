@@ -1,6 +1,6 @@
-import 'package:flags_app/core/redux/action_mapper.dart';
-import 'package:flags_app/core/redux/actions/authentication_action.dart';
-import 'package:flags_app/ui/components/text_field.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/ui/components/text_field.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordPage extends StatefulActionMapper {

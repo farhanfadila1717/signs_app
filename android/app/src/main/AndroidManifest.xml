@@ -15,7 +15,7 @@
     </queries> 
     
     <application
-        android:label="Bendera"
+        android:label="Rambu"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

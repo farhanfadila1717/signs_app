@@ -1,4 +1,4 @@
-import 'package:flags_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
 import 'package:flutter/material.dart';
 
 class AboutDialog extends StatelessWidget {

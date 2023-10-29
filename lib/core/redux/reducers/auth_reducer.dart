@@ -1,6 +1,6 @@
-import 'package:flags_app/core/redux/actions/authentication_action.dart';
-import 'package:flags_app/core/redux/states/app_state.dart';
-import 'package:flags_app/core/redux/states/authentication_state.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/core/redux/states/app_state.dart';
+import 'package:signs_app/core/redux/states/authentication_state.dart';
 import 'package:redux/redux.dart';
 
 final authReducer = combineReducers<AppState>(

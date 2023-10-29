@@ -1,9 +1,9 @@
-import 'package:flags_app/core/redux/action_mapper.dart';
-import 'package:flags_app/core/redux/actions/authentication_action.dart';
-import 'package:flags_app/core/redux/actions/navigation_action.dart';
-import 'package:flags_app/core/router/navigation_destination.dart';
-import 'package:flags_app/ui/components/circle_name.dart';
-import 'package:flags_app/ui/components/user_widget.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/core/router/navigation_destination.dart';
+import 'package:signs_app/ui/components/circle_name.dart';
+import 'package:signs_app/ui/components/user_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulActionMapper {

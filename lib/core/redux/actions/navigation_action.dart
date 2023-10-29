@@ -1,4 +1,4 @@
-import 'package:flags_app/core/router/navigation_destination.dart';
+import 'package:signs_app/core/router/navigation_destination.dart';
 
 class NavigateBackAction {
   const NavigateBackAction();

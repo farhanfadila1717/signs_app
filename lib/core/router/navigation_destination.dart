@@ -1,6 +1,6 @@
-import 'package:flags_app/ui/modals/about_dialog.dart';
-import 'package:flags_app/ui/modals/info_dialog.dart';
-import 'package:flags_app/ui/modals/loading_dialog.dart';
+import 'package:signs_app/ui/modals/about_dialog.dart';
+import 'package:signs_app/ui/modals/info_dialog.dart';
+import 'package:signs_app/ui/modals/loading_dialog.dart';
 import 'package:flutter/material.dart' hide NavigationDestination, AboutDialog;
 
 abstract class NavigationDestination {

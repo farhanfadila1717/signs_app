@@ -18,36 +18,24 @@ class DefaultTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: margin ?? EdgeInsets.zero,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: Colors.black12,
-          border: Border.all(),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 12,
-                ),
-              ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 12,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TextField(
-                controller: controller,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.zero,
-                  border: InputBorder.none,
-                  hintText: hint,
-                ),
-              ),
+          ),
+          const SizedBox(height: 8),
+          TextField(
+            controller: controller,
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              hintText: hint,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -74,55 +62,37 @@ class _PasswordFieldState extends State<PasswordField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: widget.margin ?? EdgeInsets.zero,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: Colors.black12,
-          border: Border.all(),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Password',
-                style: TextStyle(
-                  fontSize: 12,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Password',
+            style: TextStyle(
+              fontSize: 12,
+            ),
+          ),
+          const SizedBox(height: 8),
+          TextField(
+            controller: widget.controller,
+            obscureText: _isObsecure,
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              hintText: 'Masukkan password',
+              suffixIcon: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _isObsecure = !_isObsecure;
+                  });
+                },
+                child: Visibility(
+                  visible: !_isObsecure,
+                  replacement: const Icon(Icons.visibility_off),
+                  child: const Icon(Icons.visibility),
                 ),
               ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: TextField(
-                      controller: widget.controller,
-                      obscureText: _isObsecure,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Masukkan password',
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _isObsecure = !_isObsecure;
-                    });
-                  },
-                  child: Visibility(
-                    visible: !_isObsecure,
-                    replacement: const Icon(Icons.visibility_off),
-                    child: const Icon(Icons.visibility),
-                  ),
-                ),
-                const SizedBox(width: 10),
-              ],
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:flags_app/core/models/authentication/user.dart';
+import 'package:signs_app/core/models/authentication/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'authentication_state.freezed.dart';

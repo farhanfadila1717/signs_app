@@ -1,22 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'flag.dart';
+part of 'sign.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlagImpl _$$FlagImplFromJson(Map<String, dynamic> json) => _$FlagImpl(
+_$SignImpl _$$SignImplFromJson(Map<String, dynamic> json) => _$SignImpl(
       name: json['name'] as String,
-      flag: json['flag'] as String,
       image: json['image'] as String,
-      descriptions: json['descriptions'] as String,
+      description: json['description'] as String,
     );
 
-Map<String, dynamic> _$$FlagImplToJson(_$FlagImpl instance) =>
+Map<String, dynamic> _$$SignImplToJson(_$SignImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
-      'flag': instance.flag,
       'image': instance.image,
-      'descriptions': instance.descriptions,
+      'description': instance.description,
     };

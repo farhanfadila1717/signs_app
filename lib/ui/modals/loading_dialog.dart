@@ -10,13 +10,23 @@ class LoadingDialog extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: const Padding(
-        padding: EdgeInsets.only(top: 30, bottom: 20),
-        child: Column(
+        padding: EdgeInsets.only(top: 20, bottom: 20),
+        child: Row(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator.adaptive(),
-            SizedBox(height: 16),
-            Text('Loading'),
+            SizedBox.square(
+              dimension: 24,
+              child: CircularProgressIndicator(),
+            ),
+            SizedBox(width: 16),
+            Text(
+              'Mohon tunggu',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),

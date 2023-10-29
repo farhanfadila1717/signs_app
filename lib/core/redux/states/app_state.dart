@@ -1,6 +1,6 @@
-import 'package:flags_app/core/models/flag/flag.dart';
-import 'package:flags_app/core/models/quiz/question.dart';
-import 'package:flags_app/core/redux/states/authentication_state.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/redux/states/authentication_state.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_state.freezed.dart';
@@ -12,6 +12,6 @@ class AppState with _$AppState {
   const factory AppState({
     @Default(AuthenticationState()) AuthenticationState authState,
     @Default([]) List<Question> questions,
-    @Default([]) List<Flag> flags,
+    @Default([]) List<Sign> signs,
   }) = _AppState;
 }

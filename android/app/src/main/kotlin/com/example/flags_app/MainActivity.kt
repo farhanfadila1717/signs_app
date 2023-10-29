@@ -1,4 +1,4 @@
-package com.noval.flags_app
+package com.giska.signs_app
 
 import android.graphics.Color
 import android.os.Build
