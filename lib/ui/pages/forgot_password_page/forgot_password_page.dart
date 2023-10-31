@@ -1,5 +1,7 @@
+import 'package:flutter/services.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
 import 'package:signs_app/ui/components/text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -27,31 +29,16 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ScaffoldAnimation(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            Visibility(
-              visible: Navigator.canPop(context),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: DecoratedBox(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    shape: BoxShape.circle,
-                  ),
-                  child: IconButton(
-                    onPressed: () => Navigator.pop(context),
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
             const Text(
               'Lupa Password',
               style: TextStyle(

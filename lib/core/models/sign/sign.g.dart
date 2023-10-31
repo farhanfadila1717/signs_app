@@ -10,6 +10,7 @@ _$SignImpl _$$SignImplFromJson(Map<String, dynamic> json) => _$SignImpl(
       name: json['name'] as String,
       image: json['image'] as String,
       description: json['description'] as String,
+      type: json['type'] as String,
     );
 
 Map<String, dynamic> _$$SignImplToJson(_$SignImpl instance) =>
@@ -17,4 +18,5 @@ Map<String, dynamic> _$$SignImplToJson(_$SignImpl instance) =>
       'name': instance.name,
       'image': instance.image,
       'description': instance.description,
+      'type': instance.type,
     };

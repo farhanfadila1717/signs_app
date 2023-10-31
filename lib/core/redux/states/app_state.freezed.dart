@@ -19,6 +19,7 @@ mixin _$AppState {
   AuthenticationState get authState => throw _privateConstructorUsedError;
   List<Question> get questions => throw _privateConstructorUsedError;
   List<Sign> get signs => throw _privateConstructorUsedError;
+  Map<String, List<Sign>> get signsByType => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppStateCopyWith<AppState> get copyWith =>
@@ -33,7 +34,8 @@ abstract class $AppStateCopyWith<$Res> {
   $Res call(
       {AuthenticationState authState,
       List<Question> questions,
-      List<Sign> signs});
+      List<Sign> signs,
+      Map<String, List<Sign>> signsByType});
 
   $AuthenticationStateCopyWith<$Res> get authState;
 }
@@ -54,6 +56,7 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
     Object? authState = null,
     Object? questions = null,
     Object? signs = null,
+    Object? signsByType = null,
   }) {
     return _then(_value.copyWith(
       authState: null == authState
@@ -68,6 +71,10 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
           ? _value.signs
           : signs // ignore: cast_nullable_to_non_nullable
               as List<Sign>,
+      signsByType: null == signsByType
+          ? _value.signsByType
+          : signsByType // ignore: cast_nullable_to_non_nullable
+              as Map<String, List<Sign>>,
     ) as $Val);
   }
 
@@ -91,7 +98,8 @@ abstract class _$$AppStateImplCopyWith<$Res>
   $Res call(
       {AuthenticationState authState,
       List<Question> questions,
-      List<Sign> signs});
+      List<Sign> signs,
+      Map<String, List<Sign>> signsByType});
 
   @override
   $AuthenticationStateCopyWith<$Res> get authState;
@@ -111,6 +119,7 @@ class __$$AppStateImplCopyWithImpl<$Res>
     Object? authState = null,
     Object? questions = null,
     Object? signs = null,
+    Object? signsByType = null,
   }) {
     return _then(_$AppStateImpl(
       authState: null == authState
@@ -125,6 +134,10 @@ class __$$AppStateImplCopyWithImpl<$Res>
           ? _value._signs
           : signs // ignore: cast_nullable_to_non_nullable
               as List<Sign>,
+      signsByType: null == signsByType
+          ? _value._signsByType
+          : signsByType // ignore: cast_nullable_to_non_nullable
+              as Map<String, List<Sign>>,
     ));
   }
 }
@@ -135,9 +148,11 @@ class _$AppStateImpl extends _AppState {
   const _$AppStateImpl(
       {this.authState = const AuthenticationState(),
       final List<Question> questions = const [],
-      final List<Sign> signs = const []})
+      final List<Sign> signs = const [],
+      final Map<String, List<Sign>> signsByType = const {}})
       : _questions = questions,
         _signs = signs,
+        _signsByType = signsByType,
         super._();
 
   @override
@@ -161,9 +176,18 @@ class _$AppStateImpl extends _AppState {
     return EqualUnmodifiableListView(_signs);
   }
 
+  final Map<String, List<Sign>> _signsByType;
+  @override
+  @JsonKey()
+  Map<String, List<Sign>> get signsByType {
+    if (_signsByType is EqualUnmodifiableMapView) return _signsByType;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_signsByType);
+  }
+
   @override
   String toString() {
-    return 'AppState(authState: $authState, questions: $questions, signs: $signs)';
+    return 'AppState(authState: $authState, questions: $questions, signs: $signs, signsByType: $signsByType)';
   }
 
   @override
@@ -175,7 +199,9 @@ class _$AppStateImpl extends _AppState {
                 other.authState == authState) &&
             const DeepCollectionEquality()
                 .equals(other._questions, _questions) &&
-            const DeepCollectionEquality().equals(other._signs, _signs));
+            const DeepCollectionEquality().equals(other._signs, _signs) &&
+            const DeepCollectionEquality()
+                .equals(other._signsByType, _signsByType));
   }
 
   @override
@@ -183,7 +209,8 @@ class _$AppStateImpl extends _AppState {
       runtimeType,
       authState,
       const DeepCollectionEquality().hash(_questions),
-      const DeepCollectionEquality().hash(_signs));
+      const DeepCollectionEquality().hash(_signs),
+      const DeepCollectionEquality().hash(_signsByType));
 
   @JsonKey(ignore: true)
   @override
@@ -196,7 +223,8 @@ abstract class _AppState extends AppState {
   const factory _AppState(
       {final AuthenticationState authState,
       final List<Question> questions,
-      final List<Sign> signs}) = _$AppStateImpl;
+      final List<Sign> signs,
+      final Map<String, List<Sign>> signsByType}) = _$AppStateImpl;
   const _AppState._() : super._();
 
   @override
@@ -205,6 +233,8 @@ abstract class _AppState extends AppState {
   List<Question> get questions;
   @override
   List<Sign> get signs;
+  @override
+  Map<String, List<Sign>> get signsByType;
   @override
   @JsonKey(ignore: true)
   _$$AppStateImplCopyWith<_$AppStateImpl> get copyWith =>

@@ -1,8 +1,10 @@
+import 'package:flutter/services.dart';
 import 'package:signs_app/core/models/authentication/form_login.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:signs_app/core/redux/actions/authentication_action.dart';
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
 import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
 import 'package:signs_app/ui/components/text_field.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +36,12 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return ScaffoldAnimation(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+      ),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -97,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                             const NavigateToNextAction('/register'),
                           ),
                     style: const TextStyle(
-                      color: Colors.cyan,
+                      color: Colors.orange,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

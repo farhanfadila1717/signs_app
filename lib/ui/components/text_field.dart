@@ -65,7 +65,7 @@ class _PasswordFieldState extends State<PasswordField> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Password',
             style: TextStyle(
               fontSize: 12,

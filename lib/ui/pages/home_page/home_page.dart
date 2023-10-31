@@ -1,7 +1,8 @@
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
-import 'package:signs_app/ui/components/circle_name.dart';
-import 'package:signs_app/ui/components/user_widget.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulActionMapper {
@@ -14,76 +15,28 @@ class HomePage extends StatefulActionMapper {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
-    return Scaffold(
-      backgroundColor: Colors.white,
+    final size = MediaQuery.sizeOf(context);
+    return ScaffoldAnimation(
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             expandedHeight: 200,
+            backgroundColor: Colors.transparent,
+            systemOverlayStyle: SystemUiOverlayStyle.dark,
             flexibleSpace: FlexibleSpaceBar(
               background: SizedBox.expand(
                 child: Stack(
+                  alignment: Alignment.center,
                   children: [
-                    const Positioned.fill(
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFFCBBDFF),
-                              Color(0xFF589AF0),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned.fill(
-                      child: Image.asset(
-                        'assets/images/flag_bg.png',
-                        alignment: Alignment.topRight,
-                        opacity: const AlwaysStoppedAnimation(.1),
-                      ),
-                    ),
-                    Positioned.fill(
-                      left: 20,
-                      right: 20,
-                      bottom: 20,
-                      child: UserWidget(builder: (_, user) {
-                        return Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Row(
-                              children: [
-                                CircleName(
-                                  name: user.fullName,
-                                ),
-                                const SizedBox(width: 10),
-                                Text(
-                                  'Hi, ${user.fullName}',
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        );
-                      }),
-                    ),
                     Positioned(
-                      width: width,
-                      height: 30,
-                      bottom: 0,
-                      child: const DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(20),
-                          ),
+                      bottom: 50,
+                      width: size.width,
+                      child: Text(
+                        'Rambu Lalu Lintas',
+                        style: GoogleFonts.paytoneOne(
+                          fontSize: 24,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
@@ -95,226 +48,73 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
             sliver: SliverGrid.count(
               crossAxisCount: 2,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              children: [
-                GestureDetector(
-                  onTap: () => widget.dispatch(
-                    const NavigateToNextAction(
-                      '/flags',
-                    ),
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Colors.black12,
-                      ),
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(0, 5),
-                          blurRadius: 5,
-                          color: Colors.black12,
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          DecoratedBox(
-                            decoration: const BoxDecoration(
-                              color: Colors.black12,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Image.asset(
-                                'assets/images/ic_flag.png',
-                                height: 30,
-                                width: 30,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Bendera',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              children: const [
+                _Menu(
+                  path: '/signs',
+                  title: 'Rambu Lalu Lintas',
                 ),
-                GestureDetector(
-                  onTap: () => widget.dispatch(
-                    const NavigateToNextAction(
-                      '/quiz',
-                    ),
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Colors.black12,
-                      ),
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(0, 5),
-                          blurRadius: 5,
-                          color: Colors.black12,
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          DecoratedBox(
-                            decoration: BoxDecoration(
-                              color: Colors.blue.withOpacity(.1),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.question_answer,
-                                color: Colors.blue,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Kuis',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                _Menu(
+                  path: '/quiz',
+                  title: 'Kuis',
                 ),
-                GestureDetector(
-                  onTap: () => widget.dispatch(
-                    const NavigateToNextAction(
-                      '/history',
-                    ),
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Colors.black12,
-                      ),
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(0, 5),
-                          blurRadius: 5,
-                          color: Colors.black12,
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          DecoratedBox(
-                            decoration: BoxDecoration(
-                              color: Colors.orange.withOpacity(.1),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.history_edu,
-                                color: Colors.orange,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Sejarah',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                _Menu(
+                  path: '/history',
+                  title: 'Sejarah',
                 ),
-                GestureDetector(
-                  onTap: () => widget.dispatch(
-                    const NavigateToNextAction(
-                      '/profile',
-                    ),
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Colors.black12,
-                      ),
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(0, 5),
-                          blurRadius: 5,
-                          color: Colors.black12,
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          DecoratedBox(
-                            decoration: BoxDecoration(
-                              color: Colors.green.withOpacity(.1),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.person,
-                                color: Colors.green,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Profil',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                _Menu(
+                  path: '/profile',
+                  title: 'Profil',
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _Menu extends StatelessActionMapper {
+  const _Menu({
+    required this.path,
+    required this.title,
+  });
+
+  final String path;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => dispatch(
+        NavigateToNextAction(
+          path,
+        ),
+      ),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Colors.orangeAccent.shade100,
+          border: Border.all(
+            color: Colors.deepOrange,
+            width: 5,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Center(
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.paytoneOne(
+                fontSize: 24,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

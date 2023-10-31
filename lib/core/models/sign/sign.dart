@@ -13,6 +13,7 @@ class Sign with _$Sign {
     required String name,
     required String image,
     required String description,
+    required String type,
   }) = _Sign;
 
   factory Sign.fromJson(Map<String, dynamic> json) => _$SignFromJson(json);

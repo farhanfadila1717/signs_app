@@ -3,6 +3,7 @@ import 'package:signs_app/core/redux/actions/authentication_action.dart';
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
 import 'package:signs_app/core/router/navigation_destination.dart';
 import 'package:signs_app/ui/components/circle_name.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
 import 'package:signs_app/ui/components/user_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -21,24 +22,6 @@ class _ProfilePageState extends State<ProfilePage> {
         title: const Text('Profil'),
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
-        actions: [
-          IconButton(
-            onPressed: () => widget.dispatch(
-              ShowDialogAction(
-                destination: InfoDialogDestination(
-                  title: 'Keluar',
-                  message: 'apakah Anda yakin ingin keluar?',
-                  onTap: () => widget.dispatch(
-                    const LogoutAction(),
-                  ),
-                ),
-              ),
-            ),
-            icon: const Icon(
-              Icons.exit_to_app,
-            ),
-          ),
-        ],
       ),
       body: SafeArea(
         child: UserWidget(builder: (context, user) {
@@ -55,19 +38,34 @@ class _ProfilePageState extends State<ProfilePage> {
                 data: user.id,
                 margin: const EdgeInsets.only(top: 30),
               ),
-              const Divider(
-                height: 30,
-              ),
               _ProfileItem(
                 title: 'Nama',
                 data: user.fullName,
-              ),
-              const Divider(
-                height: 30,
+                margin: const EdgeInsets.only(top: 16),
               ),
               _ProfileItem(
                 title: 'Email',
                 data: user.email,
+                margin: const EdgeInsets.only(top: 16, bottom: 50),
+              ),
+              SizedBox(
+                height: 50,
+                child: PrimaryButton(
+                  text: 'Keluar',
+                  color: Colors.red,
+                  style: const TextStyle(color: Colors.white),
+                  onTap: () => widget.dispatch(
+                    ShowDialogAction(
+                      destination: InfoDialogDestination(
+                        title: 'Keluar',
+                        message: 'apakah Anda yakin ingin keluar?',
+                        onTap: () => widget.dispatch(
+                          const LogoutAction(),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           );
@@ -92,17 +90,29 @@ class _ProfileItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: margin ?? EdgeInsets.zero,
-      child: Row(
-        children: [
-          Text(title),
-          const SizedBox(width: 20),
-          Expanded(
-            child: SelectableText(
-              data,
-              textAlign: TextAlign.end,
-            ),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Colors.orangeAccent.shade100.withOpacity(.3),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 10,
+            vertical: 10,
           ),
-        ],
+          child: Row(
+            children: [
+              Text(title),
+              const SizedBox(width: 20),
+              Expanded(
+                child: SelectableText(
+                  data,
+                  textAlign: TextAlign.end,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

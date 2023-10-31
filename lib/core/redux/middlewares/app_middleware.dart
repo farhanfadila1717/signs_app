@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/models/quiz/question.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
 import 'package:signs_app/core/redux/actions/app_action.dart';
@@ -78,15 +79,30 @@ class AppMiddleware extends MiddlewareClass<AppState> {
       final response = await collection.get();
 
       List<Sign> signs = [];
+      List<String> types = [];
       for (var i in response.docs) {
-        signs.add(Sign.fromJson(i.data()));
+        final sign = Sign.fromJson(i.data());
+        signs.add(sign);
+
+        if (!types.contains(sign.type)) {
+          types.add(sign.type);
+        }
       }
 
       signs.sort((a, b) => a.name.compareTo(b.name));
 
-      store.dispatch(
+      Map<String, List<Sign>> signsByType = {};
+
+      for (var i in types) {
+        final findSignsByType = signs.where((e) => e.type.contains(i)).toList();
+
+        signsByType[i] = findSignsByType;
+      }
+
+      store.dispatches([
         SetSignsAction(signs),
-      );
+        SetSignsByTypeAction(signsByType),
+      ]);
     } catch (ex) {
       debugPrint(ex.toString());
     }

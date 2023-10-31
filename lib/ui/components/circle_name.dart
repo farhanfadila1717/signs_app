@@ -6,7 +6,7 @@ class CircleName extends StatelessWidget {
     required this.name,
     this.size = 46,
     this.fontSize = 20,
-    this.color = Colors.blue,
+    this.color = Colors.orange,
     this.foregroundColor = Colors.white,
   });
 

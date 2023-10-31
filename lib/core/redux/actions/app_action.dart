@@ -28,3 +28,11 @@ class SetSignsAction {
     this.signs,
   );
 }
+
+class SetSignsByTypeAction {
+  final Map<String, List<Sign>> signs;
+
+  const SetSignsByTypeAction(
+    this.signs,
+  );
+}

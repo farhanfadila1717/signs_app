@@ -23,6 +23,7 @@ mixin _$Sign {
   String get name => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,7 @@ abstract class $SignCopyWith<$Res> {
   factory $SignCopyWith(Sign value, $Res Function(Sign) then) =
       _$SignCopyWithImpl<$Res, Sign>;
   @useResult
-  $Res call({String name, String image, String description});
+  $Res call({String name, String image, String description, String type});
 }
 
 /// @nodoc
@@ -53,6 +54,7 @@ class _$SignCopyWithImpl<$Res, $Val extends Sign>
     Object? name = null,
     Object? image = null,
     Object? description = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -67,6 +69,10 @@ class _$SignCopyWithImpl<$Res, $Val extends Sign>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -78,7 +84,7 @@ abstract class _$$SignImplCopyWith<$Res> implements $SignCopyWith<$Res> {
       __$$SignImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String image, String description});
+  $Res call({String name, String image, String description, String type});
 }
 
 /// @nodoc
@@ -94,6 +100,7 @@ class __$$SignImplCopyWithImpl<$Res>
     Object? name = null,
     Object? image = null,
     Object? description = null,
+    Object? type = null,
   }) {
     return _then(_$SignImpl(
       name: null == name
@@ -108,6 +115,10 @@ class __$$SignImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -117,7 +128,10 @@ class __$$SignImplCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$SignImpl extends _Sign {
   const _$SignImpl(
-      {required this.name, required this.image, required this.description})
+      {required this.name,
+      required this.image,
+      required this.description,
+      required this.type})
       : super._();
 
   factory _$SignImpl.fromJson(Map<String, dynamic> json) =>
@@ -129,10 +143,12 @@ class _$SignImpl extends _Sign {
   final String image;
   @override
   final String description;
+  @override
+  final String type;
 
   @override
   String toString() {
-    return 'Sign(name: $name, image: $image, description: $description)';
+    return 'Sign(name: $name, image: $image, description: $description, type: $type)';
   }
 
   @override
@@ -143,12 +159,13 @@ class _$SignImpl extends _Sign {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.description, description) ||
-                other.description == description));
+                other.description == description) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, image, description);
+  int get hashCode => Object.hash(runtimeType, name, image, description, type);
 
   @JsonKey(ignore: true)
   @override
@@ -168,7 +185,8 @@ abstract class _Sign extends Sign {
   const factory _Sign(
       {required final String name,
       required final String image,
-      required final String description}) = _$SignImpl;
+      required final String description,
+      required final String type}) = _$SignImpl;
   const _Sign._() : super._();
 
   factory _Sign.fromJson(Map<String, dynamic> json) = _$SignImpl.fromJson;
@@ -179,6 +197,8 @@ abstract class _Sign extends Sign {
   String get image;
   @override
   String get description;
+  @override
+  String get type;
   @override
   @JsonKey(ignore: true)
   _$$SignImplCopyWith<_$SignImpl> get copyWith =>

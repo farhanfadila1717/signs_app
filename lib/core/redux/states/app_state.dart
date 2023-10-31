@@ -13,5 +13,6 @@ class AppState with _$AppState {
     @Default(AuthenticationState()) AuthenticationState authState,
     @Default([]) List<Question> questions,
     @Default([]) List<Sign> signs,
+    @Default({}) Map<String, List<Sign>> signsByType,
   }) = _AppState;
 }
