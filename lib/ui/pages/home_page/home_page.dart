@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               children: const [
                 _Menu(
                   path: '/signs',
-                  title: 'Rambu Lalu Lintas',
+                  title: 'Rambu\nLalu Lintas',
                 ),
                 _Menu(
                   path: '/quiz',
@@ -93,28 +93,44 @@ class _Menu extends StatelessActionMapper {
           path,
         ),
       ),
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: Colors.orangeAccent.shade100,
-          border: Border.all(
-            color: Colors.deepOrange,
-            width: 5,
-          ),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Center(
-            child: Text(
-              title,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.paytoneOne(
-                fontSize: 24,
-                color: Colors.black,
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color(0xFFFED034),
               ),
             ),
           ),
-        ),
+          Positioned.fill(
+            left: 5,
+            right: 5,
+            top: 5,
+            bottom: 5,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  width: 3,
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                title,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.paytoneOne(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -14,6 +14,7 @@ class App extends StatelessWidget {
       store: getIt.get<Store<AppState>>(),
       child: MaterialApp.router(
         routerConfig: getIt.get<GoRouter>(),
+        locale: const Locale('id-ID'),
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
           colorScheme: ColorScheme.fromSwatch(

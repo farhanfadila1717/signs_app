@@ -23,6 +23,10 @@ class CircleName extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
+          border: Border.all(
+            width: 5,
+            color: Colors.red,
+          ),
           color: color,
         ),
         child: Center(

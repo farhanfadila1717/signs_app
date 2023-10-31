@@ -1,9 +1,11 @@
+import 'package:flutter/services.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:signs_app/core/redux/actions/authentication_action.dart';
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
 import 'package:signs_app/core/router/navigation_destination.dart';
 import 'package:signs_app/ui/components/circle_name.dart';
 import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
 import 'package:signs_app/ui/components/user_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +19,12 @@ class ProfilePage extends StatefulActionMapper {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ScaffoldAnimation(
       appBar: AppBar(
         title: const Text('Profil'),
         foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        backgroundColor: Colors.transparent,
       ),
       body: SafeArea(
         child: UserWidget(builder: (context, user) {
@@ -30,8 +33,10 @@ class _ProfilePageState extends State<ProfilePage> {
             children: [
               CircleName(
                 name: user.fullName,
-                size: 65,
-                fontSize: 24,
+                size: 80,
+                fontSize: 40,
+                color: Colors.white,
+                foregroundColor: Colors.black,
               ),
               _ProfileItem(
                 title: 'ID',
@@ -92,13 +97,13 @@ class _ProfileItem extends StatelessWidget {
       padding: margin ?? EdgeInsets.zero,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: Colors.orangeAccent.shade100.withOpacity(.3),
+          color: Colors.white30,
           borderRadius: BorderRadius.circular(6),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 10,
-            vertical: 10,
+            horizontal: 16,
+            vertical: 16,
           ),
           child: Row(
             children: [

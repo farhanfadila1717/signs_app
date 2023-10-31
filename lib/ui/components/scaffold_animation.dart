@@ -6,10 +6,12 @@ class ScaffoldAnimation extends StatelessWidget {
     super.key,
     this.appBar,
     this.body,
+    this.floatingActionButton,
   });
 
   final PreferredSizeWidget? appBar;
   final Widget? body;
+  final Widget? floatingActionButton;
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +81,7 @@ class ScaffoldAnimation extends StatelessWidget {
         Scaffold(
           appBar: appBar,
           body: body,
+          floatingActionButton: floatingActionButton,
           backgroundColor: Colors.transparent,
         ),
       ],

@@ -2,9 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:after_layout/after_layout.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
 
 class HistoryPage extends StatefulActionMapper {
   const HistoryPage({super.key});
@@ -16,7 +19,7 @@ class HistoryPage extends StatefulActionMapper {
 class _HistoryPageState extends State<HistoryPage> with AfterLayoutMixin {
   @override
   FutureOr<void> afterFirstLayout(BuildContext context) {
-    _playAudio();
+    // _playAudio();
   }
 
   void _playAudio() async {
@@ -42,47 +45,41 @@ class _HistoryPageState extends State<HistoryPage> with AfterLayoutMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        const Positioned.fill(
-          child: ColoredBox(color: Colors.white),
-        ),
-        Align(
-          alignment: Alignment.topRight,
-          child: Image.asset(
-            'assets/images/flag_bg.png',
-            alignment: Alignment.bottomCenter,
-            opacity: const AlwaysStoppedAnimation(0.1),
-            fit: BoxFit.fitWidth,
-          ),
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Image.asset(
-            'assets/images/bg_kuis.png',
-            alignment: Alignment.bottomCenter,
-            fit: BoxFit.fitWidth,
-            opacity: const AlwaysStoppedAnimation(0.1),
-          ),
-        ),
-        Scaffold(
-          appBar: AppBar(
-            title: const Text('Sejarah Bendera'),
-          ),
-          backgroundColor: Colors.transparent,
-          body: Scrollbar(
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
-              children: const [
-                Text(
+    return ScaffoldAnimation(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+      ),
+      body: Scrollbar(
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
+          children: [
+            Center(
+              child: Text(
+                'Sejarah\nRambu Lalu Lintas',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.paytoneOne(
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(.8),
+                borderRadius: BorderRadius.circular(3),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
                   _kText,
                   textAlign: TextAlign.justify,
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
