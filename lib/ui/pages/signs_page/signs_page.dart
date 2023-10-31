@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
@@ -35,6 +36,7 @@ class _SignsPageState extends State<SignsPage> {
                 expandedHeight: 150,
                 foregroundColor: Colors.black,
                 backgroundColor: Colors.transparent,
+                systemOverlayStyle: SystemUiOverlayStyle.dark,
                 flexibleSpace: FlexibleSpaceBar(
                   centerTitle: true,
                   background: SizedBox.expand(
