@@ -21,6 +21,7 @@ Answer _$AnswerFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Answer {
   String get text => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
   bool get correct => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -33,7 +34,7 @@ abstract class $AnswerCopyWith<$Res> {
   factory $AnswerCopyWith(Answer value, $Res Function(Answer) then) =
       _$AnswerCopyWithImpl<$Res, Answer>;
   @useResult
-  $Res call({String text, bool correct});
+  $Res call({String text, String image, bool correct});
 }
 
 /// @nodoc
@@ -50,12 +51,17 @@ class _$AnswerCopyWithImpl<$Res, $Val extends Answer>
   @override
   $Res call({
     Object? text = null,
+    Object? image = null,
     Object? correct = null,
   }) {
     return _then(_value.copyWith(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
       correct: null == correct
           ? _value.correct
@@ -72,7 +78,7 @@ abstract class _$$AnswerImplCopyWith<$Res> implements $AnswerCopyWith<$Res> {
       __$$AnswerImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String text, bool correct});
+  $Res call({String text, String image, bool correct});
 }
 
 /// @nodoc
@@ -87,12 +93,17 @@ class __$$AnswerImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? text = null,
+    Object? image = null,
     Object? correct = null,
   }) {
     return _then(_$AnswerImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
       correct: null == correct
           ? _value.correct
@@ -106,20 +117,25 @@ class __$$AnswerImplCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$AnswerImpl extends _Answer {
-  const _$AnswerImpl({required this.text, this.correct = false}) : super._();
+  const _$AnswerImpl({this.text = '', this.image = '', this.correct = false})
+      : super._();
 
   factory _$AnswerImpl.fromJson(Map<String, dynamic> json) =>
       _$$AnswerImplFromJson(json);
 
   @override
+  @JsonKey()
   final String text;
+  @override
+  @JsonKey()
+  final String image;
   @override
   @JsonKey()
   final bool correct;
 
   @override
   String toString() {
-    return 'Answer(text: $text, correct: $correct)';
+    return 'Answer(text: $text, image: $image, correct: $correct)';
   }
 
   @override
@@ -128,12 +144,13 @@ class _$AnswerImpl extends _Answer {
         (other.runtimeType == runtimeType &&
             other is _$AnswerImpl &&
             (identical(other.text, text) || other.text == text) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.correct, correct) || other.correct == correct));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, text, correct);
+  int get hashCode => Object.hash(runtimeType, text, image, correct);
 
   @JsonKey(ignore: true)
   @override
@@ -150,14 +167,18 @@ class _$AnswerImpl extends _Answer {
 }
 
 abstract class _Answer extends Answer {
-  const factory _Answer({required final String text, final bool correct}) =
-      _$AnswerImpl;
+  const factory _Answer(
+      {final String text,
+      final String image,
+      final bool correct}) = _$AnswerImpl;
   const _Answer._() : super._();
 
   factory _Answer.fromJson(Map<String, dynamic> json) = _$AnswerImpl.fromJson;
 
   @override
   String get text;
+  @override
+  String get image;
   @override
   bool get correct;
   @override

@@ -12,10 +12,10 @@ class Question with _$Question {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory Question({
     required num no,
+    required num level,
     required String question,
-    required String image,
     required List<Answer> answers,
-    required String audio,
+    @Default('') String image,
   }) = _Question;
 
   factory Question.fromJson(Map<String, dynamic> json) =>

@@ -6,12 +6,16 @@ class ScaffoldAnimation extends StatelessWidget {
     super.key,
     this.appBar,
     this.body,
+    this.bottomNavigationBar,
     this.floatingActionButton,
+    this.skyColor,
   });
 
   final PreferredSizeWidget? appBar;
   final Widget? body;
+  final Widget? bottomNavigationBar;
   final Widget? floatingActionButton;
+  final Color? skyColor;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +35,7 @@ class ScaffoldAnimation extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.blueAccent.withOpacity(.3),
+                  skyColor ?? Colors.blueAccent.withOpacity(.3),
                   Colors.white,
                 ],
               ),
@@ -82,6 +86,7 @@ class ScaffoldAnimation extends StatelessWidget {
           appBar: appBar,
           body: body,
           floatingActionButton: floatingActionButton,
+          bottomNavigationBar: bottomNavigationBar,
           backgroundColor: Colors.transparent,
         ),
       ],

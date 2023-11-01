@@ -17,6 +17,10 @@ extension StringExtensions on String {
         return const Color(0xFFFFC635);
       case 'FORBIDDEN':
         return Colors.red;
+      case 'INSTRUCTION':
+        return const Color(0xFF000095);
+      case 'GUIDE':
+        return const Color(0xFF009A00);
     }
     return Colors.blue;
   }
@@ -24,6 +28,8 @@ extension StringExtensions on String {
   Color get foregoundColor {
     switch (this) {
       case 'FORBIDDEN':
+      case 'INSTRUCTION':
+      case 'GUIDE':
         return Colors.white;
     }
     return Colors.black;
@@ -35,8 +41,16 @@ extension StringExtensions on String {
         return 'Peringatan';
       case 'FORBIDDEN':
         return 'Larangan';
+      case 'INSTRUCTION':
+        return 'Perintah';
+      case 'GUIDE':
+        return 'Petunjuk';
     }
 
     return toLowerCase();
   }
+}
+
+extension BuildContextExtensions on BuildContext {
+  Size get sizeOf => MediaQuery.sizeOf(this);
 }

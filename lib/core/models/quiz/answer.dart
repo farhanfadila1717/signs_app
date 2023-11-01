@@ -10,7 +10,8 @@ class Answer with _$Answer {
   // ignore: invalid_annotation_target
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory Answer({
-    required String text,
+    @Default('') String text,
+    @Default('') String image,
     @Default(false) bool correct,
   }) = _Answer;
 

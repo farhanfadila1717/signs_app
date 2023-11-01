@@ -1,13 +1,11 @@
-import 'dart:async';
-import 'dart:convert';
-
-import 'package:after_layout/after_layout.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
+import 'package:signs_app/ui/components/bottom_area_bar.dart';
 import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
 
 class HistoryPage extends StatefulActionMapper {
   const HistoryPage({super.key});
@@ -16,30 +14,16 @@ class HistoryPage extends StatefulActionMapper {
   State<HistoryPage> createState() => _HistoryPageState();
 }
 
-class _HistoryPageState extends State<HistoryPage> with AfterLayoutMixin {
+class _HistoryPageState extends State<HistoryPage> with TtsMixin {
   @override
-  FutureOr<void> afterFirstLayout(BuildContext context) {
-    // _playAudio();
+  void initState() {
+    super.initState();
+    initTts(_kText);
   }
-
-  void _playAudio() async {
-    LineSplitter ls = const LineSplitter();
-
-    final lines = ls.convert(_kText);
-
-    for (var i in lines) {
-      if (i.trim().isNotEmpty) {
-        if (!mounted) break;
-        await _flutterTts.speak(i);
-      }
-    }
-  }
-
-  FlutterTts get _flutterTts => widget.getIt.get<FlutterTts>();
 
   @override
   void dispose() {
-    _flutterTts.stop();
+    flutterTts.stop();
     super.dispose();
   }
 
@@ -69,33 +53,74 @@ class _HistoryPageState extends State<HistoryPage> with AfterLayoutMixin {
                 color: Colors.white.withOpacity(.8),
                 borderRadius: BorderRadius.circular(3),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+              child: const Padding(
+                padding: EdgeInsets.all(10.0),
                 child: Text(
                   _kText,
                   textAlign: TextAlign.justify,
                 ),
               ),
             ),
+            const SizedBox(height: 30),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomAreaBar(
+        children: [
+          SizedBox(
+            width: context.sizeOf.width,
+            child: Row(
+              children: [
+                Builder(
+                  builder: (_) {
+                    if (ttsState == TtsState.playing) {
+                      return FloatingActionButton(
+                        heroTag: 'pause',
+                        onPressed: flutterTts.stop,
+                        child: const Icon(Icons.pause),
+                      );
+                    }
+                    return FloatingActionButton(
+                      heroTag: 'play',
+                      onPressed: playAudio,
+                      child: const Icon(Icons.play_arrow),
+                    );
+                  },
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: ValueListenableBuilder(
+                    valueListenable: progressNotifier,
+                    builder: (_, value, __) {
+                      return LinearProgressIndicator(
+                        value: value,
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
 }
 
 const _kText =
-    '''Secara historis, bendera berasal dari standar militer , digunakan sebagai tanda lapangan . Sepanjang sejarah, berbagai contoh bendera proto tersebut ada: spanduk kain putih tentara dinasti Zhou pada abad ke-11 SM, standar vexillum yang dikibarkan oleh tentara Kekaisaran Romawi , Standar Hitam yang terkenal dibawa oleh Muhammad yang kemudian menjadi bendera Kekhalifahan Abbasiyah , dan berbagai " panji gagak " yang dikibarkan oleh para kepala suku Viking . Angelino Dulcert menerbitkan serangkaian bagan Portolan yang komprehensif pada abad ke-14 M, yang terkenal menampilkan gambar bendera beberapa negara – meskipun ini bukan "bendera nasional" yang seragam, karena beberapa kemungkinan merupakan standar pribadi penguasa negara masing-masing.
-          
-Praktek mengibarkan bendera yang menunjukkan negara asal di luar konteks peperangan menjadi hal yang biasa terjadi pada bendera maritim . Desain bendera Belanda saat ini berasal dari varian Prinsenvlag ("Bendera Pangeran") yang berwarna oranye-putih-biru pada akhir abad ke-16, yang digunakan dalam Perang Kemerdekaan Belanda (1568–1648), yang berkembang pada awal Abad ke-17 sebagai Statenvlag ("Bendera Negara") merah-putih-biru , bendera angkatan laut Negara -Jenderal Republik Belanda , menjadikan bendera Belanda mungkin bendera tiga warna tertua yang terus digunakan, meskipun standarisasi warna yang tepat masih dilakukan. jauh di kemudian hari.  
-          
-Pada zaman layar di awal abad ke-17, Union Jack menemukan asal-usulnya, ketika James VI dari Skotlandia mewarisi takhta Inggris dan Irlandia (sebagai James I). Pada tanggal 12 April 1606, bendera baru yang mewakili persatuan agung antara Inggris dan Skotlandia ditetapkan dalam dekrit kerajaan, yang menyatakan bahwa bendera Inggris (palang merah dengan latar belakang putih, dikenal sebagai Salib St George ), dan bendera Inggris Skotlandia ( saltire putih dengan latar belakang biru, yang dikenal sebagai Saltire atau St Andrew's Cross), akan digabungkan, membentuk bendera Britania Raya dan Union Flag pertama  - tetapi kemudian tanpa Palang merah St. Patrick . Bendera ini terus digunakan sampai tanggal 1 Januari 1801, tanggal efektif penyatuan legislatif Inggris Raya dan Irlandia, ketika Salib St. Patrick (salib diagonal merah di atas putih) dimasukkan ke dalam bendera,  memberikan Union Jack desainnya saat ini.
-          
-Dengan munculnya sentimen nasionalis pada akhir abad ke-18, bendera nasional juga mulai ditampilkan dalam konteks sipil.  Contoh awal yang penting termasuk bendera AS , yang pertama kali diadopsi sebagai panji angkatan laut pada tahun 1777 tetapi mulai ditampilkan sebagai simbol umum Amerika Serikat setelah Revolusi Amerika , dan Tiga Warna Prancis , yang menjadi simbol Amerika Serikat. Republik pada tahun 1790-an. 
-          
-Sebagian besar negara di Eropa melakukan standarisasi dan kodifikasi desain bendera maritim mereka sebagai bendera nasional, pada abad ke-19 dan awal abad ke-20. Spesifikasi bendera Denmark , berdasarkan bendera yang terus digunakan sejak abad ke-14, dikodifikasikan pada tahun 1748, sebagai bendera persegi panjang dengan proporsi tertentu, menggantikan variannya dengan belahan.  Bendera Swiss diperkenalkan pada tahun 1889, juga didasarkan pada bendera perang abad pertengahan.
-          
-Di Eropa, desain tiga warna merah-putih-biru pada bendera Kerajaan Belanda menjadi populer, karena dikaitkan dengan bentuk pemerintahan republik melalui perang kemerdekaan yang panjang melawan Kerajaan Spanyol . Asosiasi tersebut semakin diperkuat setelah Revolusi Perancis (1789), ketika Perancis menggunakan warna yang sama, namun dengan garis vertikal dan bukan garis horizontal. Negara-negara lain di Eropa (seperti Irlandia , Rumania , dan Estonia ) serta di Amerika Selatan dan Tengah memilih tiga warna mereka sendiri untuk menyatakan kepatuhan mereka terhadap prinsip-prinsip kebebasan, kesetaraan, dan persaudaraan sebagaimana terkandung dalam bendera Prancis. 
-Bendera Ottoman (sekarang bendera Turki ) diadopsi pada tahun 1844. Negara-negara non-Eropa lainnya mengikuti tren ini pada akhir abad ke-19, bendera Qing Besar diperkenalkan pada tahun 1862, dan bendera Jepang diperkenalkan pada tahun 1870. Juga pada tahun 1870. Abad ke-19, sebagian besar negara di Amerika Selatan memperkenalkan bendera saat mereka merdeka ( Peru pada tahun 1820, Bolivia pada tahun 1851, Kolombia pada tahun 1860, Brasil pada tahun 1822, dll.)
-          
-Saat ini, terdapat 193 bendera nasional di dunia yang dikibarkan oleh negara-negara berdaulat yang tergabung dalam PBB.''';
+    '''Awal mula Rambu lalu lintas diciptakan oleh berbagai individu dan badan otoritas di berbagai negara sepanjang sejarah. Tidak ada satu pencipta tunggal rambu lalu lintas. Pada awalnya, penggunaan tanda-tanda jalan pertama kali diperkenalkan oleh pemerintah lokal atau badan yang bertanggung jawab atas lalu lintas di wilayah tertentu. Jadi awal mula rambu lalu lintas ini sebenarnya, merupakan hasil dari berbagai kontribusi dan peraturan di seluruh dunia.
+
+\tKemudian semakin berkembangnya waktu, standar internasional untuk rambu lalu lintas telah dikembangkan oleh organisasi seperti Perserikatan Bangsa-Bangsa (PBB) melalui Komisi Ekonomi untuk Eropa (UNECE) untuk memastikan konsistensi dalam tanda-tanda lalu lintas di seluruh dunia. 
+
+\tDari situlah sejarah rambu lalu lintas dimulai pada abad ke-19 ketika transportasi bermotor pertama kali diperkenalkan. Beberapa titik penting dalam sejarah rambu lalu lintas termasuk:
+
+\tTanda Jalan Pertama: Pada tahun 1909, Amerika Serikat memasang tanda peringatan pertama di Buffalo, New York. Tanda ini sederhana, berbentuk segitiga dan menampilkan pesan peringatan.
+
+\tSistem Warna: Pada tahun 1917, sistem warna digunakan untuk pertama kalinya dengan tanda merah untuk peringatan dan tanda hijau untuk panduan.
+
+\tPerkembangan Internasional: Seiring berkembangnya transportasi, sistem tanda lalu lintas juga berkembang di berbagai negara dan standar internasional diperkenalkan.
+
+\tTanda Standar Internasional: Perserikatan Bangsa-Bangsa (PBB) memainkan peran penting dalam menyatukan standar rambu lalu lintas internasional, yang dikelola oleh Komisi Ekonomi untuk Eropa (UNECE).
+
+\tSejarah rambu lalu lintas terus berkembang seiring waktu, dengan penggunaan tanda-tanda yang semakin kompleks dan teknologi modern seperti lampu lalu lintas, rambu elektronik, dan sistem navigasi. Tujuan utama dari rambu lalu lintas adalah untuk menjaga keamanan dan disiplin lalu lintas di jalan.
+''';

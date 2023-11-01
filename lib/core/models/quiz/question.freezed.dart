@@ -21,10 +21,10 @@ Question _$QuestionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Question {
   num get no => throw _privateConstructorUsedError;
+  num get level => throw _privateConstructorUsedError;
   String get question => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
   List<Answer> get answers => throw _privateConstructorUsedError;
-  String get audio => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,11 +38,7 @@ abstract class $QuestionCopyWith<$Res> {
       _$QuestionCopyWithImpl<$Res, Question>;
   @useResult
   $Res call(
-      {num no,
-      String question,
-      String image,
-      List<Answer> answers,
-      String audio});
+      {num no, num level, String question, List<Answer> answers, String image});
 }
 
 /// @nodoc
@@ -59,31 +55,31 @@ class _$QuestionCopyWithImpl<$Res, $Val extends Question>
   @override
   $Res call({
     Object? no = null,
+    Object? level = null,
     Object? question = null,
-    Object? image = null,
     Object? answers = null,
-    Object? audio = null,
+    Object? image = null,
   }) {
     return _then(_value.copyWith(
       no: null == no
           ? _value.no
           : no // ignore: cast_nullable_to_non_nullable
               as num,
+      level: null == level
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as num,
       question: null == question
           ? _value.question
           : question // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
               as String,
       answers: null == answers
           ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<Answer>,
-      audio: null == audio
-          ? _value.audio
-          : audio // ignore: cast_nullable_to_non_nullable
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -98,11 +94,7 @@ abstract class _$$QuestionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {num no,
-      String question,
-      String image,
-      List<Answer> answers,
-      String audio});
+      {num no, num level, String question, List<Answer> answers, String image});
 }
 
 /// @nodoc
@@ -117,31 +109,31 @@ class __$$QuestionImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? no = null,
+    Object? level = null,
     Object? question = null,
-    Object? image = null,
     Object? answers = null,
-    Object? audio = null,
+    Object? image = null,
   }) {
     return _then(_$QuestionImpl(
       no: null == no
           ? _value.no
           : no // ignore: cast_nullable_to_non_nullable
               as num,
+      level: null == level
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as num,
       question: null == question
           ? _value.question
           : question // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
               as String,
       answers: null == answers
           ? _value._answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<Answer>,
-      audio: null == audio
-          ? _value.audio
-          : audio // ignore: cast_nullable_to_non_nullable
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -153,10 +145,10 @@ class __$$QuestionImplCopyWithImpl<$Res>
 class _$QuestionImpl extends _Question {
   const _$QuestionImpl(
       {required this.no,
+      required this.level,
       required this.question,
-      required this.image,
       required final List<Answer> answers,
-      required this.audio})
+      this.image = ''})
       : _answers = answers,
         super._();
 
@@ -166,9 +158,9 @@ class _$QuestionImpl extends _Question {
   @override
   final num no;
   @override
-  final String question;
+  final num level;
   @override
-  final String image;
+  final String question;
   final List<Answer> _answers;
   @override
   List<Answer> get answers {
@@ -178,11 +170,12 @@ class _$QuestionImpl extends _Question {
   }
 
   @override
-  final String audio;
+  @JsonKey()
+  final String image;
 
   @override
   String toString() {
-    return 'Question(no: $no, question: $question, image: $image, answers: $answers, audio: $audio)';
+    return 'Question(no: $no, level: $level, question: $question, answers: $answers, image: $image)';
   }
 
   @override
@@ -191,17 +184,17 @@ class _$QuestionImpl extends _Question {
         (other.runtimeType == runtimeType &&
             other is _$QuestionImpl &&
             (identical(other.no, no) || other.no == no) &&
+            (identical(other.level, level) || other.level == level) &&
             (identical(other.question, question) ||
                 other.question == question) &&
-            (identical(other.image, image) || other.image == image) &&
             const DeepCollectionEquality().equals(other._answers, _answers) &&
-            (identical(other.audio, audio) || other.audio == audio));
+            (identical(other.image, image) || other.image == image));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, no, question, image,
-      const DeepCollectionEquality().hash(_answers), audio);
+  int get hashCode => Object.hash(runtimeType, no, level, question,
+      const DeepCollectionEquality().hash(_answers), image);
 
   @JsonKey(ignore: true)
   @override
@@ -220,10 +213,10 @@ class _$QuestionImpl extends _Question {
 abstract class _Question extends Question {
   const factory _Question(
       {required final num no,
+      required final num level,
       required final String question,
-      required final String image,
       required final List<Answer> answers,
-      required final String audio}) = _$QuestionImpl;
+      final String image}) = _$QuestionImpl;
   const _Question._() : super._();
 
   factory _Question.fromJson(Map<String, dynamic> json) =
@@ -232,13 +225,13 @@ abstract class _Question extends Question {
   @override
   num get no;
   @override
-  String get question;
+  num get level;
   @override
-  String get image;
+  String get question;
   @override
   List<Answer> get answers;
   @override
-  String get audio;
+  String get image;
   @override
   @JsonKey(ignore: true)
   _$$QuestionImplCopyWith<_$QuestionImpl> get copyWith =>

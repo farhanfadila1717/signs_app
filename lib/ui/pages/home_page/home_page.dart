@@ -29,14 +29,17 @@ class _HomePageState extends State<HomePage> {
                   alignment: Alignment.center,
                   children: [
                     Positioned(
-                      bottom: 50,
+                      bottom: 30,
                       width: size.width,
-                      child: Text(
-                        'Rambu Lalu Lintas',
-                        style: GoogleFonts.paytoneOne(
-                          fontSize: 24,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          'Rambu Lalu Lintas',
+                          style: GoogleFonts.paytoneOne(
+                            fontSize: 40,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
@@ -95,7 +98,7 @@ class _Menu extends StatelessActionMapper {
       ),
       child: Stack(
         children: [
-          Positioned.fill(
+          const Positioned.fill(
             child: DecoratedBox(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
