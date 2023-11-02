@@ -38,6 +38,12 @@ class _AboutDialogState extends State<AboutDialog> {
   }
 
   @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: DecoratedBox(
