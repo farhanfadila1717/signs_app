@@ -49,3 +49,11 @@ class ShowSnackBarAction {
     required this.message,
   });
 }
+
+class ShowModalBottomSheetAction {
+  final NavigationDestination destination;
+
+  const ShowModalBottomSheetAction({
+    required this.destination,
+  });
+}

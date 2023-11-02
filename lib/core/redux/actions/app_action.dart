@@ -1,3 +1,4 @@
+import 'package:signs_app/core/models/about/about.dart';
 import 'package:signs_app/core/models/quiz/question.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
 
@@ -34,5 +35,17 @@ class SetSignsByTypeAction {
 
   const SetSignsByTypeAction(
     this.signs,
+  );
+}
+
+class GetAboutAction {
+  const GetAboutAction();
+}
+
+class SetAboutAction {
+  final About about;
+
+  const SetAboutAction(
+    this.about,
   );
 }

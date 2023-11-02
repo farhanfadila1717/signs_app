@@ -1,3 +1,4 @@
+import 'package:signs_app/core/models/about/about.dart';
 import 'package:signs_app/core/models/quiz/question.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
 import 'package:signs_app/core/redux/states/authentication_state.dart';
@@ -14,5 +15,6 @@ class AppState with _$AppState {
     @Default([]) List<Question> questions,
     @Default([]) List<Sign> signs,
     @Default({}) Map<String, List<Sign>> signsByType,
+    About? about,
   }) = _AppState;
 }

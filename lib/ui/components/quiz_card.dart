@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:after_layout/after_layout.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -86,13 +85,18 @@ class _QuestionCardState extends State<QuestionCard> with AfterLayoutMixin {
               ),
             const SizedBox(height: 16),
             if (question.question.isNotEmpty)
-              Center(
-                child: Text(
-                  question.question,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                ),
+                child: Center(
+                  child: Text(
+                    question.question,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -170,12 +174,14 @@ class _QuestionCardState extends State<QuestionCard> with AfterLayoutMixin {
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(
-                                item.text,
-                                style: TextStyle(
-                                  fontWeight: selected
-                                      ? FontWeight.bold
-                                      : FontWeight.normal,
+                              Expanded(
+                                child: Text(
+                                  item.text,
+                                  style: TextStyle(
+                                    fontWeight: selected
+                                        ? FontWeight.bold
+                                        : FontWeight.normal,
+                                  ),
                                 ),
                               ),
                             ],

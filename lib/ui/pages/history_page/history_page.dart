@@ -1,9 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:flutter/material.dart';
-import 'package:signs_app/ui/components/bottom_area_bar.dart';
+import 'package:signs_app/ui/components/audio_controll.dart';
 import 'package:signs_app/ui/components/scaffold_animation.dart';
 import 'package:signs_app/ui/components/tts_mixin.dart';
 
@@ -65,43 +64,11 @@ class _HistoryPageState extends State<HistoryPage> with TtsMixin {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAreaBar(
-        children: [
-          SizedBox(
-            width: context.sizeOf.width,
-            child: Row(
-              children: [
-                Builder(
-                  builder: (_) {
-                    if (ttsState == TtsState.playing) {
-                      return FloatingActionButton(
-                        heroTag: 'pause',
-                        onPressed: flutterTts.stop,
-                        child: const Icon(Icons.pause),
-                      );
-                    }
-                    return FloatingActionButton(
-                      heroTag: 'play',
-                      onPressed: playAudio,
-                      child: const Icon(Icons.play_arrow),
-                    );
-                  },
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: ValueListenableBuilder(
-                    valueListenable: progressNotifier,
-                    builder: (_, value, __) {
-                      return LinearProgressIndicator(
-                        value: value,
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+      bottomNavigationBar: AudioControll(
+        ttsState: ttsState,
+        progressNotifier: progressNotifier,
+        onPause: flutterTts.stop,
+        onPlay: playAudio,
       ),
     );
   }

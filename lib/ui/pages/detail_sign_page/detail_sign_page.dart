@@ -1,11 +1,9 @@
-import 'dart:async';
-
-import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/ui/components/audio_controll.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
 import 'package:signs_app/ui/components/type_chip.dart';
 
 class DetailSignPage extends StatefulActionMapper {
@@ -20,20 +18,16 @@ class DetailSignPage extends StatefulActionMapper {
   State<DetailSignPage> createState() => _DetailSignPageState();
 }
 
-class _DetailSignPageState extends State<DetailSignPage> with AfterLayoutMixin {
+class _DetailSignPageState extends State<DetailSignPage> with TtsMixin {
   @override
-  FutureOr<void> afterFirstLayout(BuildContext context) {
-    _playAudio();
+  void initState() {
+    super.initState();
+    initTts('${widget.sign.name}\n${widget.sign.description}');
   }
-
-  FlutterTts get _flutterTts => widget.getIt.get<FlutterTts>();
-
-  void _playAudio() =>
-      _flutterTts.speak('${widget.sign.name}\n${widget.sign.description}');
 
   @override
   void dispose() {
-    _flutterTts.stop();
+    flutterTts.stop();
     super.dispose();
   }
 
@@ -147,6 +141,12 @@ class _DetailSignPageState extends State<DetailSignPage> with AfterLayoutMixin {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: AudioControll(
+        ttsState: ttsState,
+        progressNotifier: progressNotifier,
+        onPause: flutterTts.stop,
+        onPlay: playAudio,
       ),
     );
   }

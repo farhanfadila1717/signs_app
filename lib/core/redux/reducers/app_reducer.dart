@@ -7,6 +7,7 @@ final appReducer = combineReducers<AppState>(
     TypedReducer<AppState, SetQuestionsAction>(_onSetQuestionsAction),
     TypedReducer<AppState, SetSignsAction>(_onSetSignsAction),
     TypedReducer<AppState, SetSignsByTypeAction>(_onSetSignsByTypeAction),
+    TypedReducer<AppState, SetAboutAction>(_onSetAboutAction),
   ],
 );
 
@@ -34,5 +35,14 @@ AppState _onSetSignsByTypeAction(
 ) {
   return state.copyWith(
     signsByType: action.signs,
+  );
+}
+
+AppState _onSetAboutAction(
+  AppState state,
+  SetAboutAction action,
+) {
+  return state.copyWith(
+    about: action.about,
   );
 }

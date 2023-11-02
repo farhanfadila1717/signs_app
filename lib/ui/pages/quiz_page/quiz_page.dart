@@ -4,8 +4,9 @@ import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/models/quiz/answer.dart';
 import 'package:signs_app/core/models/quiz/question.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide AboutDialog;
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/core/router/navigation_destination.dart';
 import 'package:signs_app/ui/components/default_store_connector.dart';
 import 'package:signs_app/ui/components/primary_button.dart';
 import 'package:signs_app/ui/components/quiz_card.dart';
@@ -61,40 +62,47 @@ class _QuizPageState extends State<QuizPage> {
       ),
       floatingActionButton: _isPlay
           ? null
-          : Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: const BoxDecoration(
-                    color: Colors.blue,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Text(
-                      'i',
-                      style: GoogleFonts.paytoneOne(
-                        fontSize: 30,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+          : GestureDetector(
+              onTap: () => widget.dispatch(
+                const ShowModalBottomSheetAction(
+                  destination: AboutDialogDestination(),
                 ),
-                SizedBox(
-                  height: 44,
-                  width: 44,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
+              ),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: const BoxDecoration(
+                      color: Colors.blue,
                       shape: BoxShape.circle,
-                      border: Border.all(
-                        width: 2,
-                        color: Colors.white,
+                    ),
+                    child: Center(
+                      child: Text(
+                        'i',
+                        style: GoogleFonts.paytoneOne(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 44,
+                    width: 44,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          width: 2,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
       body: AnimatedSwitcher(
         duration: const Duration(milliseconds: 500),

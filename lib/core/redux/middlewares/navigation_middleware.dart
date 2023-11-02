@@ -39,6 +39,9 @@ class NavigationMiddleware extends MiddlewareClass<AppState> {
       case ShowSnackBarAction:
         _onShowSnackBarAction(store, action);
         break;
+      case ShowModalBottomSheetAction:
+        _onShowModalBottomSheetAction(store, action);
+        break;
     }
 
     next(action);
@@ -75,6 +78,15 @@ class NavigationMiddleware extends MiddlewareClass<AppState> {
       showDialog(
         context: context,
         barrierDismissible: action.barrierDismissible,
+        builder: action.destination.builder,
+      );
+
+  void _onShowModalBottomSheetAction(
+    Store<AppState> store,
+    ShowModalBottomSheetAction action,
+  ) =>
+      showModalBottomSheet(
+        context: context,
         builder: action.destination.builder,
       );
 

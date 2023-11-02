@@ -53,4 +53,6 @@ extension StringExtensions on String {
 
 extension BuildContextExtensions on BuildContext {
   Size get sizeOf => MediaQuery.sizeOf(this);
+
+  EdgeInsets get viewPadding => MediaQuery.viewPaddingOf(this);
 }
