@@ -11,12 +11,14 @@ class AudioControll extends StatelessWidget {
     required this.progressNotifier,
     required this.onPause,
     required this.onPlay,
+    this.color = Colors.orange,
   });
 
   final TtsState ttsState;
   final ValueNotifier<double> progressNotifier;
   final VoidCallback onPause;
   final VoidCallback onPlay;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +34,21 @@ class AudioControll extends StatelessWidget {
                     return FloatingActionButton(
                       heroTag: 'pause',
                       onPressed: onPause,
-                      child: const Icon(Icons.pause),
+                      backgroundColor: color,
+                      foregroundColor: Colors.white,
+                      child: const Icon(
+                        Icons.pause,
+                      ),
                     );
                   }
                   return FloatingActionButton(
                     heroTag: 'play',
                     onPressed: onPlay,
-                    child: const Icon(Icons.play_arrow),
+                    backgroundColor: color,
+                    foregroundColor: Colors.white,
+                    child: const Icon(
+                      Icons.play_arrow,
+                    ),
                   );
                 },
               ),
@@ -49,6 +59,9 @@ class AudioControll extends StatelessWidget {
                   builder: (_, value, __) {
                     return LinearProgressIndicator(
                       value: value,
+                      color: color,
+                      backgroundColor: color.withOpacity(.3),
+                      borderRadius: BorderRadius.circular(3),
                     );
                   },
                 ),

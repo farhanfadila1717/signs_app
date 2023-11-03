@@ -1,6 +1,7 @@
 import 'package:signs_app/core/models/about/about.dart';
 import 'package:signs_app/core/models/quiz/question.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/models/sign/type_sign.dart';
 
 class InitTtsAction {
   const InitTtsAction();
@@ -31,7 +32,7 @@ class SetSignsAction {
 }
 
 class SetSignsByTypeAction {
-  final Map<String, List<Sign>> signs;
+  final Map<TypeSign, List<Sign>> signs;
 
   const SetSignsByTypeAction(
     this.signs,

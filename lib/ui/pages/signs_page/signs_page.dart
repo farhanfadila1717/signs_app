@@ -79,10 +79,10 @@ class _SignsPageState extends State<SignsPage> {
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: item.color,
+                              color: item.color.toColor,
                               border: Border.all(
                                 width: 4,
-                                color: item.foregoundColor,
+                                color: item.foregroundColor.toColor,
                               ),
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -92,9 +92,9 @@ class _SignsPageState extends State<SignsPage> {
                             ),
                             child: Center(
                               child: Text(
-                                'Rambu ${item.displayedType}',
+                                'Rambu ${item.displayedName}',
                                 style: GoogleFonts.paytoneOne(
-                                  color: item.foregoundColor,
+                                  color: item.foregroundColor.toColor,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

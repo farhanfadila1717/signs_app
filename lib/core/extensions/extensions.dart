@@ -11,43 +11,17 @@ extension StoreExtensions on Store<AppState> {
 }
 
 extension StringExtensions on String {
-  Color get color {
-    switch (this) {
-      case 'WARNING':
-        return const Color(0xFFFFC635);
-      case 'FORBIDDEN':
-        return Colors.red;
-      case 'INSTRUCTION':
-        return const Color(0xFF000095);
-      case 'GUIDE':
-        return const Color(0xFF009A00);
+  String get lineBreak => replaceAll('\\n', '\n');
+
+  Color get toColor {
+    var hexColor = replaceAll("#", "");
+    if (hexColor.length == 6) {
+      hexColor = "FF$hexColor";
+    }
+    if (hexColor.length == 8) {
+      return Color(int.parse("0x$hexColor"));
     }
     return Colors.blue;
-  }
-
-  Color get foregoundColor {
-    switch (this) {
-      case 'FORBIDDEN':
-      case 'INSTRUCTION':
-      case 'GUIDE':
-        return Colors.white;
-    }
-    return Colors.black;
-  }
-
-  String get displayedType {
-    switch (this) {
-      case 'WARNING':
-        return 'Peringatan';
-      case 'FORBIDDEN':
-        return 'Larangan';
-      case 'INSTRUCTION':
-        return 'Perintah';
-      case 'GUIDE':
-        return 'Petunjuk';
-    }
-
-    return toLowerCase();
   }
 }
 

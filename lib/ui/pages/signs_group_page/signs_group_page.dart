@@ -3,13 +3,16 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/models/sign/type_sign.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:flutter/material.dart';
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/audio_controll.dart';
 import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
 
 class SignsGroup {
-  final String type;
+  final TypeSign type;
   final List<Sign> signs;
 
   SignsGroup(this.type, this.signs);
@@ -27,33 +30,72 @@ class SignsGroupPage extends StatefulActionMapper {
   State<SignsGroupPage> createState() => _SignsGroupPageState();
 }
 
-class _SignsGroupPageState extends State<SignsGroupPage> {
+class _SignsGroupPageState extends State<SignsGroupPage> with TtsMixin {
+  @override
+  void initState() {
+    super.initState();
+    final type = widget.signsGroup.type;
+    initTts('Rambu ${type.displayedName}\n${type.description}');
+  }
+
+  @override
+  void dispose() {
+    flutterTts.stop();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final signs = widget.signsGroup.signs;
+    final type = widget.signsGroup.type;
 
     return ScaffoldAnimation(
+      skyColor: type.color.toColor.withOpacity(.6),
+      bottomNavigationBar: AudioControll(
+        ttsState: ttsState,
+        progressNotifier: progressNotifier,
+        onPause: flutterTts.stop,
+        onPlay: playAudio,
+        color: type.color.toColor,
+      ),
       body: Scrollbar(
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-              floating: true,
               pinned: true,
-              expandedHeight: 150,
-              foregroundColor: Colors.black,
+              expandedHeight: 100,
+              foregroundColor: type.foregroundColor.toColor,
               backgroundColor: Colors.transparent,
-              systemOverlayStyle: SystemUiOverlayStyle.dark,
+              systemOverlayStyle: SystemUiOverlayStyle.light,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 background: SizedBox.expand(
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: Text(
-                      'Rambu Lalu Lintas\n${widget.signsGroup.type.displayedType}',
+                      'Rambu ${type.displayedName}',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.paytoneOne(
                         fontSize: 24,
+                        color: type.foregroundColor.toColor,
                       ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SliverPadding(
+              padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+              sliver: SliverToBoxAdapter(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(.8),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      type.description.lineBreak.trim(),
                     ),
                   ),
                 ),
@@ -99,7 +141,7 @@ class _SignsGroupPageState extends State<SignsGroupPage> {
                               width: double.infinity,
                               child: DecoratedBox(
                                 decoration: BoxDecoration(
-                                  color: item.type.color,
+                                  color: type.color.toColor,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Padding(
@@ -110,7 +152,7 @@ class _SignsGroupPageState extends State<SignsGroupPage> {
                                   child: Text(
                                     item.name,
                                     style: TextStyle(
-                                      color: item.type.foregoundColor,
+                                      color: type.foregroundColor.toColor,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),

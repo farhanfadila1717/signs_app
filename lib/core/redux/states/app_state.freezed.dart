@@ -19,7 +19,8 @@ mixin _$AppState {
   AuthenticationState get authState => throw _privateConstructorUsedError;
   List<Question> get questions => throw _privateConstructorUsedError;
   List<Sign> get signs => throw _privateConstructorUsedError;
-  Map<String, List<Sign>> get signsByType => throw _privateConstructorUsedError;
+  Map<TypeSign, List<Sign>> get signsByType =>
+      throw _privateConstructorUsedError;
   About? get about => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -36,7 +37,7 @@ abstract class $AppStateCopyWith<$Res> {
       {AuthenticationState authState,
       List<Question> questions,
       List<Sign> signs,
-      Map<String, List<Sign>> signsByType,
+      Map<TypeSign, List<Sign>> signsByType,
       About? about});
 
   $AuthenticationStateCopyWith<$Res> get authState;
@@ -78,7 +79,7 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
       signsByType: null == signsByType
           ? _value.signsByType
           : signsByType // ignore: cast_nullable_to_non_nullable
-              as Map<String, List<Sign>>,
+              as Map<TypeSign, List<Sign>>,
       about: freezed == about
           ? _value.about
           : about // ignore: cast_nullable_to_non_nullable
@@ -119,7 +120,7 @@ abstract class _$$AppStateImplCopyWith<$Res>
       {AuthenticationState authState,
       List<Question> questions,
       List<Sign> signs,
-      Map<String, List<Sign>> signsByType,
+      Map<TypeSign, List<Sign>> signsByType,
       About? about});
 
   @override
@@ -161,7 +162,7 @@ class __$$AppStateImplCopyWithImpl<$Res>
       signsByType: null == signsByType
           ? _value._signsByType
           : signsByType // ignore: cast_nullable_to_non_nullable
-              as Map<String, List<Sign>>,
+              as Map<TypeSign, List<Sign>>,
       about: freezed == about
           ? _value.about
           : about // ignore: cast_nullable_to_non_nullable
@@ -177,7 +178,7 @@ class _$AppStateImpl extends _AppState {
       {this.authState = const AuthenticationState(),
       final List<Question> questions = const [],
       final List<Sign> signs = const [],
-      final Map<String, List<Sign>> signsByType = const {},
+      final Map<TypeSign, List<Sign>> signsByType = const {},
       this.about})
       : _questions = questions,
         _signs = signs,
@@ -205,10 +206,10 @@ class _$AppStateImpl extends _AppState {
     return EqualUnmodifiableListView(_signs);
   }
 
-  final Map<String, List<Sign>> _signsByType;
+  final Map<TypeSign, List<Sign>> _signsByType;
   @override
   @JsonKey()
-  Map<String, List<Sign>> get signsByType {
+  Map<TypeSign, List<Sign>> get signsByType {
     if (_signsByType is EqualUnmodifiableMapView) return _signsByType;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_signsByType);
@@ -258,7 +259,7 @@ abstract class _AppState extends AppState {
       {final AuthenticationState authState,
       final List<Question> questions,
       final List<Sign> signs,
-      final Map<String, List<Sign>> signsByType,
+      final Map<TypeSign, List<Sign>> signsByType,
       final About? about}) = _$AppStateImpl;
   const _AppState._() : super._();
 
@@ -269,7 +270,7 @@ abstract class _AppState extends AppState {
   @override
   List<Sign> get signs;
   @override
-  Map<String, List<Sign>> get signsByType;
+  Map<TypeSign, List<Sign>> get signsByType;
   @override
   About? get about;
   @override

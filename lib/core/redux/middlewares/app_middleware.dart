@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:signs_app/core/extensions/extensions.dart';
 import 'package:signs_app/core/models/about/about.dart';
-import 'package:signs_app/core/models/quiz/answer.dart';
 import 'package:signs_app/core/models/quiz/question.dart';
 import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/models/sign/type_sign.dart';
 import 'package:signs_app/core/redux/actions/app_action.dart';
 import 'package:signs_app/core/redux/states/app_state.dart';
 import 'package:signs_app/core/router/router.dart';
@@ -81,27 +81,43 @@ class AppMiddleware extends MiddlewareClass<AppState> {
     GetSignsAction action,
   ) async {
     try {
-      final collection = firestore.collection('signs');
+      final signsCollection = firestore.collection('signs');
+      final typesCollection = firestore.collection('types');
 
-      final response = await collection.get();
+      // for (var i in upload) {
+      //   signsCollection
+      //       .doc(
+      //           '${i.type}_${i.name.replaceAll(" ", "_")}_${generateRandomString(3)}')
+      //       .set(
+      //         i.toJson(),
+      //       );
+      // }
+
+      final responseSigns = await signsCollection.get();
+      final responseType = await typesCollection.get();
 
       List<Sign> signs = [];
-      List<String> types = [];
-      for (var i in response.docs) {
+      List<TypeSign> types = [];
+
+      for (var i in responseType.docs) {
+        types.add(TypeSign.fromJson(i.data()));
+      }
+
+      for (var i in responseSigns.docs) {
         final sign = Sign.fromJson(i.data());
         signs.add(sign);
-
-        if (!types.contains(sign.type)) {
-          types.add(sign.type);
-        }
       }
 
       signs.sort((a, b) => a.name.compareTo(b.name));
 
-      Map<String, List<Sign>> signsByType = {};
+      Map<TypeSign, List<Sign>> signsByType = {};
 
       for (var i in types) {
-        final findSignsByType = signs.where((e) => e.type.contains(i)).toList();
+        final findSignsByType = signs
+            .where(
+              (e) => e.type.contains(i.id),
+            )
+            .toList();
 
         signsByType[i] = findSignsByType;
       }
@@ -150,219 +166,35 @@ String generateRandomString(int length) {
   return temp;
 }
 
-const upload = <Question>[
-  Question(
-    no: 21,
-    level: 3,
-    question: 'Rambu lalu lintas bermanfaat untuk?',
-    image: '',
-    answers: [
-      Answer(
-        text: 'Hiasan jalan',
-      ),
-      Answer(
-        text: 'Menarik perhatian',
-      ),
-      Answer(
-        text: 'Ketertiban lalu lintas',
-        correct: true,
-      ),
-      Answer(
-        text: 'Penerangan jalan',
-      ),
-    ],
-  ),
-  Question(
-    no: 22,
-    level: 3,
-    question: 'Fungsi dari lampu lalu lintas adalah?',
-    image: '',
-    answers: [
-      Answer(
-        text: 'Tempat penyebrangan jalan',
-      ),
-      Answer(
-        text: 'Tanda untuk melarang pergerakan lalu lintas tertentu',
-      ),
-      Answer(
-        text: 'Memberi petunjuk tentang arah yang harus ditempuh',
-      ),
-      Answer(
-        text: 'Sebagai pengatur arus kendaraan pada persimpangan jalan',
-        correct: true,
-      ),
-    ],
-  ),
-  Question(
-    no: 23,
-    level: 3,
-    question: 'Rambu berwarna merah menunjukan rambu?',
+final upload = [
+  Sign(
+    name: 'Parkir',
     image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_larangan.png?alt=media&token=c965c0f5-1c76-42ba-979b-f31f66e9bb25&_gl=1*13j1wk4*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTY2MDQuNDguMC4w',
-    answers: [
-      Answer(
-        text: 'Larangan',
-        correct: true,
-      ),
-      Answer(
-        text: 'Petunjuk',
-      ),
-      Answer(
-        text: 'Peringatan',
-      ),
-      Answer(
-        text: 'Perintah',
-      ),
-    ],
+        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_parkir_2.png?alt=media&token=c4cbe941-59a7-41b3-ac61-6db066c5f9a9&_gl=1*wss453*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5OTAxNjcyOS4xMDQuMS4xNjk5MDE3MTk3LjQzLjAuMA..',
+    description: '''
+Rambu dengan warna dasar biru serta piktogram berupa huruf P berwarna putih ini termasuk rambu petunjuk. Digunakan untuk memberikan informasi mengenai lokasi fasilitas parkir.
+'''
+        .trim(),
+    type: 'INSTRUCTION',
   ),
-  Question(
-    no: 24,
-    level: 3,
-    question: 'Rambu berwarna kuning menunjukan rambu?',
+  Sign(
+    name: 'Bundaran',
     image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_peringatan.png?alt=media&token=54def03e-b8c5-4bbf-8169-b750187d2495&_gl=1*1u4hyws*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTY3ODUuNDkuMC4w',
-    answers: [
-      Answer(
-        text: 'Larangan',
-      ),
-      Answer(
-        text: 'Petunjuk',
-      ),
-      Answer(
-        text: 'Peringatan',
-        correct: true,
-      ),
-      Answer(
-        text: 'Perintah',
-      ),
-    ],
+        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_bundaran_2.png?alt=media&token=5b126304-e469-4e29-9ede-87ac507f764b&_gl=1*g2uxh7*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5OTAxNjcyOS4xMDQuMS4xNjk5MDE3Mjc3LjUwLjAuMA..',
+    description: '''
+Rambu lalu lintas ini menyatakan perintah kepada pengguna jalan untuk mengikuti arah yang ditunjukkan saat memasuki bundaran.
+'''
+        .trim(),
+    type: 'INSTRUCTION',
   ),
-  Question(
-    no: 25,
-    level: 3,
-    question: 'Jika mau ke tebet, kita harus mengambil arah?',
+  Sign(
+    name: 'Rumah Sakit',
     image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_petunjuk_jalan_2.png?alt=media&token=c2ca94d8-9b69-43b1-b43a-267f71e563ed&_gl=1*ulz7e7*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTU4NzUuNjAuMC4w',
-    answers: [
-      Answer(
-        text: 'Kanan',
-      ),
-      Answer(
-        text: 'Kiri',
-        correct: true,
-      ),
-      Answer(
-        text: 'Lurus',
-      ),
-      Answer(
-        text: 'Putar balik',
-      ),
-    ],
-  ),
-  Question(
-    no: 26,
-    level: 3,
-    question: 'Manakah rambu yang menunjukkan rambu petunjuk jurusan',
-    image: '',
-    answers: [
-      Answer(
-        image:
-            'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_parkir.png?alt=media&token=fa72f0c2-5d16-4458-8588-fe80fec5071d&_gl=1*yxjezg*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTQzNzUuNjAuMC4w',
-      ),
-      Answer(
-        image:
-            'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_tempat_menyebrang.png?alt=media&token=9608e50f-b9fa-404f-ae71-0a6ba8738f45&_gl=1*p0ut4k*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTQ0OTUuNTQuMC4w',
-      ),
-      Answer(
-        image:
-            'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_petunjuk_jalan_2.png?alt=media&token=c2ca94d8-9b69-43b1-b43a-267f71e563ed&_gl=1*ulz7e7*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTU4NzUuNjAuMC4w',
-        correct: true,
-      ),
-    ],
-  ),
-  Question(
-    no: 27,
-    level: 3,
-    question:
-        'Rambu lalu lintas yang ditunjukan kepada pengguna jalan agar berhati-hati biasanya berwarna?',
-    image: '',
-    answers: [
-      Answer(
-        text: 'Merah',
-      ),
-      Answer(
-        text: 'Hijau',
-      ),
-      Answer(
-        text: 'Kuning',
-        correct: true,
-      ),
-      Answer(
-        text: 'Biru',
-      ),
-    ],
-  ),
-  Question(
-    no: 28,
-    level: 3,
-    question: 'Arti rambu diatas adalah?',
-    image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_30km.png?alt=media&token=15e2e1ad-7da7-4fe7-baf6-6a7c432f8e5f&_gl=1*oak8dw*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTcwNTMuNTUuMC4w',
-    answers: [
-      Answer(
-        text: 'Kecepatan maksimum yang diwajibkan',
-      ),
-      Answer(
-        text: 'Kecepatan minimum yang diwajibkan',
-        correct: true,
-      ),
-      Answer(
-        text: 'Panjang jalan yang akan dilewati',
-      ),
-    ],
-  ),
-  Question(
-    no: 29,
-    level: 3,
-    question:
-        'Rambu larangan menunjukkan perbuatan yang dilarang dilakukan oleh pengguna jalan. Warna dasar dari rambu jenis ini adalah putih dan lambang atau tulisan berwarna hitam atau merah. Contohnya adalah?',
-    image: '',
-    answers: [
-      Answer(
-        image:
-            'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_dilarang_parkir.png?alt=media&token=9749985e-9b25-4290-8c5b-c97baba36e43&_gl=1*hkwhgy*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTczMTMuNTYuMC4w',
-        correct: true,
-      ),
-      Answer(
-        image:
-            'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_tempat_menyebrang.png?alt=media&token=9608e50f-b9fa-404f-ae71-0a6ba8738f45&_gl=1*p0ut4k*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTQ0OTUuNTQuMC4w',
-      ),
-      Answer(
-        image:
-            'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_jalan_licin_2.png?alt=media&token=1ec1b9c2-93c5-442c-9aea-271fcd3a19c3&_gl=1*flxr07*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5ODg5MzQwNy45OC4xLjE2OTg4OTczNTcuMTIuMC4w',
-      ),
-    ],
-  ),
-  Question(
-    no: 30,
-    level: 3,
-    question:
-        'Berapakah maksimal jumlah orang yang berada dalam satu sepeda motor?',
-    image: '',
-    answers: [
-      Answer(
-        text: '1',
-      ),
-      Answer(
-        text: '2',
-        correct: true,
-      ),
-      Answer(
-        text: '3',
-      ),
-      Answer(
-        text: '4',
-      ),
-    ],
+        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_rumah_sakit_2.png?alt=media&token=7e6d582d-5eda-49a4-bf7a-a6d2b71880fb&_gl=1*zzefyb*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5OTAxNjcyOS4xMDQuMS4xNjk5MDE3NDg5LjM3LjAuMA..',
+    description: '''
+Rambu dengan warna dasar biru serta piktogram berupa tempat tidur dan palang merah di pojok kanan atasnya ini termasuk rambu petunjuk. Digunakan untuk memberikan informasi mengenai salah satu lokasi pelayanan umum, yaitu rumah sakit.
+'''
+        .trim(),
+    type: 'INSTRUCTION',
   ),
 ];

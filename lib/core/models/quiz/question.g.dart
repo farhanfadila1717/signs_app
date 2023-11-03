@@ -22,6 +22,6 @@ Map<String, dynamic> _$$QuestionImplToJson(_$QuestionImpl instance) =>
       'no': instance.no,
       'level': instance.level,
       'question': instance.question,
-      'answers': instance.answers.map((e) => e.toJson()).toList(),
+      'answers': instance.answers,
       'image': instance.image,
     };
