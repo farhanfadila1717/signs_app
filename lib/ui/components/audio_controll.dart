@@ -47,7 +47,7 @@ class AudioControll extends StatelessWidget {
                     backgroundColor: color,
                     foregroundColor: Colors.white,
                     child: const Icon(
-                      Icons.play_arrow,
+                      Icons.music_note,
                     ),
                   );
                 },
