@@ -11,7 +11,6 @@ enum TtsState {
 
 mixin TtsMixin<T extends StatefulActionMapper> on State<T> {
   late final ValueNotifier<String> speakingWord;
-  late final ValueNotifier<double> progressNotifier;
 
   TtsState ttsState = TtsState.stopped;
   int speakIndex = 0;
@@ -21,7 +20,6 @@ mixin TtsMixin<T extends StatefulActionMapper> on State<T> {
 
   void initTts(String text) {
     speakingWord = ValueNotifier('');
-    progressNotifier = ValueNotifier(0.0);
     rawText = text;
     listenTts();
   }
@@ -41,16 +39,6 @@ mixin TtsMixin<T extends StatefulActionMapper> on State<T> {
       (_, start, end, word) {
         speakIndex = end;
         speakingWord.value = word;
-        int count = end;
-
-        for (int i = 0; i < paraghraphIndex; i++) {
-          if (i == paraghraphIndex) {
-            continue;
-          }
-          count += paragrapghLength(i);
-        }
-
-        progressNotifier.value = (count / length).clamp(0.0, 1.0);
       },
     );
   }

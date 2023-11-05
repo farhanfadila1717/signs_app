@@ -8,6 +8,7 @@ class ScaffoldAnimation extends StatelessWidget {
     this.body,
     this.bottomNavigationBar,
     this.floatingActionButton,
+    this.floatingActionButtonLocation,
     this.skyColor,
   });
 
@@ -15,6 +16,7 @@ class ScaffoldAnimation extends StatelessWidget {
   final Widget? body;
   final Widget? bottomNavigationBar;
   final Widget? floatingActionButton;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
   final Color? skyColor;
 
   @override
@@ -88,6 +90,7 @@ class ScaffoldAnimation extends StatelessWidget {
           floatingActionButton: floatingActionButton,
           bottomNavigationBar: bottomNavigationBar,
           backgroundColor: Colors.transparent,
+          floatingActionButtonLocation: floatingActionButtonLocation,
         ),
       ],
     );

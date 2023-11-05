@@ -142,9 +142,10 @@ class _DetailSignPageState extends State<DetailSignPage> with TtsMixin {
           ),
         ],
       ),
-      bottomNavigationBar: AudioControll(
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: AudioControll(
         ttsState: ttsState,
-        progressNotifier: progressNotifier,
+        speakingWord: speakingWord,
         onPause: flutterTts.stop,
         onPlay: playAudio,
       ),

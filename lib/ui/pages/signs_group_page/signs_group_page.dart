@@ -51,9 +51,10 @@ class _SignsGroupPageState extends State<SignsGroupPage> with TtsMixin {
 
     return ScaffoldAnimation(
       skyColor: type.color.toColor.withOpacity(.6),
-      bottomNavigationBar: AudioControll(
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: AudioControll(
         ttsState: ttsState,
-        progressNotifier: progressNotifier,
+        speakingWord: speakingWord,
         onPause: flutterTts.stop,
         onPlay: playAudio,
         color: type.color.toColor,

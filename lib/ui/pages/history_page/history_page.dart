@@ -64,9 +64,10 @@ class _HistoryPageState extends State<HistoryPage> with TtsMixin {
           ],
         ),
       ),
-      bottomNavigationBar: AudioControll(
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: AudioControll(
         ttsState: ttsState,
-        progressNotifier: progressNotifier,
+        speakingWord: speakingWord,
         onPause: flutterTts.stop,
         onPlay: playAudio,
       ),
