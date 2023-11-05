@@ -1,0 +1,2772 @@
+1 lib/ui/modals/loading_dialog.dart
+
+import 'package:flutter/material.dart';
+
+class LoadingDialog extends StatelessWidget {
+const LoadingDialog({super.key});
+
+@override
+Widget build(BuildContext context) {
+return Dialog(
+shape: RoundedRectangleBorder(
+borderRadius: BorderRadius.circular(16),
+),
+child: const Padding(
+padding: EdgeInsets.only(top: 20, bottom: 20),
+child: Row(
+mainAxisSize: MainAxisSize.min,
+mainAxisAlignment: MainAxisAlignment.center,
+children: [
+SizedBox.square(
+dimension: 24,
+child: CircularProgressIndicator(),
+),
+SizedBox(width: 16),
+Text(
+'Mohon tunggu',
+style: TextStyle(
+fontSize: 14,
+fontWeight: FontWeight.bold,
+),
+),
+],
+),
+),
+);
+}
+}
+
+
+2 lib/ui/modals/info_dialog.dart
+
+import 'package:flutter/material.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+
+class InfoDialog extends StatelessWidget {
+const InfoDialog({
+super.key,
+required this.title,
+required this.message,
+required this.onTap,
+required this.onCancel,
+});
+
+final String title;
+final String message;
+final VoidCallback? onTap;
+final VoidCallback? onCancel;
+
+@override
+Widget build(BuildContext context) {
+return Dialog(
+shape: RoundedRectangleBorder(
+borderRadius: BorderRadius.circular(16),
+),
+child: Stack(
+children: [
+Positioned(
+right: 20,
+top: 20,
+child: GestureDetector(
+onTap: () {
+Navigator.pop(context);
+onCancel?.call();
+},
+child: const Icon(Icons.close),
+),
+),
+Padding(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.start,
+mainAxisSize: MainAxisSize.min,
+children: [
+Text(
+title,
+style: const TextStyle(
+fontSize: 16,
+fontWeight: FontWeight.bold,
+),
+),
+const SizedBox(height: 10),
+Text(
+message,
+textAlign: TextAlign.center,
+),
+const SizedBox(height: 16),
+SizedBox(
+height: 45,
+width: double.infinity,
+child: PrimaryButton(
+text: 'Oke',
+onTap: () {
+Navigator.pop(context);
+onTap?.call();
+},
+),
+),
+],
+),
+),
+],
+),
+);
+}
+}
+
+
+3 lib/ui/modals/about_dialog.dart
+
+import 'package:just_audio/just_audio.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/app_action.dart';
+import 'package:signs_app/ui/components/default_store_connector.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:flutter/material.dart';
+
+class AboutDialog extends StatefulActionMapper {
+const AboutDialog({super.key});
+
+@override
+State<AboutDialog> createState() => _AboutDialogState();
+}
+
+class _AboutDialogState extends State<AboutDialog> {
+late final AudioPlayer _player;
+
+@override
+void initState() {
+super.initState();
+_player = AudioPlayer();
+final about = widget.store.state.about;
+if (about == null) {
+widget.dispatch(
+const GetAboutAction(),
+);
+} else {
+_initAudio(about.audio);
+}
+}
+
+void _initAudio(String url) async {
+try {
+await _player.setUrl(url);
+} catch (ex) {
+debugPrint(ex.toString());
+}
+}
+
+@override
+void dispose() {
+_player.dispose();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+return SafeArea(
+child: DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.blue.shade100,
+),
+child: DefaultStoreConnector(
+onDidChange: (previousState, state) async {
+if (previousState?.about?.audio != state.about?.audio) {
+if (state.about?.audio == null) return;
+await _player.setUrl(state.about!.audio);
+}
+},
+builder: (_, state) {
+final about = state.about;
+
+if (about == null) {
+return const SizedBox(
+height: 200,
+width: double.infinity,
+child: CircularProgressIndicator.adaptive(),
+);
+}
+
+return Padding(
+padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+child: Column(
+mainAxisSize: MainAxisSize.min,
+crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+Row(
+children: [
+const Expanded(
+child: Text(
+'Tentang',
+style: TextStyle(
+fontSize: 16,
+fontWeight: FontWeight.bold,
+),
+),
+),
+const SizedBox(width: 20),
+if (about.audio.isNotEmpty)
+StreamBuilder<PlayerState>(
+stream: _player.playerStateStream,
+builder: (context, snapshot) {
+final playerState = snapshot.data;
+final processingState =
+playerState?.processingState;
+final playing = playerState?.playing;
+if (processingState == ProcessingState.loading ||
+processingState == ProcessingState.buffering) {
+return const SizedBox.square(
+dimension: 24,
+child: CircularProgressIndicator(),
+);
+} else if (playing != true) {
+return FloatingActionButton.small(
+onPressed: _player.play,
+child: const Icon(Icons.play_arrow),
+);
+} else if (processingState !=
+ProcessingState.completed) {
+return FloatingActionButton.small(
+onPressed: _player.pause,
+child: const Icon(Icons.pause),
+);
+} else {
+return FloatingActionButton.small(
+onPressed: () => _player.seek(Duration.zero),
+child: const Icon(Icons.replay),
+);
+}
+},
+),
+],
+),
+const SizedBox(height: 16),
+_NameCard(
+type: 'Dibuat oleh',
+name: about.creator,
+),
+const SizedBox(height: 10),
+_NameCard(
+type: 'Dosen materi',
+name: about.dospem1,
+),
+const SizedBox(height: 10),
+_NameCard(
+type: 'Dosen teknik',
+name: about.dospem2,
+),
+const SizedBox(height: 20),
+SizedBox(
+height: 50,
+width: double.infinity,
+child: PrimaryButton(
+text: 'Oke',
+onTap: () => Navigator.pop(context),
+),
+),
+],
+),
+);
+},
+),
+),
+);
+}
+}
+
+class _NameCard extends StatelessWidget {
+const _NameCard({required this.name, required this.type});
+
+final String name;
+final String type;
+
+@override
+Widget build(BuildContext context) {
+return DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.black12,
+borderRadius: BorderRadius.circular(6),
+),
+child: Padding(
+padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+child: Row(
+children: [
+Expanded(
+child: Text(type),
+),
+const SizedBox(width: 10),
+Expanded(
+flex: 2,
+child: Text(
+name,
+textAlign: TextAlign.end,
+),
+),
+],
+),
+),
+);
+}
+}
+
+
+4 lib/ui/components/text_field.dart
+
+import 'package:flutter/material.dart';
+
+class DefaultTextField extends StatelessWidget {
+const DefaultTextField({
+super.key,
+required this.controller,
+required this.title,
+required this.hint,
+this.margin,
+});
+
+final TextEditingController controller;
+final String title;
+final String hint;
+final EdgeInsetsGeometry? margin;
+
+@override
+Widget build(BuildContext context) {
+return Padding(
+padding: margin ?? EdgeInsets.zero,
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+Text(
+title,
+style: const TextStyle(
+fontSize: 12,
+),
+),
+const SizedBox(height: 8),
+TextField(
+controller: controller,
+decoration: InputDecoration(
+border: const OutlineInputBorder(),
+hintText: hint,
+),
+),
+],
+),
+);
+}
+}
+
+class PasswordField extends StatefulWidget {
+const PasswordField({
+super.key,
+required this.controller,
+this.margin,
+});
+
+final TextEditingController controller;
+final EdgeInsetsGeometry? margin;
+
+@override
+State<PasswordField> createState() => _PasswordFieldState();
+}
+
+class _PasswordFieldState extends State<PasswordField> {
+bool _isObsecure = true;
+
+@override
+Widget build(BuildContext context) {
+return Padding(
+padding: widget.margin ?? EdgeInsets.zero,
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+const Text(
+'Password',
+style: TextStyle(
+fontSize: 12,
+),
+),
+const SizedBox(height: 8),
+TextField(
+controller: widget.controller,
+obscureText: _isObsecure,
+decoration: InputDecoration(
+border: const OutlineInputBorder(),
+hintText: 'Masukkan password',
+suffixIcon: GestureDetector(
+onTap: () {
+setState(() {
+_isObsecure = !_isObsecure;
+});
+},
+child: Visibility(
+visible: !_isObsecure,
+replacement: const Icon(Icons.visibility_off),
+child: const Icon(Icons.visibility),
+),
+),
+),
+),
+],
+),
+);
+}
+}
+
+
+5 lib/ui/components/audio_controll.dart
+
+import 'package:flutter/material.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
+
+import 'bottom_area_bar.dart';
+
+class AudioControll extends StatelessWidget {
+const AudioControll({
+super.key,
+required this.ttsState,
+required this.progressNotifier,
+required this.onPause,
+required this.onPlay,
+this.color = Colors.orange,
+});
+
+final TtsState ttsState;
+final ValueNotifier<double> progressNotifier;
+final VoidCallback onPause;
+final VoidCallback onPlay;
+final Color color;
+
+@override
+Widget build(BuildContext context) {
+return BottomAreaBar(
+children: [
+SizedBox(
+width: context.sizeOf.width,
+child: Row(
+children: [
+Builder(
+builder: (_) {
+if (ttsState == TtsState.playing) {
+return FloatingActionButton(
+heroTag: 'pause',
+onPressed: onPause,
+backgroundColor: color,
+foregroundColor: Colors.white,
+child: const Icon(
+Icons.pause,
+),
+);
+}
+return FloatingActionButton(
+heroTag: 'play',
+onPressed: onPlay,
+backgroundColor: color,
+foregroundColor: Colors.white,
+child: const Icon(
+Icons.play_arrow,
+),
+);
+},
+),
+const SizedBox(width: 10),
+Expanded(
+child: ValueListenableBuilder(
+valueListenable: progressNotifier,
+builder: (_, value, __) {
+return LinearProgressIndicator(
+value: value,
+color: color,
+backgroundColor: color.withOpacity(.3),
+borderRadius: BorderRadius.circular(3),
+);
+},
+),
+),
+],
+),
+),
+],
+);
+}
+}
+
+
+6 lib/ui/components/primary_button.dart
+
+import 'package:flutter/material.dart';
+
+class PrimaryButton extends StatelessWidget {
+const PrimaryButton({
+super.key,
+required this.text,
+this.color,
+this.foregroundColor,
+this.onTap,
+this.style,
+this.borderRadius,
+this.strokeWidth,
+});
+
+final String text;
+final Color? color;
+final Color? foregroundColor;
+final VoidCallback? onTap;
+final TextStyle? style;
+final double? borderRadius;
+final double? strokeWidth;
+
+@override
+Widget build(BuildContext context) {
+return ElevatedButton(
+onPressed: onTap,
+style: ButtonStyle(
+backgroundColor: MaterialStateProperty.resolveWith((states) {
+if (states.contains(MaterialState.disabled)) {
+return Colors.black12;
+}
+return color;
+}),
+elevation: const MaterialStatePropertyAll(0.0),
+shape: MaterialStatePropertyAll(
+RoundedRectangleBorder(
+borderRadius: BorderRadius.circular(10),
+side: BorderSide(
+color: foregroundColor ?? Colors.black,
+width: strokeWidth ?? 3,
+),
+),
+),
+),
+child: Text(
+text,
+style: (style ?? TextStyle(color: foregroundColor)),
+),
+);
+}
+}
+
+
+7 lib/ui/components/quiz_card.dart
+
+import 'dart:async';
+
+import 'package:after_layout/after_layout.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:signs_app/core/models/quiz/answer.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+
+class QuestionCard extends StatefulActionMapper {
+const QuestionCard({
+super.key,
+required this.question,
+required this.answers,
+required this.onAnswer,
+required this.onNext,
+});
+
+final Question question;
+final Map<Question, Answer> answers;
+final ValueChanged<Answer> onAnswer;
+final VoidCallback onNext;
+
+@override
+State<QuestionCard> createState() => _QuestionCardState();
+}
+
+class _QuestionCardState extends State<QuestionCard> with AfterLayoutMixin {
+@override
+FutureOr<void> afterFirstLayout(BuildContext context) {
+_playAudio();
+}
+
+void _playAudio() {
+String voiceText =
+'${widget.question.question}. Pilihan jawabannya adalah ';
+
+for (int i = 0; i < widget.question.answers.length; i++) {
+final text = widget.question.answers[i].text;
+if (text.isNotEmpty) voiceText += '$text\n';
+}
+widget.getIt.get<FlutterTts>().speak(voiceText);
+}
+
+FlutterTts get flutterTts => widget.getIt.get<FlutterTts>();
+
+void _onSelectAnswer(Answer answer, [String text = '']) {
+widget.onAnswer(answer);
+flutterTts.speak('Anda memilih ${answer.text} $text');
+}
+
+@override
+void dispose() {
+flutterTts.stop();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+final question = widget.question;
+final hasAnswer = widget.answers.containsKey(question);
+return DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.white70,
+borderRadius: BorderRadius.circular(10),
+),
+child: SizedBox(
+width: double.infinity,
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+const SizedBox(height: 20),
+if (question.image.isNotEmpty)
+Container(
+height: 100,
+width: double.infinity,
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(20),
+image: DecorationImage(
+image: NetworkImage(question.image),
+),
+),
+),
+const SizedBox(height: 16),
+if (question.question.isNotEmpty)
+Padding(
+padding: const EdgeInsets.symmetric(
+horizontal: 16,
+),
+child: Center(
+child: Text(
+question.question,
+textAlign: TextAlign.center,
+style: const TextStyle(
+fontSize: 18,
+fontWeight: FontWeight.bold,
+),
+),
+),
+),
+const SizedBox(height: 16),
+...List.generate(
+question.answers.length,
+(index) {
+final item = question.answers[index];
+final hasImage = item.image.isNotEmpty;
+final hasText = item.text.isNotEmpty;
+bool selected = false;
+
+if (hasAnswer) {
+selected = widget.answers[question] == item;
+}
+
+return Padding(
+padding:
+const EdgeInsets.only(bottom: 10, left: 16, right: 16),
+child: GestureDetector(
+onTap: () => _onSelectAnswer(
+item,
+hasImage && !hasText ? 'Gambar ke ${index + 1}' : '',
+),
+child: Padding(
+padding: const EdgeInsets.symmetric(vertical: 6),
+child: SizedBox(
+width: double.infinity,
+child: Visibility(
+visible: !hasImage,
+replacement: Row(
+children: [
+Container(
+height: 24,
+width: 24,
+decoration: BoxDecoration(
+border: Border.all(),
+color: selected ? Colors.amber : null,
+shape: BoxShape.circle,
+),
+),
+const SizedBox(width: 10),
+Column(
+crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+if (hasImage) ...[
+Image.network(
+item.image,
+height: 60,
+),
+const SizedBox(height: 6),
+],
+if (hasText)
+Text(
+item.text,
+style: TextStyle(
+fontWeight: selected
+? FontWeight.bold
+: FontWeight.normal,
+),
+),
+],
+),
+],
+),
+child: Row(
+children: [
+Container(
+height: 24,
+width: 24,
+decoration: BoxDecoration(
+border: Border.all(),
+color: selected ? Colors.amber : null,
+shape: BoxShape.circle,
+),
+),
+const SizedBox(width: 10),
+Expanded(
+child: Text(
+item.text,
+style: TextStyle(
+fontWeight: selected
+? FontWeight.bold
+: FontWeight.normal,
+),
+),
+),
+],
+),
+),
+),
+),
+),
+)
+.animate(
+key: ValueKey(item),
+delay: Duration(milliseconds: 200 * index),
+)
+.fadeIn();
+},
+),
+Padding(
+padding: const EdgeInsets.fromLTRB(16, 30, 16, 16),
+child: SizedBox(
+height: 50,
+width: double.infinity,
+child: PrimaryButton(
+text: 'Selanjutnya',
+onTap: hasAnswer ? widget.onNext : null,
+),
+),
+),
+],
+),
+),
+);
+}
+}
+
+
+8 lib/ui/components/type_chip.dart
+
+import 'package:flutter/material.dart';
+
+class TypeChip extends StatelessWidget {
+const TypeChip({
+super.key,
+required this.type,
+});
+
+final String type;
+
+@override
+Widget build(BuildContext context) {
+return Align(
+alignment: Alignment.topLeft,
+child: DecoratedBox(
+decoration: BoxDecoration(
+color: type.color,
+borderRadius: BorderRadius.circular(4),
+),
+child: Padding(
+padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+child: Text(
+type.displayedType,
+style: TextStyle(
+fontWeight: FontWeight.bold,
+color: type.foregoundColor,
+),
+),
+),
+),
+);
+}
+}
+
+extension on String {
+Color get color {
+switch (this) {
+case 'WARNING':
+return const Color(0xFFFFC635);
+case 'FORBIDDEN':
+return Colors.red;
+}
+return Colors.blue;
+}
+
+Color get foregoundColor {
+switch (this) {
+case 'FORBIDDEN':
+return Colors.white;
+}
+return Colors.black;
+}
+
+String get displayedType {
+switch (this) {
+case 'WARNING':
+return 'Peringatan';
+case 'FORBIDDEN':
+return 'Larangan';
+}
+
+return toLowerCase();
+}
+}
+
+
+9 lib/ui/components/tts_mixin.dart
+
+import 'dart:convert';
+
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+enum TtsState {
+playing,
+stopped,
+}
+
+mixin TtsMixin<T extends StatefulActionMapper> on State<T> {
+late final ValueNotifier<String> speakingWord;
+late final ValueNotifier<double> progressNotifier;
+
+TtsState ttsState = TtsState.stopped;
+int speakIndex = 0;
+
+int paraghraphIndex = 0;
+String rawText = '';
+
+void initTts(String text) {
+speakingWord = ValueNotifier('');
+progressNotifier = ValueNotifier(0.0);
+rawText = text;
+listenTts();
+}
+
+void listenTts() {
+flutterTts.setStartHandler(() {
+ttsState = TtsState.playing;
+setState(() {});
+});
+
+flutterTts.setCancelHandler(() {
+ttsState = TtsState.stopped;
+setState(() {});
+});
+
+flutterTts.setProgressHandler(
+(_, start, end, word) {
+speakIndex = end;
+speakingWord.value = word;
+int count = end;
+
+for (int i = 0; i < paraghraphIndex; i++) {
+if (i == paraghraphIndex) {
+continue;
+}
+count += paragrapghLength(i);
+}
+
+progressNotifier.value = (count / length).clamp(0.0, 1.0);
+},
+);
+}
+
+int paragrapghLength(int index) => texts[index].length;
+
+int get length {
+int count = 0;
+for (var i in texts) {
+count += i.length;
+}
+
+return count;
+}
+
+List<String> get texts {
+LineSplitter ls = const LineSplitter();
+
+final texts = ls.convert(rawText);
+
+texts.removeWhere((e) => e.trim().isEmpty);
+
+return texts;
+}
+
+void playAudio() async {
+if (paraghraphIndex == texts.length) {
+setState(() {
+ttsState = TtsState.stopped;
+paraghraphIndex = 0;
+speakIndex = 0;
+speakingWord.value = '';
+});
+return;
+}
+
+final text = texts[paraghraphIndex];
+final speakText = text.substring(speakIndex, text.length);
+
+final result = await flutterTts.speak(speakText);
+
+_nextParagraph(result);
+}
+
+void _nextParagraph(int result) {
+if (result == 1) {
+paraghraphIndex++;
+speakIndex = 0;
+playAudio();
+}
+}
+
+FlutterTts get flutterTts => widget.getIt.get<FlutterTts>();
+}
+
+
+10 lib/ui/components/user_widget.dart
+
+import 'package:signs_app/core/models/authentication/user.dart';
+import 'package:signs_app/ui/components/default_store_connector.dart';
+import 'package:flutter/material.dart';
+
+typedef UserBuilder = Widget Function(BuildContext, User);
+
+class UserWidget extends StatelessWidget {
+const UserWidget({
+super.key,
+required this.builder,
+this.replacement,
+});
+
+final UserBuilder builder;
+final Widget? replacement;
+
+@override
+Widget build(BuildContext context) {
+return DefaultStoreConnector(
+builder: (_, state) {
+if (state.authState.isLoggedIn) {
+return builder(context, state.authState.user!);
+}
+return replacement ?? const SizedBox.shrink();
+},
+);
+}
+}
+
+
+11 lib/ui/components/circle_name.dart
+
+import 'package:flutter/material.dart';
+
+class CircleName extends StatelessWidget {
+const CircleName({
+super.key,
+required this.name,
+this.size = 46,
+this.fontSize = 20,
+this.color = Colors.orange,
+this.foregroundColor = Colors.white,
+});
+
+final String name;
+final double size;
+final double fontSize;
+final Color color;
+final Color foregroundColor;
+
+@override
+Widget build(BuildContext context) {
+return SizedBox.square(
+dimension: size,
+child: DecoratedBox(
+decoration: BoxDecoration(
+shape: BoxShape.circle,
+border: Border.all(
+width: 5,
+color: Colors.red,
+),
+color: color,
+),
+child: Center(
+child: Text(
+name[0],
+style: TextStyle(
+color: foregroundColor,
+fontWeight: FontWeight.bold,
+fontSize: fontSize,
+),
+),
+),
+),
+);
+}
+}
+
+
+12 lib/ui/components/bottom_area_bar.dart
+
+import 'package:flutter/material.dart';
+
+class BottomAreaBar extends StatelessWidget {
+const BottomAreaBar({
+super.key,
+required this.children,
+});
+
+final List<Widget> children;
+
+@override
+Widget build(BuildContext context) {
+final ThemeData theme = Theme.of(context);
+return Container(
+padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+decoration: BoxDecoration(
+color: theme.scaffoldBackgroundColor,
+),
+child: SafeArea(
+top: false,
+child: Column(
+mainAxisSize: MainAxisSize.min,
+crossAxisAlignment: CrossAxisAlignment.start,
+children: children,
+),
+),
+);
+}
+}
+
+
+13 lib/ui/components/default_store_connector.dart
+
+import 'package:signs_app/core/redux/states/app_state.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:redux/redux.dart';
+
+class DefaultStoreConnector extends StatelessWidget {
+const DefaultStoreConnector({
+super.key,
+required this.builder,
+this.onInitialBuild,
+this.ignoreChange,
+this.onDidChange,
+});
+
+final ViewModelBuilder<AppState> builder;
+final OnInitialBuildCallback<AppState>? onInitialBuild;
+final IgnoreChangeTest<AppState>? ignoreChange;
+final OnDidChangeCallback<AppState>? onDidChange;
+
+@override
+Widget build(BuildContext context) {
+return StoreConnector<AppState, AppState>(
+converter: (Store<AppState> store) => store.state,
+builder: (context, state) => builder(context, state),
+onInitialBuild: onInitialBuild,
+ignoreChange: ignoreChange,
+onDidChange: onDidChange,
+);
+}
+}
+
+
+14 lib/ui/components/scaffold_animation.dart
+
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
+class ScaffoldAnimation extends StatelessWidget {
+const ScaffoldAnimation({
+super.key,
+this.appBar,
+this.body,
+this.bottomNavigationBar,
+this.floatingActionButton,
+this.skyColor,
+});
+
+final PreferredSizeWidget? appBar;
+final Widget? body;
+final Widget? bottomNavigationBar;
+final Widget? floatingActionButton;
+final Color? skyColor;
+
+@override
+Widget build(BuildContext context) {
+final size = MediaQuery.sizeOf(context);
+final viewPadding = MediaQuery.viewPaddingOf(context);
+return Stack(
+children: [
+const Positioned.fill(
+child: ColoredBox(
+color: Colors.white,
+),
+),
+Positioned.fill(
+child: DecoratedBox(
+decoration: BoxDecoration(
+gradient: LinearGradient(
+begin: Alignment.topCenter,
+end: Alignment.bottomCenter,
+colors: [
+skyColor ?? Colors.blueAccent.withOpacity(.3),
+Colors.white,
+],
+),
+),
+),
+),
+Positioned(
+bottom: viewPadding.bottom,
+child: Image.asset(
+'assets/images/bg.png',
+width: size.width,
+),
+),
+Positioned(
+bottom: 100,
+left: 0,
+child: Image.asset(
+'assets/images/bike.png',
+width: 90,
+)
+.animate(
+delay: const Duration(seconds: 5),
+onComplete: (contoller) => contoller.repeat(),
+)
+.slideX(
+begin: -1,
+duration: const Duration(seconds: 11),
+end: 8,
+),
+),
+Positioned(
+bottom: 50,
+left: 0,
+child: Image.asset(
+'assets/images/car_red.png',
+width: 150,
+)
+.animate(
+onComplete: (contoller) => contoller.repeat(),
+)
+.slideX(
+begin: -1,
+duration: const Duration(seconds: 10),
+end: 5,
+),
+),
+Scaffold(
+appBar: appBar,
+body: body,
+floatingActionButton: floatingActionButton,
+bottomNavigationBar: bottomNavigationBar,
+backgroundColor: Colors.transparent,
+),
+],
+);
+}
+}
+
+
+15 lib/ui/pages/profile_page/profile_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/core/router/navigation_destination.dart';
+import 'package:signs_app/ui/components/circle_name.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/user_widget.dart';
+import 'package:flutter/material.dart';
+
+class ProfilePage extends StatefulActionMapper {
+const ProfilePage({super.key});
+
+@override
+State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+@override
+Widget build(BuildContext context) {
+return ScaffoldAnimation(
+appBar: AppBar(
+title: const Text('Profil'),
+foregroundColor: Colors.black,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+backgroundColor: Colors.transparent,
+),
+body: SafeArea(
+child: UserWidget(builder: (context, user) {
+return ListView(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+children: [
+CircleName(
+name: user.fullName,
+size: 80,
+fontSize: 40,
+color: Colors.white,
+foregroundColor: Colors.black,
+),
+_ProfileItem(
+title: 'ID',
+data: user.id,
+margin: const EdgeInsets.only(top: 30),
+),
+_ProfileItem(
+title: 'Nama',
+data: user.fullName,
+margin: const EdgeInsets.only(top: 16),
+),
+_ProfileItem(
+title: 'Email',
+data: user.email,
+margin: const EdgeInsets.only(top: 16, bottom: 50),
+),
+SizedBox(
+height: 50,
+child: PrimaryButton(
+text: 'Keluar',
+color: Colors.red,
+style: const TextStyle(color: Colors.white),
+onTap: () => widget.dispatch(
+ShowDialogAction(
+destination: InfoDialogDestination(
+title: 'Keluar',
+message: 'apakah Anda yakin ingin keluar?',
+onTap: () => widget.dispatch(
+const LogoutAction(),
+),
+),
+),
+),
+),
+),
+],
+);
+}),
+),
+);
+}
+}
+
+class _ProfileItem extends StatelessWidget {
+const _ProfileItem({
+required this.title,
+required this.data,
+this.margin,
+});
+
+final String title;
+final String data;
+final EdgeInsetsGeometry? margin;
+
+@override
+Widget build(BuildContext context) {
+return Padding(
+padding: margin ?? EdgeInsets.zero,
+child: DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.white30,
+borderRadius: BorderRadius.circular(6),
+),
+child: Padding(
+padding: const EdgeInsets.symmetric(
+horizontal: 16,
+vertical: 16,
+),
+child: Row(
+children: [
+Text(title),
+const SizedBox(width: 20),
+Expanded(
+child: SelectableText(
+data,
+textAlign: TextAlign.end,
+),
+),
+],
+),
+),
+),
+);
+}
+}
+
+
+16 lib/ui/pages/signs_page/signs_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/app_action.dart';
+import 'package:flutter/material.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/default_store_connector.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/pages/signs_group_page/signs_group_page.dart';
+
+class SignsPage extends StatefulActionMapper {
+const SignsPage({super.key});
+
+@override
+State<SignsPage> createState() => _SignsPageState();
+}
+
+class _SignsPageState extends State<SignsPage> {
+@override
+Widget build(BuildContext context) {
+return ScaffoldAnimation(
+body: RefreshIndicator(
+onRefresh: () async {
+widget.dispatch(
+const GetSignsAction(),
+);
+return;
+},
+child: Scrollbar(
+child: CustomScrollView(
+slivers: [
+SliverAppBar(
+floating: true,
+pinned: true,
+expandedHeight: 150,
+foregroundColor: Colors.black,
+backgroundColor: Colors.transparent,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+flexibleSpace: FlexibleSpaceBar(
+centerTitle: true,
+background: SizedBox.expand(
+child: Align(
+alignment: Alignment.bottomCenter,
+child: Text(
+'Macam-macam\nRambu Lalu Lintas',
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 24,
+),
+),
+),
+),
+),
+),
+SliverPadding(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+sliver: DefaultStoreConnector(
+builder: (_, state) {
+final signsByType = state.signsByType;
+final keys = signsByType.keys;
+
+return SliverList.separated(
+itemCount: keys.length,
+itemBuilder: (_, index) {
+final item = keys.elementAt(index);
+final signs = signsByType[item]!;
+
+return GestureDetector(
+onTap: () => widget.dispatch(
+NavigateToNextAction(
+'/signs-group',
+extra: SignsGroup(
+item,
+signs,
+),
+),
+),
+child: Container(
+width: double.infinity,
+decoration: BoxDecoration(
+color: item.color.toColor,
+border: Border.all(
+width: 4,
+color: item.foregroundColor.toColor,
+),
+borderRadius: BorderRadius.circular(10),
+),
+padding: const EdgeInsets.symmetric(
+horizontal: 20,
+vertical: 20,
+),
+child: Center(
+child: Text(
+'Rambu ${item.displayedName}',
+style: GoogleFonts.paytoneOne(
+color: item.foregroundColor.toColor,
+fontWeight: FontWeight.bold,
+),
+),
+),
+),
+);
+},
+separatorBuilder: (_, index) =>
+const SizedBox(height: 16),
+);
+},
+),
+),
+const SliverToBoxAdapter(
+child: SizedBox(height: 30),
+),
+],
+),
+),
+),
+);
+}
+}
+
+
+17 lib/ui/pages/forgot_password_page/forgot_password_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/text_field.dart';
+import 'package:flutter/material.dart';
+
+class ForgotPasswordPage extends StatefulActionMapper {
+const ForgotPasswordPage({super.key});
+
+@override
+State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
+}
+
+class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
+late final TextEditingController _emailController;
+
+@override
+void initState() {
+super.initState();
+_emailController = TextEditingController();
+}
+
+@override
+void dispose() {
+_emailController.dispose();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+return ScaffoldAnimation(
+appBar: AppBar(
+backgroundColor: Colors.transparent,
+foregroundColor: Colors.black,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+),
+body: SafeArea(
+child: ListView(
+padding: const EdgeInsets.all(20),
+children: [
+const Text(
+'Lupa Password',
+style: TextStyle(
+fontWeight: FontWeight.bold,
+fontSize: 22,
+),
+),
+DefaultTextField(
+controller: _emailController,
+title: 'Email',
+hint: 'Masukkan email',
+margin: const EdgeInsets.only(top: 20),
+),
+const SizedBox(height: 30),
+SizedBox(
+height: 50,
+child: ElevatedButton(
+onPressed: () => widget.dispatch(
+SubmitForgotPasswordAction(
+_emailController.text,
+),
+),
+child: const Text('Oke'),
+),
+),
+],
+),
+),
+);
+}
+}
+
+
+18 lib/ui/pages/results_quiz_page/results_quiz_page.dart
+
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:signs_app/core/models/quiz/answer.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/user_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class ResultsQuizPage extends StatefulActionMapper {
+const ResultsQuizPage({
+super.key,
+required this.answers,
+});
+
+final Map<Question, Answer> answers;
+
+@override
+State<ResultsQuizPage> createState() => _ResultsQuizPageState();
+}
+
+class _ResultsQuizPageState extends State<ResultsQuizPage> {
+int _correctAnswer = 0;
+double _percent = 0.0;
+
+@override
+void initState() {
+super.initState();
+
+widget.answers.forEach((key, value) {
+if (value.correct) {
+_correctAnswer++;
+}
+});
+_percent = (_correctAnswer / widget.answers.length).clamp(0.0, 1.0);
+}
+
+@override
+Widget build(BuildContext context) {
+late final String text;
+late final Color color;
+final percent100 = 100 * _percent;
+
+if (percent100 > 80) {
+text = 'Mengagumkan';
+color = Colors.blue.withOpacity(.5);
+} else if (percent100 > 50) {
+text = 'Bagus';
+color = Colors.amber.withOpacity(.5);
+} else {
+text = 'Kurang';
+color = Colors.red.withOpacity(.5);
+}
+
+return ScaffoldAnimation(
+skyColor: color,
+body: Stack(
+alignment: Alignment.topCenter,
+children: [
+const Positioned.fill(
+child: ColoredBox(
+color: Colors.black12,
+),
+),
+SizedBox.expand(
+child: Padding(
+padding: const EdgeInsets.symmetric(horizontal: 20),
+child: Column(
+mainAxisAlignment: MainAxisAlignment.center,
+crossAxisAlignment: CrossAxisAlignment.center,
+children: [
+Text(
+text,
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 40,
+),
+)
+.animate(
+key: UniqueKey(),
+)
+.scale(
+curve: Curves.fastLinearToSlowEaseIn,
+duration: const Duration(seconds: 1),
+),
+const SizedBox(height: 20),
+UserWidget(
+builder: (_, user) => Text(
+'${user.fullName} kamu benar $_correctAnswer dari ${widget.answers.length} pertanyaan',
+),
+),
+const SizedBox(height: 30),
+SizedBox(
+height: 50,
+width: 230,
+child: PrimaryButton(
+text: 'Kembali ke Kuis',
+color: Colors.green,
+onTap: () => widget.dispatch(
+const NavigateToAndReplaceAction('/quiz'),
+),
+),
+),
+const SizedBox(height: 10),
+SizedBox(
+height: 50,
+width: 230,
+child: PrimaryButton(
+text: 'Kembali ke Beranda',
+color: Colors.orange,
+onTap: () => widget.dispatch(
+const NavigateToRootAction(),
+),
+),
+),
+]
+.animate(
+interval: const Duration(milliseconds: 300),
+)
+.fadeIn(),
+),
+),
+),
+],
+),
+);
+}
+}
+
+
+19 lib/ui/pages/home_page/home_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulActionMapper {
+const HomePage({super.key});
+
+@override
+State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+@override
+Widget build(BuildContext context) {
+final size = MediaQuery.sizeOf(context);
+return ScaffoldAnimation(
+body: CustomScrollView(
+slivers: [
+SliverAppBar(
+expandedHeight: 200,
+backgroundColor: Colors.transparent,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+flexibleSpace: FlexibleSpaceBar(
+background: SizedBox.expand(
+child: Stack(
+alignment: Alignment.center,
+children: [
+Positioned(
+bottom: 30,
+width: size.width,
+child: Padding(
+padding: const EdgeInsets.symmetric(horizontal: 20),
+child: Text(
+'Rambu Lalu Lintas',
+style: GoogleFonts.paytoneOne(
+fontSize: 40,
+),
+textAlign: TextAlign.center,
+),
+),
+),
+],
+),
+),
+),
+),
+SliverPadding(
+padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+sliver: SliverGrid.count(
+crossAxisCount: 2,
+crossAxisSpacing: 10,
+mainAxisSpacing: 10,
+children: const [
+_Menu(
+path: '/signs',
+title: 'Rambu\nLalu Lintas',
+),
+_Menu(
+path: '/quiz',
+title: 'Kuis',
+),
+_Menu(
+path: '/history',
+title: 'Sejarah',
+),
+_Menu(
+path: '/profile',
+title: 'Profil',
+),
+],
+),
+),
+],
+),
+);
+}
+}
+
+class _Menu extends StatelessActionMapper {
+const _Menu({
+required this.path,
+required this.title,
+});
+
+final String path;
+final String title;
+
+@override
+Widget build(BuildContext context) {
+return GestureDetector(
+onTap: () => dispatch(
+NavigateToNextAction(
+path,
+),
+),
+child: Stack(
+children: [
+const Positioned.fill(
+child: DecoratedBox(
+decoration: BoxDecoration(
+shape: BoxShape.circle,
+color: Color(0xFFFED034),
+),
+),
+),
+Positioned.fill(
+left: 5,
+right: 5,
+top: 5,
+bottom: 5,
+child: DecoratedBox(
+decoration: BoxDecoration(
+shape: BoxShape.circle,
+border: Border.all(
+width: 3,
+),
+),
+),
+),
+Center(
+child: Padding(
+padding: const EdgeInsets.all(10),
+child: Text(
+title,
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 24,
+color: Colors.black,
+),
+),
+),
+),
+],
+),
+);
+}
+}
+
+
+20 lib/ui/pages/signs_group_page/signs_group_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
+import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/models/sign/type_sign.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:flutter/material.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/audio_controll.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
+
+class SignsGroup {
+final TypeSign type;
+final List<Sign> signs;
+
+SignsGroup(this.type, this.signs);
+}
+
+class SignsGroupPage extends StatefulActionMapper {
+const SignsGroupPage({
+super.key,
+required this.signsGroup,
+});
+
+final SignsGroup signsGroup;
+
+@override
+State<SignsGroupPage> createState() => _SignsGroupPageState();
+}
+
+class _SignsGroupPageState extends State<SignsGroupPage> with TtsMixin {
+@override
+void initState() {
+super.initState();
+final type = widget.signsGroup.type;
+initTts('Rambu ${type.displayedName}\n${type.description}');
+}
+
+@override
+void dispose() {
+flutterTts.stop();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+final signs = widget.signsGroup.signs;
+final type = widget.signsGroup.type;
+
+return ScaffoldAnimation(
+skyColor: type.color.toColor.withOpacity(.6),
+bottomNavigationBar: AudioControll(
+ttsState: ttsState,
+progressNotifier: progressNotifier,
+onPause: flutterTts.stop,
+onPlay: playAudio,
+color: type.color.toColor,
+),
+body: Scrollbar(
+child: CustomScrollView(
+slivers: [
+SliverAppBar(
+pinned: true,
+expandedHeight: 100,
+foregroundColor: type.foregroundColor.toColor,
+backgroundColor: Colors.transparent,
+systemOverlayStyle: SystemUiOverlayStyle.light,
+flexibleSpace: FlexibleSpaceBar(
+centerTitle: true,
+background: SizedBox.expand(
+child: Align(
+alignment: Alignment.bottomCenter,
+child: Text(
+'Rambu ${type.displayedName}',
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 24,
+color: type.foregroundColor.toColor,
+),
+),
+),
+),
+),
+),
+SliverPadding(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+sliver: SliverToBoxAdapter(
+child: DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.white.withOpacity(.8),
+borderRadius: BorderRadius.circular(3),
+),
+child: Padding(
+padding: const EdgeInsets.all(10),
+child: Text(
+type.description.lineBreak.trim(),
+),
+),
+),
+),
+),
+SliverPadding(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 50),
+sliver: SliverMasonryGrid.count(
+childCount: signs.length,
+crossAxisCount: 2,
+mainAxisSpacing: 16,
+crossAxisSpacing: 16,
+itemBuilder: (_, index) {
+final item = signs[index];
+return GestureDetector(
+onTap: () => widget.dispatch(
+NavigateToNextAction(
+'/detail-sign',
+extra: item,
+),
+),
+child: DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.white,
+borderRadius: BorderRadius.circular(20),
+),
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+Center(
+child: Padding(
+padding: const EdgeInsets.only(top: 30),
+child: Image.network(
+item.image,
+height: 100,
+alignment: Alignment.bottomCenter,
+),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: SizedBox(
+width: double.infinity,
+child: DecoratedBox(
+decoration: BoxDecoration(
+color: type.color.toColor,
+borderRadius: BorderRadius.circular(10),
+),
+child: Padding(
+padding: const EdgeInsets.symmetric(
+horizontal: 16,
+vertical: 10,
+),
+child: Text(
+item.name,
+style: TextStyle(
+color: type.foregroundColor.toColor,
+fontWeight: FontWeight.w500,
+),
+),
+),
+),
+),
+),
+],
+),
+),
+);
+},
+),
+),
+const SliverToBoxAdapter(
+child: SizedBox(height: 30),
+),
+],
+),
+),
+);
+}
+}
+
+
+21 lib/ui/pages/login_page/login_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:signs_app/core/models/authentication/form_login.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/text_field.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+
+class LoginPage extends StatefulActionMapper {
+const LoginPage({super.key});
+
+@override
+State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+late final TextEditingController _emailController;
+late final TextEditingController _passwordController;
+
+@override
+void initState() {
+super.initState();
+_emailController = TextEditingController();
+_passwordController = TextEditingController();
+}
+
+@override
+void dispose() {
+_emailController.dispose();
+_passwordController.dispose();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+return ScaffoldAnimation(
+appBar: AppBar(
+backgroundColor: Colors.transparent,
+foregroundColor: Colors.black,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+),
+body: ListView(
+padding: const EdgeInsets.all(20),
+children: [
+const Center(
+child: Text(
+'Masuk Akun',
+style: TextStyle(
+fontWeight: FontWeight.bold,
+fontSize: 22,
+),
+),
+),
+DefaultTextField(
+controller: _emailController,
+title: 'Email',
+hint: 'Masukkan email',
+margin: const EdgeInsets.only(top: 20),
+),
+PasswordField(
+controller: _passwordController,
+margin: const EdgeInsets.only(top: 20),
+),
+Align(
+alignment: Alignment.topRight,
+child: TextButton(
+onPressed: () => widget.dispatch(
+const NavigateToNextAction(
+'/forgot-password',
+),
+),
+child: const Text('Lupa password'),
+),
+),
+const SizedBox(height: 30),
+SizedBox(
+height: 50,
+child: PrimaryButton(
+onTap: () => widget.dispatch(
+SubmitLoginAction(
+login: FormLogin(
+email: _emailController.text,
+password: _passwordController.text,
+),
+),
+),
+text: 'Masuk',
+),
+),
+const SizedBox(height: 20),
+Center(
+child: Text.rich(
+TextSpan(
+children: [
+const TextSpan(text: 'Belum mempunyai akun? '),
+TextSpan(
+text: 'Daftar sekarang',
+recognizer: TapGestureRecognizer()
+..onTap = () => widget.dispatch(
+const NavigateToNextAction('/register'),
+),
+style: const TextStyle(
+color: Colors.orange,
+fontWeight: FontWeight.w600,
+),
+),
+],
+),
+),
+),
+],
+),
+);
+}
+}
+
+
+22 lib/ui/pages/register_page/register_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:signs_app/core/models/authentication/form_register_user.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/text_field.dart';
+
+class RegisterPage extends StatefulActionMapper {
+const RegisterPage({super.key});
+
+@override
+State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
+late final TextEditingController _emailController;
+late final TextEditingController _passwordController;
+late final TextEditingController _nameController;
+
+@override
+void initState() {
+super.initState();
+_emailController = TextEditingController();
+_nameController = TextEditingController();
+_passwordController = TextEditingController();
+}
+
+@override
+void dispose() {
+_emailController.dispose();
+_nameController.dispose();
+_passwordController.dispose();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+return ScaffoldAnimation(
+appBar: AppBar(
+backgroundColor: Colors.transparent,
+foregroundColor: Colors.black,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+),
+body: ListView(
+padding: const EdgeInsets.all(20),
+children: [
+const Center(
+child: Text(
+'Daftar Akun',
+style: TextStyle(
+fontWeight: FontWeight.bold,
+fontSize: 22,
+),
+),
+),
+DefaultTextField(
+margin: const EdgeInsets.only(top: 20),
+controller: _nameController,
+title: 'Nama',
+hint: 'Masukkan nama',
+),
+DefaultTextField(
+margin: const EdgeInsets.only(top: 20),
+controller: _emailController,
+title: 'Email',
+hint: 'Masukkan email',
+),
+PasswordField(
+margin: const EdgeInsets.only(top: 20, bottom: 30),
+controller: _passwordController,
+),
+SizedBox(
+height: 50,
+child: PrimaryButton(
+onTap: () => widget.dispatch(
+SubmitRegisterAction(
+registerUser: FormRegisterUser(
+email: _emailController.text,
+password: _passwordController.text,
+fullName: _nameController.text,
+),
+),
+),
+text: 'Daftar',
+),
+),
+const SizedBox(height: 20),
+Center(
+child: Text.rich(
+TextSpan(
+children: [
+const TextSpan(text: 'Sudah mempunyai akun? '),
+TextSpan(
+text: 'Masuk',
+recognizer: TapGestureRecognizer()
+..onTap = () => widget.dispatch(
+const NavigateToNextAction('/login'),
+),
+style: const TextStyle(
+color: Colors.orange,
+fontWeight: FontWeight.w600,
+),
+),
+],
+),
+),
+),
+],
+),
+);
+}
+}
+
+
+23 lib/ui/pages/splash_page/splash_page.dart
+
+import 'dart:async';
+
+import 'package:after_layout/after_layout.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/core/redux/actions/app_action.dart';
+import 'package:signs_app/core/redux/actions/authentication_action.dart';
+import 'package:flutter/material.dart';
+
+class SplashPage extends StatefulActionMapper {
+const SplashPage({super.key});
+
+@override
+State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> with AfterLayoutMixin {
+@override
+FutureOr<void> afterFirstLayout(BuildContext context) {
+widget.dispatches([
+const InitTtsAction(),
+const GetCurrentLoginAction(),
+const GetSignsAction(),
+const GetQuestionsAction(),
+const GetAboutAction(),
+]);
+}
+
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+body: SizedBox.expand(
+child: Column(
+mainAxisAlignment: MainAxisAlignment.center,
+crossAxisAlignment: CrossAxisAlignment.center,
+children: [
+Image.asset(
+'assets/images/icon.png',
+height: 100,
+width: 100,
+),
+const SizedBox(height: 30),
+const SizedBox.square(
+dimension: 30,
+child: CircularProgressIndicator.adaptive(),
+),
+],
+),
+),
+);
+}
+}
+
+
+24 lib/ui/pages/quiz_page/quiz_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:signs_app/core/extensions/extensions.dart';
+import 'package:signs_app/core/models/quiz/answer.dart';
+import 'package:signs_app/core/models/quiz/question.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:flutter/material.dart' hide AboutDialog;
+import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/core/router/navigation_destination.dart';
+import 'package:signs_app/ui/components/default_store_connector.dart';
+import 'package:signs_app/ui/components/primary_button.dart';
+import 'package:signs_app/ui/components/quiz_card.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+
+class QuizPage extends StatefulActionMapper {
+const QuizPage({super.key});
+
+@override
+State<QuizPage> createState() => _QuizPageState();
+}
+
+class _QuizPageState extends State<QuizPage> {
+final Map<Question, Answer> _answers = {};
+bool _isPlay = false, _showLevelChanged = false;
+int _index = 0, _level = 1;
+
+List<Question> get questions => widget.store.state.questions;
+
+void _onAnswer(Question question, Answer answer) async {
+if (_answers.containsKey(question)) {
+_answers.update(question, (value) => answer);
+} else {
+_answers[question] = answer;
+}
+
+setState(() {});
+}
+
+@override
+Widget build(BuildContext context) {
+final size = MediaQuery.sizeOf(context);
+
+return ScaffoldAnimation(
+appBar: AppBar(
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+backgroundColor: Colors.transparent,
+automaticallyImplyLeading: false,
+leading: !_isPlay || _showLevelChanged
+? null
+: IconButton(
+onPressed: () {
+if (_index == 0) {
+Navigator.pop(context);
+return;
+}
+setState(() {
+_index--;
+});
+},
+icon: const Icon(Icons.arrow_back),
+),
+),
+floatingActionButton: _isPlay
+? null
+: GestureDetector(
+onTap: () => widget.dispatch(
+const ShowModalBottomSheetAction(
+destination: AboutDialogDestination(),
+),
+),
+child: Stack(
+alignment: Alignment.center,
+children: [
+Container(
+height: 50,
+width: 50,
+decoration: const BoxDecoration(
+color: Colors.blue,
+shape: BoxShape.circle,
+),
+child: Center(
+child: Text(
+'i',
+style: GoogleFonts.paytoneOne(
+fontSize: 30,
+color: Colors.white,
+),
+),
+),
+),
+SizedBox(
+height: 44,
+width: 44,
+child: DecoratedBox(
+decoration: BoxDecoration(
+shape: BoxShape.circle,
+border: Border.all(
+width: 2,
+color: Colors.white,
+),
+),
+),
+),
+],
+),
+),
+body: AnimatedSwitcher(
+duration: const Duration(milliseconds: 500),
+child: _isPlay
+? _showLevelChanged
+? ListView(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 50),
+children: [
+SizedBox(
+height: size.height * .15,
+),
+Text(
+'Pertanyaan Level ke $_level',
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 40,
+),
+),
+const SizedBox(height: 30),
+SizedBox(
+height: 50,
+width: 200,
+child: PrimaryButton(
+text: 'Oke',
+color: Colors.green,
+foregroundColor: Colors.white,
+onTap: () {
+setState(() {
+_showLevelChanged = false;
+});
+},
+),
+),
+],
+)
+: ListView(
+padding: const EdgeInsets.fromLTRB(20, 30, 20, 50),
+children: [
+DefaultStoreConnector(
+builder: (_, state) {
+if (questions.isEmpty) {
+return Padding(
+padding: EdgeInsets.only(
+top: context.sizeOf.height * .2,
+),
+child: const Center(
+child: CircularProgressIndicator.adaptive(),
+),
+);
+}
+final question = questions[_index];
+final isLast = questions.last == question;
+
+return QuestionCard(
+key: ValueKey(question),
+question: question,
+answers: _answers,
+onAnswer: (answer) => _onAnswer(question, answer),
+onNext: () {
+if (isLast) {
+widget.store.dispatch(
+NavigateToAndReplaceAction(
+'/results-quiz',
+extra: _answers,
+),
+);
+return;
+}
+_showLevelChanged =
+questions[_index + 1].level.toInt() > _level;
+
+if (_showLevelChanged) _level++;
+
+_index++;
+setState(() {});
+},
+);
+},
+),
+],
+)
+: SizedBox.expand(
+child: Column(
+crossAxisAlignment: CrossAxisAlignment.center,
+children: [
+SizedBox(
+height: size.height * .15,
+),
+Text(
+'Kuis Rambu\nLalu Lintas',
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 40,
+),
+),
+const SizedBox(height: 30),
+SizedBox(
+height: 50,
+width: 200,
+child: PrimaryButton(
+text: 'Mulai',
+color: Colors.green,
+foregroundColor: Colors.white,
+onTap: () {
+setState(() {
+_isPlay = true;
+});
+},
+),
+),
+const SizedBox(height: 10),
+SizedBox(
+height: 50,
+width: 200,
+child: PrimaryButton(
+text: 'Keluar',
+color: Colors.redAccent,
+foregroundColor: Colors.white,
+onTap: () => Navigator.pop(context),
+),
+),
+],
+),
+),
+),
+);
+}
+}
+
+
+25 lib/ui/pages/history_page/history_page.dart
+
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:flutter/material.dart';
+import 'package:signs_app/ui/components/audio_controll.dart';
+import 'package:signs_app/ui/components/scaffold_animation.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
+
+class HistoryPage extends StatefulActionMapper {
+const HistoryPage({super.key});
+
+@override
+State<HistoryPage> createState() => _HistoryPageState();
+}
+
+class _HistoryPageState extends State<HistoryPage> with TtsMixin {
+@override
+void initState() {
+super.initState();
+initTts(_kText);
+}
+
+@override
+void dispose() {
+flutterTts.stop();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+return ScaffoldAnimation(
+appBar: AppBar(
+backgroundColor: Colors.transparent,
+systemOverlayStyle: SystemUiOverlayStyle.dark,
+),
+body: Scrollbar(
+child: ListView(
+padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
+children: [
+Center(
+child: Text(
+'Sejarah\nRambu Lalu Lintas',
+textAlign: TextAlign.center,
+style: GoogleFonts.paytoneOne(
+fontSize: 24,
+),
+),
+),
+const SizedBox(height: 30),
+DecoratedBox(
+decoration: BoxDecoration(
+color: Colors.white.withOpacity(.8),
+borderRadius: BorderRadius.circular(3),
+),
+child: const Padding(
+padding: EdgeInsets.all(10.0),
+child: Text(
+_kText,
+textAlign: TextAlign.justify,
+),
+),
+),
+const SizedBox(height: 30),
+],
+),
+),
+bottomNavigationBar: AudioControll(
+ttsState: ttsState,
+progressNotifier: progressNotifier,
+onPause: flutterTts.stop,
+onPlay: playAudio,
+),
+);
+}
+}
+
+const _kText =
+'''Awal mula Rambu lalu lintas diciptakan oleh berbagai individu dan badan otoritas di berbagai negara sepanjang sejarah. Tidak ada satu pencipta tunggal rambu lalu lintas. Pada awalnya, penggunaan tanda-tanda jalan pertama kali diperkenalkan oleh pemerintah lokal atau badan yang bertanggung jawab atas lalu lintas di wilayah tertentu. Jadi awal mula rambu lalu lintas ini sebenarnya, merupakan hasil dari berbagai kontribusi dan peraturan di seluruh dunia.
+
+\tKemudian semakin berkembangnya waktu, standar internasional untuk rambu lalu lintas telah dikembangkan oleh organisasi seperti Perserikatan Bangsa-Bangsa (PBB) melalui Komisi Ekonomi untuk Eropa (UNECE) untuk memastikan konsistensi dalam tanda-tanda lalu lintas di seluruh dunia.
+
+\tDari situlah sejarah rambu lalu lintas dimulai pada abad ke-19 ketika transportasi bermotor pertama kali diperkenalkan. Beberapa titik penting dalam sejarah rambu lalu lintas termasuk:
+
+\tTanda Jalan Pertama: Pada tahun 1909, Amerika Serikat memasang tanda peringatan pertama di Buffalo, New York. Tanda ini sederhana, berbentuk segitiga dan menampilkan pesan peringatan.
+
+\tSistem Warna: Pada tahun 1917, sistem warna digunakan untuk pertama kalinya dengan tanda merah untuk peringatan dan tanda hijau untuk panduan.
+
+\tPerkembangan Internasional: Seiring berkembangnya transportasi, sistem tanda lalu lintas juga berkembang di berbagai negara dan standar internasional diperkenalkan.
+
+\tTanda Standar Internasional: Perserikatan Bangsa-Bangsa (PBB) memainkan peran penting dalam menyatukan standar rambu lalu lintas internasional, yang dikelola oleh Komisi Ekonomi untuk Eropa (UNECE).
+
+\tSejarah rambu lalu lintas terus berkembang seiring waktu, dengan penggunaan tanda-tanda yang semakin kompleks dan teknologi modern seperti lampu lalu lintas, rambu elektronik, dan sistem navigasi. Tujuan utama dari rambu lalu lintas adalah untuk menjaga keamanan dan disiplin lalu lintas di jalan.
+''';
+
+
+26 lib/ui/pages/detail_sign_page/detail_sign_page.dart
+
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:signs_app/core/models/sign/sign.dart';
+import 'package:signs_app/core/redux/action_mapper.dart';
+import 'package:signs_app/ui/components/audio_controll.dart';
+import 'package:signs_app/ui/components/tts_mixin.dart';
+import 'package:signs_app/ui/components/type_chip.dart';
+
+class DetailSignPage extends StatefulActionMapper {
+const DetailSignPage({
+super.key,
+required this.sign,
+});
+
+final Sign sign;
+
+@override
+State<DetailSignPage> createState() => _DetailSignPageState();
+}
+
+class _DetailSignPageState extends State<DetailSignPage> with TtsMixin {
+@override
+void initState() {
+super.initState();
+initTts('${widget.sign.name}\n${widget.sign.description}');
+}
+
+@override
+void dispose() {
+flutterTts.stop();
+super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+final size = MediaQuery.sizeOf(context);
+return Scaffold(
+body: CustomScrollView(
+slivers: [
+SliverAppBar(
+expandedHeight: 230.0,
+flexibleSpace: FlexibleSpaceBar(
+background: SizedBox.expand(
+child: Stack(
+alignment: Alignment.bottomCenter,
+children: [
+Positioned.fill(
+child: ColoredBox(
+color: Colors.amberAccent.withOpacity(.3),
+),
+),
+Align(
+alignment: Alignment.bottomCenter,
+child: Image.asset(
+'assets/images/city.png',
+fit: BoxFit.fitWidth,
+),
+),
+Positioned(
+bottom: 28,
+child: Image.network(
+widget.sign.image,
+height: 150,
+),
+),
+Positioned(
+bottom: -1,
+child: ColoredBox(
+color: const Color(0xFF555151),
+child: SizedBox(
+height: 30,
+width: size.width,
+),
+),
+),
+Align(
+alignment: Alignment.bottomLeft,
+child: Image.asset(
+'assets/images/bike.png',
+width: 80,
+)
+.animate(
+delay: const Duration(seconds: 5),
+onComplete: (contoller) => contoller.repeat(),
+)
+.slideX(
+begin: -1,
+duration: const Duration(seconds: 10),
+end: 7,
+),
+),
+Align(
+alignment: Alignment.bottomLeft,
+child: Image.asset(
+'assets/images/car_red.png',
+width: 130,
+)
+.animate(
+onComplete: (contoller) => contoller.repeat(),
+)
+.slideX(
+begin: -1,
+duration: const Duration(seconds: 10),
+end: 5,
+),
+)
+],
+),
+),
+),
+),
+SliverPadding(
+padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+sliver: SliverToBoxAdapter(
+child: Row(
+children: [
+Expanded(
+child: Text(
+widget.sign.name,
+style: const TextStyle(
+fontSize: 20,
+fontWeight: FontWeight.bold,
+),
+),
+),
+const SizedBox(width: 20),
+TypeChip(type: widget.sign.type),
+],
+),
+),
+),
+SliverPadding(
+padding: const EdgeInsets.symmetric(
+horizontal: 20,
+),
+sliver: SliverToBoxAdapter(
+child: Text(
+widget.sign.description.trim(),
+textAlign: TextAlign.justify,
+),
+),
+),
+],
+),
+bottomNavigationBar: AudioControll(
+ttsState: ttsState,
+progressNotifier: progressNotifier,
+onPause: flutterTts.stop,
+onPlay: playAudio,
+),
+);
+}
+}
+
+
