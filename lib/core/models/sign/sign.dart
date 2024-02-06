@@ -10,6 +10,7 @@ class Sign with _$Sign {
   // ignore: invalid_annotation_target
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory Sign({
+    required String id,
     required String name,
     required String image,
     required String description,

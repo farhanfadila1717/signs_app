@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Indonesian_Road_Sign_Info_5b1.png/90px-Indonesian_Road_Sign_Info_5b1.png",
+    "name": "Tempat pembuangan Sementara",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi tempat pembuangan sementara, tempat di mana barang atau material dapat sementara disimpan sebelum diproses lebih lanjut atau dibuang secara permanen."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Indonesian_Road_Sign_Info_5b2.png/90px-Indonesian_Road_Sign_Info_5b2.png",
+    "name": "Tempat Pembuangan Akhir",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan tempat pembuangan akhir, di mana sampah atau limbah dibuang secara permanen setelah melalui proses pengelolaan dan pengolahan yang sesuai."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Indonesian_Road_Sign_Info_5c1.png/90px-Indonesian_Road_Sign_Info_5c1.png",
+    "name": "Kantor pos",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi kantor pos, tempat di mana layanan pos dan pengiriman surat atau paket berlangsung."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Indonesian_Road_Sign_Info_5c2.png/90px-Indonesian_Road_Sign_Info_5c2.png",
+    "name": "Telepon umum",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan keberadaan telepon umum di sekitar area tersebut, memberikan informasi kepada pengguna jalan bahwa mereka dapat menemukan telepon umum di lokasi tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Indonesia_New_Road_Sign_Info_5d1.png/90px-Indonesia_New_Road_Sign_Info_5d1.png",
+    "name": "Halte bus",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi halte bus, tempat di mana penumpang dapat naik atau turun dari bus umum."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Indonesia_New_Road_Sign_Info_5d2.png/90px-Indonesia_New_Road_Sign_Info_5d2.png",
+    "name": "Stand taksi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan area stand taksi, di mana penumpang dapat menemukan taksi yang sedang menunggu atau berhenti untuk menaikkan penumpang."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Indonesian_Road_Sign_Info_5d3.png/90px-Indonesian_Road_Sign_Info_5d3.png",
+    "name": "Kendaraan umum selain bus dan taksi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan informasi tentang jalur khusus untuk kendaraan umum selain bus dan taksi, memastikan kelancaran lalu lintas di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indonesian_Road_Sign_Info_5e.png/90px-Indonesian_Road_Sign_Info_5e.png",
+    "name": "Penyebrangan pejalan kaki",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi penyebrangan pejalan kaki, memberikan peringatan kepada pengguna jalan untuk memperhatikan pejalan kaki yang mungkin menyeberang di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Indonesian_Road_Sign_Info_5F1.png/89px-Indonesian_Road_Sign_Info_5F1.png",
+    "name": "Zona parkir",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan zona parkir, menandakan area di mana kendaraan dapat diparkir sesuai dengan peraturan dan tanda-tanda yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Indonesian_Road_Sign_Info_5f2.png/90px-Indonesian_Road_Sign_Info_5f2.png",
+    "name": "Zona parkir untuk penyadangan cacat",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan zona parkir khusus untuk penyandang cacat, memberikan akses dan fasilitas parkir yang sesuai untuk mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Indonesia_New_Road_Sign_Info_5g1.png/90px-Indonesia_New_Road_Sign_Info_5g1.png",
+    "name": "Terowongan bermula",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan informasi bahwa terowongan dimulai di lokasi tersebut, memperingatkan pengemudi untuk bersiap-siap masuk ke dalam terowongan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Indonesian_Road_Sign_Info_5g2.png/90px-Indonesian_Road_Sign_Info_5g2.png",
+    "name": "Terowongan berakhir",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan bahwa terowongan berakhir di lokasi tersebut, memberikan informasi kepada pengemudi bahwa mereka akan keluar dari terowongan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Indonesian_Road_Sign_Info_5h1.png/90px-Indonesian_Road_Sign_Info_5h1.png",
+    "name": "Rute evakuasi tsunami",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan rute evakuasi untuk menghindari bahaya tsunami, memberikan petunjuk kepada penduduk atau pengunjung tentang jalur yang aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indonesian_Road_Sign_Info_5h2.png/90px-Indonesian_Road_Sign_Info_5h2.png",
+    "name": "Rute evakuasi gempabumi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan rute evakuasi khusus untuk menghindari bahaya gempa bumi, memberikan panduan kepada orang-orang untuk mencapai lokasi yang lebih aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Indonesian_Road_Sign_Info_5h3.png/90px-Indonesian_Road_Sign_Info_5h3.png",
+    "name": "Rute evakuasi letusan gunungapi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan informasi tentang rute evakuasi khusus untuk menghindari bahaya letusan gunungapi, memberikan panduan kepada masyarakat untuk mencapai daerah yang lebih aman."
+  }
+]

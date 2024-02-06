@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Indonesian_Road_Sign_Info_6c1.png/90px-Indonesian_Road_Sign_Info_6c1.png",
+    "name": "Pasar",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya pasar di sekitar. Pengendara diharapkan berhati-hati dan memperhatikan aktivitas pejalan kaki dan penyebrangan di area ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Indonesia_Road_Sign_Info_6c2.png/90px-Indonesia_Road_Sign_Info_6c2.png",
+    "name": "Toko restoran",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini mengindikasikan keberadaan toko atau restoran di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan penyebrangan pejalan kaki di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesian_Road_Sign_Info_6c3.png/90px-Indonesian_Road_Sign_Info_6c3.png",
+    "name": "Toko kafe",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya kafe atau tempat minum kopi di sekitar. Pengendara diharapkan berhati-hati dan mengurangi kecepatan saat melewati area ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Indonesian_Road_Sign_Info_6c4.png/90px-Indonesian_Road_Sign_Info_6c4.png",
+    "name": "Penginapan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberitahu bahwa ada penginapan di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan tanda-tanda petunjuk menuju penginapan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Indonesian_Road_Sign_Info_6c5.png/90px-Indonesian_Road_Sign_Info_6c5.png",
+    "name": "Bengkel",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya bengkel atau tempat perbaikan kendaraan di sekitar. Pengendara diharapkan untuk memperlambat laju kendaraan dan berhati-hati saat mendekati area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesian_Road_Sign_Info_6d1.png/90px-Indonesian_Road_Sign_Info_6d1.png",
+    "name": "Taman",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan keberadaan taman di sekitar. Pengendara diharapkan untuk memperhatikan pejalan kaki dan berlalu dengan kecepatan yang aman di area ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Indonesian_Road_Sign_Info_6d2.png/90px-Indonesian_Road_Sign_Info_6d2.png",
+    "name": "Rute jelajahi alam",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini mengarahkan pengendara menuju rute untuk menjelajahi alam. Diingatkan untuk mengikuti petunjuk rambu dan memperhatikan kondisi jalan di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Indonesian_Road_Sign_Info_6d3.png/90px-Indonesian_Road_Sign_Info_6d3.png",
+    "name": "Kemah tenda",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan adanya area kemah tenda. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan keberadaan pejalan kaki atau pengunjung yang mungkin berada di sekitar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Indonesian_Road_Sign_Info_6d4.png/90px-Indonesian_Road_Sign_Info_6d4.png",
+    "name": "Kemah karavan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya area kemah karavan. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan aktivitas di sekitar area kemah karavan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesian_Road_Sign_Info_6d5.png/90px-Indonesian_Road_Sign_Info_6d5.png",
+    "name": "Perkemahan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan adanya tempat perkemahan di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan pejalan kaki atau pengunjung yang mungkin berada di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Indonesian_Road_Sign_Info_6d6.png/90px-Indonesian_Road_Sign_Info_6d6.png",
+    "name": "Vila",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya vila di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan petunjuk arah menuju vila tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Indonesian_Road_Sign_Info_6d7.png/90px-Indonesian_Road_Sign_Info_6d7.png",
+    "name": "Pantai",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan keberadaan pantai di sekitar. Pengendara diharapkan untuk berhati-hati dan mematuhi peraturan lalu lintas khusus di area pantai."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Indonesian_Road_Sign_Info_6e1.png/90px-Indonesian_Road_Sign_Info_6e1.png",
+    "name": "Lapangan olahraga terbuka",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan keberadaan lapangan olahraga terbuka di sekitar. Pengendara diharapkan untuk memperhatikan keberadaan atlet atau pengunjung yang mungkin berada di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Indonesian_Road_Sign_Info_6e2.png/90px-Indonesian_Road_Sign_Info_6e2.png",
+    "name": "Gelanggang olahraga",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan adanya gelanggang olahraga di sekitar. Pengendara diharapkan untuk memperhatikan keberadaan atlet atau pengunjung yang mungkin berada di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6e3.png/90px-Indonesian_Road_Sign_Info_6e3.png",
+    "name": "Kolam renang",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya kolam renang di sekitar. Pengendara diharapkan untuk berhati-hati dan mengurangi kecepatan saat melewati area ini, terutama jika ada pejalan kaki di sekitar."
+  }
+]

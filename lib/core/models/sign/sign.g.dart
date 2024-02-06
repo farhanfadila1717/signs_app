@@ -7,6 +7,7 @@ part of 'sign.dart';
 // **************************************************************************
 
 _$SignImpl _$$SignImplFromJson(Map<String, dynamic> json) => _$SignImpl(
+      id: json['id'] as String,
       name: json['name'] as String,
       image: json['image'] as String,
       description: json['description'] as String,
@@ -15,6 +16,7 @@ _$SignImpl _$$SignImplFromJson(Map<String, dynamic> json) => _$SignImpl(
 
 Map<String, dynamic> _$$SignImplToJson(_$SignImpl instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'image': instance.image,
       'description': instance.description,

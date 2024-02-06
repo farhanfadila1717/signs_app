@@ -1,0 +1,896 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Indonesia_New_Road_Sign_1a.png/300px-Indonesia_New_Road_Sign_1a.png",
+    "name": "Tikungan ke kiri",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya tikungan ke kiri pada jalan. Pengemudi diharapkan untuk memperlambat laju kendaraan dan berhati-hati saat melewati tikungan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Indonesia_New_Road_Sign_1b.png/300px-Indonesia_New_Road_Sign_1b.png",
+    "name": "Tikungan ke kanan",
+    "type": "WARNING",
+    "description": "Rambu ini mengindikasikan keberadaan tikungan ke kanan di jalan. Para pengendara diharapkan untuk mengurangi kecepatan dan mengemudikan kendaraan dengan hati-hati melalui tikungan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Indonesia_New_Road_Sign_1c.png/300px-Indonesia_New_Road_Sign_1c.png",
+    "name": "Tikungan ganda",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di depan akan ada dua tikungan berurutan. Pengemudi sebaiknya waspada dan mengurangi kecepatan untuk menghadapi kedua tikungan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Indonesia_New_Road_Sign_1d.png/300px-Indonesia_New_Road_Sign_1d.png",
+    "name": "Tikungan ganda",
+    "type": "WARNING",
+    "description": "Rambu ini memberitahu pengendara bahwa di depan terdapat dua tikungan berurutan. Disarankan untuk mengurangi kecepatan dan mengemudi dengan hati-hati."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Indonesia_New_Road_Sign_1e.png/300px-Indonesia_New_Road_Sign_1e.png",
+    "name": "Tikungan tajam",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya tikungan tajam di jalan. Pengemudi harus merespons dengan mengurangi kecepatan dan memperhatikan dengan lebih cermat saat melalui tikungan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Indonesia_New_Road_Sign_1f.png/300px-Indonesia_New_Road_Sign_1f.png",
+    "name": "Tikungan tajam",
+    "type": "WARNING",
+    "description": "Rambu ini menginformasikan tentang keberadaan tikungan tajam di depan. Para pengendara diharapkan untuk mengurangi kecepatan dan berkendara dengan hati-hati."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_1g.png/300px-Indonesia_New_Road_Sign_1g.png",
+    "name": "Tikungan tajam ganda",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di depan akan ada dua tikungan tajam berurutan. Pengemudi diharapkan untuk memperlambat kendaraan dan menjaga kewaspadaan saat melewati kedua tikungan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Indonesia_New_Road_Sign_1h.png/300px-Indonesia_New_Road_Sign_1h.png",
+    "name": "Tikungan tajam ganda",
+    "type": "WARNING",
+    "description": "Rambu ini memberitahu pengendara tentang keberadaan dua tikungan tajam berurutan. Disarankan untuk memperlambat laju kendaraan dan mengemudi dengan hati-hati."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indonesia_New_Road_Sign_1i.png/300px-Indonesia_New_Road_Sign_1i.png",
+    "name": "Banyak tikungan",
+    "type": "WARNING",
+    "description": "Rambu ini mengindikasikan bahwa di depan terdapat banyak tikungan. Pengemudi sebaiknya mengurangi kecepatan dan memperhatikan rambu-rambu tambahan yang mungkin memberikan petunjuk lebih lanjut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Indonesia_New_Road_Sign_1j.png/300px-Indonesia_New_Road_Sign_1j.png",
+    "name": "Banyak tikungan",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan bahwa di depan terdapat sejumlah tikungan. Para pengendara diharapkan untuk memperlambat kendaraan dan berkendara dengan hati-hati melalui area dengan banyak tikungan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Indonesia_New_Road_Sign_1k.png/300px-Indonesia_New_Road_Sign_1k.png",
+    "name": "Tikungan memutar",
+    "type": "WARNING",
+    "description": "Rambu ini menginformasikan adanya tikungan memutar di depan. Pengemudi diwajibkan untuk mengurangi kecepatan dan mengikuti jalan melingkar dengan hati-hati."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Indonesia_New_Road_Sign_1l.png/300px-Indonesia_New_Road_Sign_1l.png",
+    "name": "Tikungan memutar",
+    "type": "WARNING",
+    "description": "Rambu ini memberitahu pengendara tentang keberadaan tikungan memutar di jalan. Disarankan untuk melambat dan mengemudi dengan hati-hati melewati tikungan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Indonesia_New_Road_Sign_1m.png/300px-Indonesia_New_Road_Sign_1m.png",
+    "name": "Pelebaran badan jalan",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di depan akan ada pelebaran badan jalan. Para pengemudi sebaiknya memperhatikan perubahan lebar jalan dan menjaga laju kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_1p.png/116px-Indonesia_New_Road_Sign_1p.png",
+    "name": "Penyempitan badan Jalan di bagian kanan",
+    "type": "WARNING",
+    "description": "Rambu ini memberitahu pengendara bahwa badan jalan akan menyempit di sebelah kanan. Disarankan untuk memberikan prioritas kepada kendaraan yang datang dari arah sebelah kiri."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Indonesia_New_Road_Sign_1w.png/300px-Indonesia_New_Road_Sign_1w.png",
+    "name": "Jembatan",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan bahwa di depan terdapat sebuah jembatan. Para pengendara sebaiknya memperlambat laju kendaraan dan memperhatikan kondisi jalan yang mungkin berbeda di atas jembatan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_2a.png/300px-Indonesia_New_Road_Sign_2a.png",
+    "name": "Jalan menurun landai",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa jalan akan menurun dengan kemiringan yang landai. Pengemudi diharapkan untuk mengurangi kecepatan dan memperhatikan kondisi jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indonesian_New_Road_sign_2B.png/300px-Indonesian_New_Road_sign_2B.png",
+    "name": "Jalan menurun curam",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan bahwa pengemudi akan melewati jalan menurun dengan kemiringan curam. Keamanan dan pengurangan kecepatan sangat penting."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indonesia_New_Road_Sign_2c.png/117px-Indonesia_New_Road_Sign_2c.png",
+    "name": "Jalan memanjak landai",
+    "type": "WARNING",
+    "description": "Rambu ini mengindikasikan bahwa pengemudi akan melewati jalan memanjak dengan kemiringan yang landai. Tetap waspada terhadap perubahan kecepatan dan kontrol kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Indonesian_New_Road_Sign_2d.png/300px-Indonesian_New_Road_Sign_2d.png",
+    "name": "Jalan memanjak curam",
+    "type": "WARNING",
+    "description": "Rambu ini memberi tahu pengemudi bahwa jalan akan memanjak dengan kemiringan curam. Pengemudi diharapkan untuk menggunakan rem dengan hati-hati dan menjaga kendali kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Indonesian_Road_Sign_7.png/300px-Indonesian_Road_Sign_7.png",
+    "name": "Jalan licin",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa jalan dapat menjadi licin. Pengemudi harus meningkatkan kewaspadaan, mengurangi kecepatan, dan menjaga jarak aman antara kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Indonesia_New_Road_Sign_3e.png/300px-Indonesia_New_Road_Sign_3e.png",
+    "name": "Cekungan",
+    "type": "WARNING",
+    "description": "Rambu ini mengidentifikasi adanya cekungan di jalan. Pengemudi diharapkan untuk mengurangi kecepatan dan tetap waspada terhadap perubahan permukaan jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Indonesia_New_Road_Sign_3f.png/300px-Indonesia_New_Road_Sign_3f.png",
+    "name": "Jalan cembung Alat pembatas/Kecepatan",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya jalan cembung dengan adanya alat pembatas atau pembatas kecepatan. Pengemudi diharapkan untuk mengikuti petunjuk kecepatan dan memperhatikan batasan jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesia_New_Road_Sign_3g.png/300px-Indonesia_New_Road_Sign_3g.png",
+    "name": "Jalan bergelombang",
+    "type": "WARNING",
+    "description": "Rambu ini memberi tahu pengemudi bahwa jalan akan bergelombang. Kendaraan harus melalui rintangan ini dengan hati-hati untuk menjaga stabilitas dan kenyamanan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesian_Road_Sign_8.png/117px-Indonesian_Road_Sign_8.png",
+    "name": "Lontaran kerikil",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang adanya lontaran kerikil di jalan. Pengemudi diharapkan untuk mengurangi kecepatan dan menghindari manuver yang tiba-tiba."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Indonesia_New_Road_Sign_3i.png/300px-Indonesia_New_Road_Sign_3i.png",
+    "name": "Bagian tepi Rawan runtuh (Longsor)",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan bahwa bagian tepi jalan rawan runtuh atau longsor. Pengemudi diharapkan untuk melalui area ini dengan hati-hati dan memperhatikan perubahan kondisi jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Indonesia_New_Road_Sign_4a1.png/300px-Indonesia_New_Road_Sign_4a1.png",
+    "name": "Lampu lalu Lintas",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa ada lampu lalu lintas di depan. Pengemudi diharapkan untuk mematuhi aturan lalu lintas, menghentikan kendaraan saat lampu merah, dan melanjutkan perjalanan saat lampu hijau."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesia_New_Road_Sign_4b1.png/117px-Indonesia_New_Road_Sign_4b1.png",
+    "name": "Persimpangan 4 arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di depan akan ada persimpangan empat arah. Pengemudi diharapkan untuk mematuhi aturan lalu lintas dan memberikan hak prioritas kepada kendaraan yang datang dari arah lain."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Indonesia_New_Road_Sign_4b10.png/300px-Indonesia_New_Road_Sign_4b10.png",
+    "name": "Persimpangan tiga berganda",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan persimpangan tiga berganda di depan. Pengemudi diharapkan untuk mengurangi kecepatan, memberikan hak prioritas, dan mengikuti tanda arah yang benar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Indonesia_New_Road_Sign_4b11.png/300px-Indonesia_New_Road_Sign_4b11.png",
+    "name": "Persimpangan tiga berganda",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya persimpangan tiga berganda di depan. Pengemudi harus memperhatikan dan mengikuti tanda arah yang benar untuk memastikan keselamatan lalu lintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Indonesia_New_Road_Sign_4b13.png/111px-Indonesia_New_Road_Sign_4b13.png",
+    "name": "Persimpangan tiga serong",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya persimpangan tiga serong di depan. Pengemudi diharapkan untuk memperlambat kendaraan, memberikan hak prioritas, dan berhati-hati saat melintasi persimpangan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indonesia_New_Road_Sign_4b17.png/300px-Indonesia_New_Road_Sign_4b17.png",
+    "name": "Persimpangan tiga",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa Anda akan segera mencapai persimpangan tiga di jalan. Pastikan untuk mengurangi kecepatan dan berhati-hati saat mendekati persimpangan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Indonesia_New_Road_Sign_4b18.png/110px-Indonesia_New_Road_Sign_4b18.png",
+    "name": "Persimpangan tiga",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang adanya persimpangan tiga di depan. Harap berhati-hati dan patuhi aturan lalu lintas yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Indonesia_New_Road_Sign_4b19.png/300px-Indonesia_New_Road_Sign_4b19.png",
+    "name": "Persimpangan tiga serong",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan bahwa ada persimpangan tiga dengan sudut miring di sepanjang jalan. Pastikan untuk mengamati lalu lintas dari semua arah sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Indonesia_New_Road_Sign_4b2.png/118px-Indonesia_New_Road_Sign_4b2.png",
+    "name": "Persimpangan 4 arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya persimpangan empat arah di depan. Harap berhenti atau mengurangi kecepatan, dan pastikan area persimpangan aman sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indonesia_New_Road_Sign_4b3.png/300px-Indonesia_New_Road_Sign_4b3.png",
+    "name": "Bundaran",
+    "type": "WARNING",
+    "description": "Rambu ini mengindikasikan bahwa Anda akan menghadapi bundaran di jalan. Patuhi aturan lalu lintas bundaran dan berikan prioritas kepada kendaraan yang sudah ada di dalam bundaran."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indonesia_New_Road_Sign_4b5.png/111px-Indonesia_New_Road_Sign_4b5.png",
+    "name": "Persimpangan tiga lengan serong",
+    "type": "WARNING",
+    "description": "Rambu ini memberitahu Anda bahwa akan ada persimpangan tiga lengan dengan sudut miring di sepanjang jalan. Pastikan untuk memperhatikan lalu lintas dari semua arah sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Indonesia_New_Road_Sign_4b6.png/300px-Indonesia_New_Road_Sign_4b6.png",
+    "name": "Penggabungan jalan",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan area di mana dua jalan bergabung. Perhatikan dan berikan prioritas kepada kendaraan dari kedua arah untuk memastikan keamanan lalu lintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indonesia_New_Road_Sign_4b7.png/300px-Indonesia_New_Road_Sign_4b7.png",
+    "name": "Penggabungan jalan",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang adanya penggabungan jalan. Pastikan untuk mengurangi kecepatan dan memperhatikan lalu lintas sebelum memasuki area penggabungan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Indonesia_New_Road_Sign_4b8.png/116px-Indonesia_New_Road_Sign_4b8.png",
+    "name": "Persimpangan 3 arah",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya persimpangan tiga arah di depan. Berhenti atau mengurangi kecepatan sebelum mencapai persimpangan, dan pastikan lalu lintas aman sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Indonesia_New_Road_Sign_4b9.png/111px-Indonesia_New_Road_Sign_4b9.png",
+    "name": "Persimpangan 3 arah",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan akan adanya persimpangan tiga arah di jalan. Pastikan untuk berhenti atau mengurangi kecepatan sebelum mencapai persimpangan dan amati lalu lintas dari semua arah."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesia_New_Road_Sign_4c1.png/300px-Indonesia_New_Road_Sign_4c1.png",
+    "name": "Awal bangunan pemisah untuk lalulintas dua arah",
+    "type": "WARNING",
+    "description": "Rambu ini menandai awal dari sebuah bangunan pemisah untuk lalu lintas dua arah. Pastikan untuk tetap berada pada jalur Anda dan mengikuti aturan lalu lintas yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Indonesia_New_Road_Sign_4c2.png/300px-Indonesia_New_Road_Sign_4c2.png",
+    "name": "Akhir bangunan pemisah untuk lalulintas dua arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan akhir dari sebuah bangunan pemisah untuk lalu lintas dua arah. Pastikan untuk menyesuaikan kecepatan Anda dan bersiap untuk menggabungkan diri dengan lalu lintas lain."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Indonesia_New_Road_Sign_4c3.png/300px-Indonesia_New_Road_Sign_4c3.png",
+    "name": "Awal bangunan pemisah untuk lalulintas satu arah",
+    "type": "WARNING",
+    "description": "Rambu ini menandai awal dari sebuah bangunan pemisah untuk lalu lintas satu arah. Harap ikuti jalur yang ditentukan dan patuhi aturan lalu lintas yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Indonesia_New_Road_Sign_6a.png/300px-Indonesia_New_Road_Sign_6a.png",
+    "name": "Penyebrangan pejalan kaki",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya penyebrangan pejalan kaki di depan. Harap berhenti dan berikan prioritas kepada pejalan kaki yang akan menyeberang jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Indonesia_New_Road_Sign_6b.png/300px-Indonesia_New_Road_Sign_6b.png",
+    "name": "Area banyak pejalan kaki",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang area di mana terdapat banyak pejalan kaki. Harap perhatikan dan mengurangi kecepatan untuk keamanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Indonesia_New_Road_Sign_6c.png/300px-Indonesia_New_Road_Sign_6c.png",
+    "name": "Area pejalan kaki anak-anak",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di area ini terdapat pejalan kaki anak-anak. Pengemudi diharapkan untuk lebih berhati-hati dan memperhatikan keberadaan anak-anak yang mungkin melintas di sekitar area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indonesia_New_Road_Sign_6e.png/106px-Indonesia_New_Road_Sign_6e.png",
+    "name": "Pesepeda",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan kepada pengemudi bahwa di sekitar area ini sering dilalui oleh pesepeda. Pengemudi diharapkan untuk memberi keutamaan dan menjaga jarak aman dengan pesepeda."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Indonesia_New_Road_Sign_6f.png/300px-Indonesia_New_Road_Sign_6f.png",
+    "name": "Binatang ternak",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya potensi lintasan binatang ternak di sekitar jalan. Pengemudi diharapkan untuk mengurangi kecepatan dan tetap waspada terhadap kemungkinan adanya binatang ternak yang melintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Indonesia_New_Road_Sign_6g.png/300px-Indonesia_New_Road_Sign_6g.png",
+    "name": "Binatang liar",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengemudi bahwa di daerah ini terdapat kemungkinan adanya binatang liar. Pengemudi diharapkan untuk berkendara dengan hati-hati dan waspada terhadap kemungkinan lintasan binatang liar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Indonesia_New_Road_Sign_8a.png/107px-Indonesia_New_Road_Sign_8a.png",
+    "name": "Hati-hati",
+    "type": "WARNING",
+    "description": "Rambu ini mengingatkan pengemudi untuk lebih berhati-hati di sekitar area tersebut. Mungkin terdapat kondisi jalan yang berbahaya atau perubahan keadaan yang memerlukan perhatian ekstra dari pengemudi."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Indonesia_New_Road_Sign_8b.png/110px-Indonesia_New_Road_Sign_8b.png",
+    "name": "Pekerjaan di depan",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya pekerjaan atau konstruksi di depan. Pengemudi diharapkan untuk mengurangi kecepatan, mengikuti petunjuk arah, dan tetap waspada terhadap pekerjaan yang sedang berlangsung."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indonesia_New_Road_Sign_8c.png/300px-Indonesia_New_Road_Sign_8c.png",
+    "name": "Batas tinggi ruang bebas",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan batas tinggi ruang bebas di sekitar area tersebut. Pengemudi yang mengangkut kendaraan besar perlu memperhatikan batas tinggi ini untuk menghindari tabrakan atau kerusakan pada kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Indonesia_New_Road_Sign_8d.png/300px-Indonesia_New_Road_Sign_8d.png",
+    "name": "Batas lebar ruang bebas",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan batas lebar ruang bebas di sekitar area tersebut. Pengemudi yang membawa kendaraan besar perlu memperhatikan batas lebar ini untuk menghindari masalah saat melintasi area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Indonesia_New_Road_Sign_8g.png/300px-Indonesia_New_Road_Sign_8g.png",
+    "name": "Daerah pesawat terbang rendah",
+    "type": "WARNING",
+    "description": "Rambu ini memberi tahu pengemudi bahwa daerah tersebut merupakan jalur pesawat terbang rendah. Pengemudi diharapkan untuk tetap waspada terhadap pesawat yang mungkin melintas rendah di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Indonesia_New_Road_Sign_8h.png/300px-Indonesia_New_Road_Sign_8h.png",
+    "name": "Angin samping",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan kepada pengemudi tentang kemungkinan angin samping di area tersebut. Pengemudi diharapkan untuk memegang kendali dengan lebih hati-hati untuk menghindari gangguan akibat angin samping."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Indonesia_New_Road_Sign_8i.png/300px-Indonesia_New_Road_Sign_8i.png",
+    "name": "Lalu lintas dua arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di area ini terdapat lalu lintas dari dua arah yang bertemu. Pengemudi diharapkan untuk berhati-hati dan mematuhi aturan lalu lintas untuk menghindari kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Indonesia_New_Road_Sign_8j.png/300px-Indonesia_New_Road_Sign_8j.png",
+    "name": "Jembatan angkat",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya jembatan angkat di depan. Pengemudi diharapkan untuk mengurangi kecepatan dan mematuhi petunjuk lalu lintas yang mungkin diberikan terkait pengoperasian jembatan angkat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesia_New_Road_Sign_8e.png/300px-Indonesia_New_Road_Sign_8e.png",
+    "name": "Perlintasan kereta api dengan palang pintu",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya perlintasan kereta api dengan palang pintu. Pengemudi diharapkan untuk berhenti dan menunggu saat palang pintu ditutup dan memastikan bahwa tidak ada kereta yang akan melintas sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Indonesia_New_Road_Sign_8f.png/300px-Indonesia_New_Road_Sign_8f.png",
+    "name": "Perlintasan kereta api tanpa palang pintu",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya perlintasan kereta api tanpa palang pintu. Pengemudi diharapkan untuk berhenti, memastikan bahwa jalur kereta aman, dan melanjutkan perjalanan dengan hati-hati."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesia_Road_Sign_Toll_Road_fog.svg/300px-Indonesia_Road_Sign_Toll_Road_fog.svg.png",
+    "name": "Hati-hati terjadi kabut",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan kepada pengemudi bahwa di daerah ini sering terjadi kabut. Pengemudi diharapkan untuk mengurangi kecepatan, menggunakan lampu kabut, dan menjaga jarak aman untuk keselamatan berkendara."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_Road_Sign_Toll_Road_tailwind.png/300px-Indonesia_Road_Sign_Toll_Road_tailwind.png",
+    "name": "Hati-hati angin kencang dari samping",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengendara untuk berhati-hati terhadap angin kencang yang bisa datang dari samping. Pengemudi disarankan untuk mengurangi kecepatan dan mempertahankan kendali kendaraan agar tidak terpengaruh oleh angin yang kuat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/b/bd/Arahbelok.png/300px-Arahbelok.png",
+    "name": "Pengarah tikungan ke kiri atau ke kanan",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan petunjuk kepada pengendara bahwa ada tikungan mendekat ke arah kiri atau kanan. Pengemudi disarankan untuk mempersiapkan diri, mengurangi kecepatan, dan mengikuti arah tikungan yang ditunjukkan oleh rambu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/4/4c/Ramburintang.png/94px-Ramburintang.png",
+    "name": "Rambu peringatan rintangan atau objek berbahaya di sisi kiri jalan (rambu kiri) atau sisi kanan jalan (rambu kanan)",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengendara tentang adanya rintangan atau objek berbahaya di sisi kiri atau kanan jalan. Pengemudi diharapkan untuk tetap waspada dan berhati-hati saat melintasi area yang ditunjuk oleh rambu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/3/38/Ramburintang2.png/45px-Ramburintang2.png",
+    "name": "Rambu peringatan rintangan atau objek berbahaya pada pemisal lajur atau jalur",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengendara tentang adanya rintangan atau objek berbahaya di jalur atau lajur tertentu. Pengemudi diharapkan untuk memperhatikan rambu ini dan mengambil tindakan yang diperlukan untuk menghindari risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Indonesian_Road_Sign_b3c.png/117px-Indonesian_Road_Sign_b3c.png",
+    "name": "Sepeda motor dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa sepeda motor dilarang masuk ke area yang ditunjuk. Pengemudi sepeda motor diharapkan untuk mengikuti aturan tersebut dan mencari rute alternatif jika perlu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Indonesian_Road_Sign_b3a.png/300px-Indonesian_Road_Sign_b3a.png",
+    "name": "Mobil dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa mobil dilarang masuk ke area yang ditunjuk. Pengemudi mobil diharapkan untuk mengikuti aturan tersebut dan mencari rute alternatif jika perlu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Indonesian_Road_Sign_b3d.png/300px-Indonesian_Road_Sign_b3d.png",
+    "name": "Kendaraan bermotor dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa kendaraan bermotor dilarang masuk ke area yang ditunjuk. Pengemudi diharapkan untuk mematuhi aturan tersebut dan mencari jalur lain sesuai kebutuhan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Indonesia_New_Road_Sign_Pro_2c3.png/105px-Indonesia_New_Road_Sign_Pro_2c3.png",
+    "name": "Sepeda dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini melarang masuknya sepeda ke area yang ditunjuk. Pengendara sepeda diharapkan untuk mematuhi peraturan tersebut dan mencari jalur yang sesuai untuk perjalanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Indonesia_New_Road_Sign_Pro_2d1.png/300px-Indonesia_New_Road_Sign_Pro_2d1.png",
+    "name": "Larangan untuk truk dengan panjang tertentu",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa truk dengan panjang tertentu dilarang masuk. Pengemudi truk diharapkan untuk memahami batasan panjang yang ditetapkan dan memilih jalur alternatif jika diperlukan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Indonesia_New_Road_Sign_Pro_2d2.png/300px-Indonesia_New_Road_Sign_Pro_2d2.png",
+    "name": "Batas ketinggian",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan ketinggian yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memastikan bahwa kendaraan mereka memenuhi batasan tersebut untuk mencegah kerusakan atau risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Indonesia_New_Road_Sign_Pro_2d3.png/300px-Indonesia_New_Road_Sign_Pro_2d3.png",
+    "name": "Batas ruang lebar",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan ruang lebar yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memastikan bahwa kendaraan mereka memenuhi batasan tersebut untuk mencegah masalah di jalan atau risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Indonesia_New_Road_Sign_Pro_2d5.png/300px-Indonesia_New_Road_Sign_Pro_2d5.png",
+    "name": "Batas tonase",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan tonase yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memahami batasan tersebut dan memastikan bahwa kendaraan mereka memenuhi persyaratan yang ditetapkan untuk meminimalkan risiko kerusakan jalan atau kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Indonesia_New_Road_Sign_Pro_2d6.png/300px-Indonesia_New_Road_Sign_Pro_2d6.png",
+    "name": "Batas tonase sumbu muatan",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan tonase sumbu muatan yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memahami batasan tersebut dan memastikan bahwa kendaraan mereka memenuhi persyaratan yang ditetapkan untuk mencegah kerusakan jalan atau risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Indonesia_New_Road_Sign_Pro_3a.png/300px-Indonesia_New_Road_Sign_Pro_3a.png",
+    "name": "Dilarang berhenti",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa berhenti di area yang ditunjuk dilarang. Pengendara diharapkan untuk terus melanjutkan perjalanan mereka dan mencari tempat berhenti yang sesuai jika diperlukan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Indonesia_New_Road_Sign_Pro_3b.png/300px-Indonesia_New_Road_Sign_Pro_3b.png",
+    "name": "Dilarang parkir",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa parkir di area yang ditunjuk dilarang. Pengendara diharapkan untuk mencari tempat parkir yang sesuai dengan aturan lalu lintas dan menghindari parkir di lokasi yang dilarang."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Indonesia_New_Road_Sign_Pro_4h.png/300px-Indonesia_New_Road_Sign_Pro_4h.png",
+    "name": "Batas maksimal kecepatan",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batas maksimal kecepatan yang diperbolehkan di daerah tersebut. Pengemudi diharapkan untuk mematuhi batas kecepatan ini untuk menjaga keamanan dan ketertiban lalu lintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Indonesia_new_road_sign_pro_4g.png/300px-Indonesia_new_road_sign_pro_4g.png",
+    "name": "Batas jarak antar kendaraan",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menetapkan batas jarak yang harus dijaga antara kendaraan satu dengan yang lain. Mempertahankan jarak yang aman adalah kunci untuk mencegah kecelakaan dan memberikan waktu reaksi yang cukup."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Indonesia_New_Road_Sign_Pro_1a.png/119px-Indonesia_New_Road_Sign_Pro_1a.png",
+    "name": "Berhenti",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberikan instruksi kepada pengemudi untuk berhenti sepenuhnya. Penting untuk mematuhi rambu ini, baik untuk keamanan pribadi maupun untuk mengatur lalu lintas dengan baik."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Indonesia_New_Road_Sign_Pro_1b.png/300px-Indonesia_New_Road_Sign_Pro_1b.png",
+    "name": "Beri jalan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan instruksi kepada pengemudi untuk memberikan jalan kepada kendaraan lain. Memahami dan mengikuti rambu ini membantu menjaga alur lalu lintas yang lancar dan aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Indonesia_Road_Sign_Mandatory_5.png/300px-Indonesia_Road_Sign_Mandatory_5.png",
+    "name": "Wajib memakai rantai pada ban",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan bahwa pengemudi wajib memakai rantai pada ban kendaraannya. Hal ini umumnya diberlakukan di daerah-daerah dengan kondisi jalan yang licin atau berbahaya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indonesia_Road_Sign_Mandatory_7B.png/300px-Indonesia_Road_Sign_Mandatory_7B.png",
+    "name": "Batas akhir wajib memakai rantai pada ban",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan batas akhir daerah di mana pengemudi diwajibkan untuk memakai rantai pada ban. Pengemudi harus memastikan bahwa rantai pada ban sudah dipasang sebelum mencapai batas ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Indonesian_Road_sign_info_3a.png/300px-Indonesian_Road_sign_info_3a.png",
+    "name": "Awal batas wilayah kota ubud",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan awal dari batas wilayah kota Ubud. Pengemudi sebaiknya memperhatikan perubahan-perubahan aturan lalu lintas dan kebijakan yang mungkin berlaku di dalam kota."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Indonesian_Road_Sign_info_3b.png/300px-Indonesian_Road_Sign_info_3b.png",
+    "name": "Keluar batas wilayah kota ubud",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan bahwa Anda meninggalkan batas wilayah kota Ubud. Pengemudi sebaiknya memperhatikan perubahan-perubahan aturan lalu lintas dan kebijakan yang mungkin berlaku di luar kota."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indonesia_New_Road_Sign_Info_4a.png/93px-Indonesia_New_Road_Sign_Info_4a.png",
+    "name": "Jalan tol",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan bahwa Anda telah memasuki jalan tol. Pastikan untuk membayar tol yang diperlukan dan mematuhi aturan lalu lintas khusus jalan tol."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Indonesian_road_sign_info_4c.png/300px-Indonesian_road_sign_info_4c.png",
+    "name": "Nama Jalan tol (bermula)",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan titik awal suatu jalan tol dengan memberikan informasi nama jalan tol yang akan diikuti. Gunakan informasi ini untuk navigasi dan referensi selama perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Indonesian_road_sign_info_4d.png/300px-Indonesian_road_sign_info_4d.png",
+    "name": "Nama Jalan tol (berakhir)",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan titik akhir suatu jalan tol dengan memberikan informasi nama jalan tol yang baru selesai diikuti. Persiapkan diri untuk keluar dari jalan tol."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Indonesian_Road_Sign_Info_5a1.png/90px-Indonesian_Road_Sign_Info_5a1.png",
+    "name": "Terminal bus",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi terminal bus. Pengguna transportasi umum dapat menggunakan rambu ini sebagai panduan untuk menemukan terminal bus dan menentukan rute perjalanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Indonesia_New_Road_Sign_Info_5A2.png/90px-Indonesia_New_Road_Sign_Info_5A2.png",
+    "name": "Stasiun kereta api",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi stasiun kereta api. Penumpang kereta api dapat mengikuti rambu ini untuk menemukan stasiun dan memudahkan akses ke sarana transportasi kereta api."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Indonesian_Road_Sign_Info_5a3.png/90px-Indonesian_Road_Sign_Info_5a3.png",
+    "name": "Pelabuhan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pelabuhan. Pengguna transportasi laut dapat menggunakan rambu ini sebagai panduan untuk menemukan pelabuhan dan mengakses kapal atau fasilitas lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Indonesia_New_Road_Sign_Info_5a4.svg/90px-Indonesia_New_Road_Sign_Info_5a4.svg.png",
+    "name": "Bandara udara",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi bandara udara. Penumpang pesawat dapat mengikuti rambu ini untuk menemukan bandara dan memulai perjalanan udara mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Indonesian_Road_Sign_Info_5b1.png/90px-Indonesian_Road_Sign_Info_5b1.png",
+    "name": "Tempat pembuangan Sementara",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi tempat pembuangan sementara, tempat di mana barang atau material dapat sementara disimpan sebelum diproses lebih lanjut atau dibuang secara permanen."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Indonesian_Road_Sign_Info_5b2.png/90px-Indonesian_Road_Sign_Info_5b2.png",
+    "name": "Tempat Pembuangan Akhir",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan tempat pembuangan akhir, di mana sampah atau limbah dibuang secara permanen setelah melalui proses pengelolaan dan pengolahan yang sesuai."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Indonesian_Road_Sign_Info_5c1.png/90px-Indonesian_Road_Sign_Info_5c1.png",
+    "name": "Kantor pos",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi kantor pos, tempat di mana layanan pos dan pengiriman surat atau paket berlangsung."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Indonesian_Road_Sign_Info_5c2.png/90px-Indonesian_Road_Sign_Info_5c2.png",
+    "name": "Telepon umum",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan keberadaan telepon umum di sekitar area tersebut, memberikan informasi kepada pengguna jalan bahwa mereka dapat menemukan telepon umum di lokasi tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Indonesia_New_Road_Sign_Info_5d1.png/90px-Indonesia_New_Road_Sign_Info_5d1.png",
+    "name": "Halte bus",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi halte bus, tempat di mana penumpang dapat naik atau turun dari bus umum."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Indonesia_New_Road_Sign_Info_5d2.png/90px-Indonesia_New_Road_Sign_Info_5d2.png",
+    "name": "Stand taksi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan area stand taksi, di mana penumpang dapat menemukan taksi yang sedang menunggu atau berhenti untuk menaikkan penumpang."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Indonesian_Road_Sign_Info_5d3.png/90px-Indonesian_Road_Sign_Info_5d3.png",
+    "name": "Kendaraan umum selain bus dan taksi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan informasi tentang jalur khusus untuk kendaraan umum selain bus dan taksi, memastikan kelancaran lalu lintas di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indonesian_Road_Sign_Info_5e.png/90px-Indonesian_Road_Sign_Info_5e.png",
+    "name": "Penyebrangan pejalan kaki",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi penyebrangan pejalan kaki, memberikan peringatan kepada pengguna jalan untuk memperhatikan pejalan kaki yang mungkin menyeberang di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Indonesian_Road_Sign_Info_5F1.png/89px-Indonesian_Road_Sign_Info_5F1.png",
+    "name": "Zona parkir",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan zona parkir, menandakan area di mana kendaraan dapat diparkir sesuai dengan peraturan dan tanda-tanda yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Indonesian_Road_Sign_Info_5f2.png/90px-Indonesian_Road_Sign_Info_5f2.png",
+    "name": "Zona parkir untuk penyadangan cacat",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan zona parkir khusus untuk penyandang cacat, memberikan akses dan fasilitas parkir yang sesuai untuk mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Indonesia_New_Road_Sign_Info_5g1.png/90px-Indonesia_New_Road_Sign_Info_5g1.png",
+    "name": "Terowongan bermula",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan informasi bahwa terowongan dimulai di lokasi tersebut, memperingatkan pengemudi untuk bersiap-siap masuk ke dalam terowongan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Indonesian_Road_Sign_Info_5g2.png/90px-Indonesian_Road_Sign_Info_5g2.png",
+    "name": "Terowongan berakhir",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan bahwa terowongan berakhir di lokasi tersebut, memberikan informasi kepada pengemudi bahwa mereka akan keluar dari terowongan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Indonesian_Road_Sign_Info_5h1.png/90px-Indonesian_Road_Sign_Info_5h1.png",
+    "name": "Rute evakuasi tsunami",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan rute evakuasi untuk menghindari bahaya tsunami, memberikan petunjuk kepada penduduk atau pengunjung tentang jalur yang aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indonesian_Road_Sign_Info_5h2.png/90px-Indonesian_Road_Sign_Info_5h2.png",
+    "name": "Rute evakuasi gempabumi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan rute evakuasi khusus untuk menghindari bahaya gempa bumi, memberikan panduan kepada orang-orang untuk mencapai lokasi yang lebih aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Indonesian_Road_Sign_Info_5h3.png/90px-Indonesian_Road_Sign_Info_5h3.png",
+    "name": "Rute evakuasi letusan gunungapi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan informasi tentang rute evakuasi khusus untuk menghindari bahaya letusan gunungapi, memberikan panduan kepada masyarakat untuk mencapai daerah yang lebih aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Indonesian_Road_Sign_Info_5h4.png/90px-Indonesian_Road_Sign_Info_5h4.png",
+    "name": "Lokasi berkumpul darurat",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi tempat berkumpul darurat. Tempat ini biasanya digunakan sebagai titik pertemuan aman dalam situasi darurat atau evakuasi."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Indonesian_Road_Sign_Info_5h5.png/90px-Indonesian_Road_Sign_Info_5h5.png",
+    "name": "Kamp pengungsian",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi kamp pengungsian. Tempat ini digunakan sebagai tempat perlindungan sementara untuk orang-orang yang mengungsi dari bencana atau situasi darurat lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Indonesian_Road_Sign_Info_5h6.png/90px-Indonesian_Road_Sign_Info_5h6.png",
+    "name": "Pusat pengungsian",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pusat pengungsian. Tempat ini merupakan pusat koordinasi dan bantuan untuk orang-orang yang membutuhkan perlindungan dan bantuan dalam situasi darurat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Indonesian_Road_Sign_Info_6a1.png/90px-Indonesian_Road_Sign_Info_6a1.png",
+    "name": "Masjid",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi masjid. Tempat ini adalah tempat ibadah bagi umat Islam untuk melaksanakan salat dan kegiatan keagamaan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Indonesian_Road_Sign_Info_6a2.png/90px-Indonesian_Road_Sign_Info_6a2.png",
+    "name": "Gereja",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi gereja. Tempat ini adalah tempat ibadah bagi umat Kristen untuk melaksanakan kegiatan keagamaan dan peribadatan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6a3.png/90px-Indonesian_Road_Sign_Info_6a3.png",
+    "name": "Wihara",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi wihara. Tempat ini adalah tempat ibadah bagi umat Buddha untuk melaksanakan kegiatan keagamaan dan meditasi."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Indonesian_Road_Sign_Info_6a4.png/90px-Indonesian_Road_Sign_Info_6a4.png",
+    "name": "Pura",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pura. Tempat ini adalah tempat ibadah bagi umat Hindu untuk melaksanakan upacara keagamaan dan peribadatan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Indonesian_Road_Sign_Info_6b1.png/90px-Indonesian_Road_Sign_Info_6b1.png",
+    "name": "Rumah Sakit",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi rumah sakit. Tempat ini adalah fasilitas kesehatan yang menyediakan pelayanan medis dan perawatan bagi orang-orang yang membutuhkan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6b2.png/90px-Indonesian_Road_Sign_Info_6b2.png",
+    "name": "Klinik/Puskesmas",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi klinik atau puskesmas. Tempat ini adalah fasilitas kesehatan yang menyediakan pelayanan medis dasar dan perawatan kesehatan masyarakat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Indonesian_Road_Sign_Info_6b3.png/90px-Indonesian_Road_Sign_Info_6b3.png",
+    "name": "Apotek",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi apotek. Tempat ini adalah tempat di mana orang dapat membeli obat-obatan dan produk kesehatan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Indonesian_Road_Sign_Info_6b4.png/90px-Indonesian_Road_Sign_Info_6b4.png",
+    "name": "Pompa Bahan Bakar",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pompa bahan bakar. Tempat ini adalah fasilitas untuk mengisi ulang bahan bakar kendaraan bermotor."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Indonesia_New_Road_Sign_Info_6b5.png/90px-Indonesia_New_Road_Sign_Info_6b5.png",
+    "name": "Stasiun uji berkala",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi stasiun uji berkala. Tempat ini digunakan untuk melakukan uji berkala terhadap kendaraan bermotor guna memastikan keamanan dan kelayakan operasionalnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indonesia_New_Road_Sign_Info_6b6.png/90px-Indonesia_New_Road_Sign_Info_6b6.png",
+    "name": "Stasiun uji emisi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi stasiun uji emisi. Tempat ini digunakan untuk mengukur emisi gas buang kendaraan bermotor untuk memastikan kepatuhan terhadap standar lingkungan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Indonesian_Road_Sign_Info_6b7.png/90px-Indonesian_Road_Sign_Info_6b7.png",
+    "name": "Jembatan timbang",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi jembatan timbang. Tempat ini digunakan untuk menimbang kendaraan bermotor guna memastikan kesesuaian dengan batas berat yang ditetapkan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indonesian_Road_Sign_Info_6b8.png/90px-Indonesian_Road_Sign_Info_6b8.png",
+    "name": "Museum",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi museum. Tempat ini adalah tempat untuk melestarikan dan menampilkan koleksi seni, sejarah, dan budaya bagi masyarakat umum."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Indonesian_Road_Sign_Info_6c1.png/90px-Indonesian_Road_Sign_Info_6c1.png",
+    "name": "Pasar",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya pasar di sekitar. Pengendara diharapkan berhati-hati dan memperhatikan aktivitas pejalan kaki dan penyebrangan di area ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Indonesia_Road_Sign_Info_6c2.png/90px-Indonesia_Road_Sign_Info_6c2.png",
+    "name": "Toko restoran",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini mengindikasikan keberadaan toko atau restoran di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan penyebrangan pejalan kaki di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesian_Road_Sign_Info_6c3.png/90px-Indonesian_Road_Sign_Info_6c3.png",
+    "name": "Toko kafe",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya kafe atau tempat minum kopi di sekitar. Pengendara diharapkan berhati-hati dan mengurangi kecepatan saat melewati area ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Indonesian_Road_Sign_Info_6c4.png/90px-Indonesian_Road_Sign_Info_6c4.png",
+    "name": "Penginapan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberitahu bahwa ada penginapan di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan tanda-tanda petunjuk menuju penginapan tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Indonesian_Road_Sign_Info_6c5.png/90px-Indonesian_Road_Sign_Info_6c5.png",
+    "name": "Bengkel",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya bengkel atau tempat perbaikan kendaraan di sekitar. Pengendara diharapkan untuk memperlambat laju kendaraan dan berhati-hati saat mendekati area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesian_Road_Sign_Info_6d1.png/90px-Indonesian_Road_Sign_Info_6d1.png",
+    "name": "Taman",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan keberadaan taman di sekitar. Pengendara diharapkan untuk memperhatikan pejalan kaki dan berlalu dengan kecepatan yang aman di area ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Indonesian_Road_Sign_Info_6d2.png/90px-Indonesian_Road_Sign_Info_6d2.png",
+    "name": "Rute jelajahi alam",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini mengarahkan pengendara menuju rute untuk menjelajahi alam. Diingatkan untuk mengikuti petunjuk rambu dan memperhatikan kondisi jalan di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Indonesian_Road_Sign_Info_6d3.png/90px-Indonesian_Road_Sign_Info_6d3.png",
+    "name": "Kemah tenda",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan adanya area kemah tenda. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan keberadaan pejalan kaki atau pengunjung yang mungkin berada di sekitar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Indonesian_Road_Sign_Info_6d4.png/90px-Indonesian_Road_Sign_Info_6d4.png",
+    "name": "Kemah karavan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya area kemah karavan. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan aktivitas di sekitar area kemah karavan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesian_Road_Sign_Info_6d5.png/90px-Indonesian_Road_Sign_Info_6d5.png",
+    "name": "Perkemahan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan adanya tempat perkemahan di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan pejalan kaki atau pengunjung yang mungkin berada di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Indonesian_Road_Sign_Info_6d6.png/90px-Indonesian_Road_Sign_Info_6d6.png",
+    "name": "Vila",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya vila di sekitar. Pengendara diharapkan untuk mengurangi kecepatan dan memperhatikan petunjuk arah menuju vila tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Indonesian_Road_Sign_Info_6d7.png/90px-Indonesian_Road_Sign_Info_6d7.png",
+    "name": "Pantai",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan keberadaan pantai di sekitar. Pengendara diharapkan untuk berhati-hati dan mematuhi peraturan lalu lintas khusus di area pantai."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Indonesian_Road_Sign_Info_6e1.png/90px-Indonesian_Road_Sign_Info_6e1.png",
+    "name": "Lapangan olahraga terbuka",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan keberadaan lapangan olahraga terbuka di sekitar. Pengendara diharapkan untuk memperhatikan keberadaan atlet atau pengunjung yang mungkin berada di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Indonesian_Road_Sign_Info_6e2.png/90px-Indonesian_Road_Sign_Info_6e2.png",
+    "name": "Gelanggang olahraga",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan adanya gelanggang olahraga di sekitar. Pengendara diharapkan untuk memperhatikan keberadaan atlet atau pengunjung yang mungkin berada di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6e3.png/90px-Indonesian_Road_Sign_Info_6e3.png",
+    "name": "Kolam renang",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan adanya kolam renang di sekitar. Pengendara diharapkan untuk berhati-hati dan mengurangi kecepatan saat melewati area ini, terutama jika ada pejalan kaki di sekitar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Indonesian_Road_Sign_Info_6e4.png/90px-Indonesian_Road_Sign_Info_6e4.png",
+    "name": "Stadion",
+    "type": "INSTRUCTION",
+    "description": "Rambu Stadion memberikan petunjuk bahwa ada stadion di dekatnya. Pengemudi dan pejalan kaki harus memperhatikan adanya area stadion dan mungkin perlu mengikuti petunjuk lebih lanjut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Indonesian_Road_Sign_Info_6f1.png/90px-Indonesian_Road_Sign_Info_6f1.png",
+    "name": "Sekolah",
+    "type": "INSTRUCTION",
+    "description": "Rambu Sekolah memberikan informasi bahwa ada sekolah di dekatnya. Pengguna jalan harus berhati-hati dan mematuhi aturan lalu lintas ekstra karena adanya keberadaan sekolah."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Indonesian_Road_Sign_Info_6f2.png/90px-Indonesian_Road_Sign_Info_6f2.png",
+    "name": "Perpustakaan",
+    "type": "INSTRUCTION",
+    "description": "Rambu Perpustakaan memberikan petunjuk bahwa terdapat perpustakaan di sekitarnya. Pengguna jalan diharapkan untuk memperhatikan adanya perpustakaan dan mengikuti petunjuk yang mungkin terkait."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indonesia_New_Road_Sign_Info_7b.png/300px-Indonesia_New_Road_Sign_Info_7b.png",
+    "name": "Satu arah",
+    "type": "INSTRUCTION",
+    "description": "Rambu Satu Arah menunjukkan bahwa lalu lintas hanya diizinkan bergerak ke arah tertentu. Pengemudi harus mengikuti arah yang ditunjukkan oleh panah pada rambu ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Indonesia_New_Road_Sign_Info_7d.png/92px-Indonesia_New_Road_Sign_Info_7d.png",
+    "name": "Buntu",
+    "type": "INSTRUCTION",
+    "description": "Rambu Buntu mengindikasikan bahwa jalan berakhir atau buntu. Pengemudi harus mempersiapkan diri untuk mengambil jalur lain dan tidak melanjutkan perjalanan ke depan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Indonesia_New_Road_Sign_Info_7g.png/80px-Indonesia_New_Road_Sign_Info_7g.png",
+    "name": "Area putaran",
+    "type": "INSTRUCTION",
+    "description": "Rambu Area Putaran memberikan petunjuk bahwa ada putaran di depan. Pengemudi harus berhati-hati dan mengikuti aturan lalu lintas yang berlaku saat mendekati atau menggunakan area putaran."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Indonesia_New_Road_Sign_Info_7h.png/92px-Indonesia_New_Road_Sign_Info_7h.png",
+    "name": "Jalan kendaraan bermotor",
+    "type": "INSTRUCTION",
+    "description": "Rambu Jalan Kendaraan Bermotor memberikan informasi bahwa jalan tersebut diperuntukkan bagi kendaraan bermotor. Pengemudi sepeda motor, mobil, dan kendaraan bermotor lainnya dapat menggunakan jalan ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Indonesian_Directional_Sign_-_6.png/300px-Indonesian_Directional_Sign_-_6.png",
+    "name": "Rambu petunjuk 1 (Kode warna coklat untuk tujuan wisata)",
+    "type": "GUIDE",
+    "description": "Rambu petunjuk ini memberikan informasi turistik dengan kode warna coklat. Pengemudi dapat mengikuti petunjuk ini untuk mencapai lokasi tujuan wisata tertentu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Indonesian_Directional_Sign_-_7.png/300px-Indonesian_Directional_Sign_-_7.png",
+    "name": "Rambu petunjuk 2 (Kode warna putih untuk Jalan tol & biru untuk fasilitas umum )",
+    "type": "GUIDE",
+    "description": "Rambu petunjuk ini memberikan informasi mengenai jalan tol dan fasilitas umum. Kode warna putih digunakan untuk jalan tol, sementara warna biru menunjukkan fasilitas umum yang mungkin ada di sekitar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Indonesian_Directional_Sign_-_4.png/300px-Indonesian_Directional_Sign_-_4.png",
+    "name": "Pemanda jarak",
+    "type": "GUIDE",
+    "description": "Rambu Pemanda Jarak memberikan informasi mengenai jarak ke suatu lokasi atau tujuan tertentu. Pengemudi dapat menggunakan informasi ini untuk merencanakan perjalanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesian_Directional_Sign_-_1.png/300px-Indonesian_Directional_Sign_-_1.png",
+    "name": "Rambu petunjuk rute Jalan nasional",
+    "type": "GUIDE",
+    "description": "Rambu petunjuk ini memberikan informasi mengenai rute jalan nasional. Pengemudi diharapkan untuk mengikuti petunjuk ini untuk mencapai tujuan yang terletak di jalan nasional."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indonesian_Directional_Sign_-_5.svg/300px-Indonesian_Directional_Sign_-_5.svg.png",
+    "name": "Masuk tol",
+    "type": "GUIDE",
+    "description": "Rambu Masuk Tol memberikan petunjuk bahwa pengemudi sedang mendekati area masuk tol. Perhatikan aturan dan tarif tol yang berlaku saat menggunakan jalan tol."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Indonesian_Directional_Sign_-_3.png/300px-Indonesian_Directional_Sign_-_3.png",
+    "name": "Keluar tol",
+    "type": "GUIDE",
+    "description": "Rambu Keluar Tol memberikan petunjuk bahwa pengemudi dapat keluar dari jalan tol pada lokasi tersebut. Pastikan untuk menggunakan jalur keluar yang sesuai dan mengikuti aturan yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Indonesian_Directional_Sign_-_2.png/300px-Indonesian_Directional_Sign_-_2.png",
+    "name": "Simpang susun dengan jalan tol lain",
+    "type": "GUIDE",
+    "description": "Rambu Simpang Susun dengan Jalan Tol Lain memberikan petunjuk bahwa terdapat simpang susun dengan jalan tol lain di depan. Pengemudi harus memilih jalur yang sesuai dengan tujuan mereka."
+  }
+]

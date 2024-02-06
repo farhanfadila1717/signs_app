@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Indonesia_New_Road_Sign_Pro_4h.png/300px-Indonesia_New_Road_Sign_Pro_4h.png",
+    "name": "Batas maksimal kecepatan",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batas maksimal kecepatan yang diperbolehkan di daerah tersebut. Pengemudi diharapkan untuk mematuhi batas kecepatan ini untuk menjaga keamanan dan ketertiban lalu lintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Indonesia_new_road_sign_pro_4g.png/300px-Indonesia_new_road_sign_pro_4g.png",
+    "name": "Batas jarak antar kendaraan",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menetapkan batas jarak yang harus dijaga antara kendaraan satu dengan yang lain. Mempertahankan jarak yang aman adalah kunci untuk mencegah kecelakaan dan memberikan waktu reaksi yang cukup."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Indonesia_New_Road_Sign_Pro_1a.png/119px-Indonesia_New_Road_Sign_Pro_1a.png",
+    "name": "Berhenti",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberikan instruksi kepada pengemudi untuk berhenti sepenuhnya. Penting untuk mematuhi rambu ini, baik untuk keamanan pribadi maupun untuk mengatur lalu lintas dengan baik."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Indonesia_New_Road_Sign_Pro_1b.png/300px-Indonesia_New_Road_Sign_Pro_1b.png",
+    "name": "Beri jalan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini memberikan instruksi kepada pengemudi untuk memberikan jalan kepada kendaraan lain. Memahami dan mengikuti rambu ini membantu menjaga alur lalu lintas yang lancar dan aman."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Indonesia_Road_Sign_Mandatory_5.png/300px-Indonesia_Road_Sign_Mandatory_5.png",
+    "name": "Wajib memakai rantai pada ban",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan bahwa pengemudi wajib memakai rantai pada ban kendaraannya. Hal ini umumnya diberlakukan di daerah-daerah dengan kondisi jalan yang licin atau berbahaya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indonesia_Road_Sign_Mandatory_7B.png/300px-Indonesia_Road_Sign_Mandatory_7B.png",
+    "name": "Batas akhir wajib memakai rantai pada ban",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan batas akhir daerah di mana pengemudi diwajibkan untuk memakai rantai pada ban. Pengemudi harus memastikan bahwa rantai pada ban sudah dipasang sebelum mencapai batas ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Indonesian_Road_sign_info_3a.png/300px-Indonesian_Road_sign_info_3a.png",
+    "name": "Awal batas wilayah kota ubud",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan awal dari batas wilayah kota Ubud. Pengemudi sebaiknya memperhatikan perubahan-perubahan aturan lalu lintas dan kebijakan yang mungkin berlaku di dalam kota."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Indonesian_Road_Sign_info_3b.png/300px-Indonesian_Road_Sign_info_3b.png",
+    "name": "Keluar batas wilayah kota ubud",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan bahwa Anda meninggalkan batas wilayah kota Ubud. Pengemudi sebaiknya memperhatikan perubahan-perubahan aturan lalu lintas dan kebijakan yang mungkin berlaku di luar kota."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indonesia_New_Road_Sign_Info_4a.png/93px-Indonesia_New_Road_Sign_Info_4a.png",
+    "name": "Jalan tol",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan bahwa Anda telah memasuki jalan tol. Pastikan untuk membayar tol yang diperlukan dan mematuhi aturan lalu lintas khusus jalan tol."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Indonesian_road_sign_info_4c.png/300px-Indonesian_road_sign_info_4c.png",
+    "name": "Nama Jalan tol (bermula)",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan titik awal suatu jalan tol dengan memberikan informasi nama jalan tol yang akan diikuti. Gunakan informasi ini untuk navigasi dan referensi selama perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Indonesian_road_sign_info_4d.png/300px-Indonesian_road_sign_info_4d.png",
+    "name": "Nama Jalan tol (berakhir)",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menandakan titik akhir suatu jalan tol dengan memberikan informasi nama jalan tol yang baru selesai diikuti. Persiapkan diri untuk keluar dari jalan tol."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Indonesian_Road_Sign_Info_5a1.png/90px-Indonesian_Road_Sign_Info_5a1.png",
+    "name": "Terminal bus",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi terminal bus. Pengguna transportasi umum dapat menggunakan rambu ini sebagai panduan untuk menemukan terminal bus dan menentukan rute perjalanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Indonesia_New_Road_Sign_Info_5A2.png/90px-Indonesia_New_Road_Sign_Info_5A2.png",
+    "name": "Stasiun kereta api",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi stasiun kereta api. Penumpang kereta api dapat mengikuti rambu ini untuk menemukan stasiun dan memudahkan akses ke sarana transportasi kereta api."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Indonesian_Road_Sign_Info_5a3.png/90px-Indonesian_Road_Sign_Info_5a3.png",
+    "name": "Pelabuhan",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pelabuhan. Pengguna transportasi laut dapat menggunakan rambu ini sebagai panduan untuk menemukan pelabuhan dan mengakses kapal atau fasilitas lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Indonesia_New_Road_Sign_Info_5a4.svg/90px-Indonesia_New_Road_Sign_Info_5a4.svg.png",
+    "name": "Bandara udara",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi bandara udara. Penumpang pesawat dapat mengikuti rambu ini untuk menemukan bandara dan memulai perjalanan udara mereka."
+  }
+]

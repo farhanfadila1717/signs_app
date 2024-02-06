@@ -1,0 +1,86 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Indonesian_Road_Sign_Info_6e4.png/90px-Indonesian_Road_Sign_Info_6e4.png",
+    "name": "Stadion",
+    "type": "INSTRUCTION",
+    "description": "Rambu Stadion memberikan petunjuk bahwa ada stadion di dekatnya. Pengemudi dan pejalan kaki harus memperhatikan adanya area stadion dan mungkin perlu mengikuti petunjuk lebih lanjut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Indonesian_Road_Sign_Info_6f1.png/90px-Indonesian_Road_Sign_Info_6f1.png",
+    "name": "Sekolah",
+    "type": "INSTRUCTION",
+    "description": "Rambu Sekolah memberikan informasi bahwa ada sekolah di dekatnya. Pengguna jalan harus berhati-hati dan mematuhi aturan lalu lintas ekstra karena adanya keberadaan sekolah."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Indonesian_Road_Sign_Info_6f2.png/90px-Indonesian_Road_Sign_Info_6f2.png",
+    "name": "Perpustakaan",
+    "type": "INSTRUCTION",
+    "description": "Rambu Perpustakaan memberikan petunjuk bahwa terdapat perpustakaan di sekitarnya. Pengguna jalan diharapkan untuk memperhatikan adanya perpustakaan dan mengikuti petunjuk yang mungkin terkait."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indonesia_New_Road_Sign_Info_7b.png/300px-Indonesia_New_Road_Sign_Info_7b.png",
+    "name": "Satu arah",
+    "type": "INSTRUCTION",
+    "description": "Rambu Satu Arah menunjukkan bahwa lalu lintas hanya diizinkan bergerak ke arah tertentu. Pengemudi harus mengikuti arah yang ditunjukkan oleh panah pada rambu ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Indonesia_New_Road_Sign_Info_7d.png/92px-Indonesia_New_Road_Sign_Info_7d.png",
+    "name": "Buntu",
+    "type": "INSTRUCTION",
+    "description": "Rambu Buntu mengindikasikan bahwa jalan berakhir atau buntu. Pengemudi harus mempersiapkan diri untuk mengambil jalur lain dan tidak melanjutkan perjalanan ke depan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Indonesia_New_Road_Sign_Info_7g.png/80px-Indonesia_New_Road_Sign_Info_7g.png",
+    "name": "Area putaran",
+    "type": "INSTRUCTION",
+    "description": "Rambu Area Putaran memberikan petunjuk bahwa ada putaran di depan. Pengemudi harus berhati-hati dan mengikuti aturan lalu lintas yang berlaku saat mendekati atau menggunakan area putaran."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Indonesia_New_Road_Sign_Info_7h.png/92px-Indonesia_New_Road_Sign_Info_7h.png",
+    "name": "Jalan kendaraan bermotor",
+    "type": "INSTRUCTION",
+    "description": "Rambu Jalan Kendaraan Bermotor memberikan informasi bahwa jalan tersebut diperuntukkan bagi kendaraan bermotor. Pengemudi sepeda motor, mobil, dan kendaraan bermotor lainnya dapat menggunakan jalan ini."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Indonesian_Directional_Sign_-_6.png/300px-Indonesian_Directional_Sign_-_6.png",
+    "name": "Rambu petunjuk 1 (Kode warna coklat untuk tujuan wisata)",
+    "type": "GUIDE",
+    "description": "Rambu petunjuk ini memberikan informasi turistik dengan kode warna coklat. Pengemudi dapat mengikuti petunjuk ini untuk mencapai lokasi tujuan wisata tertentu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Indonesian_Directional_Sign_-_7.png/300px-Indonesian_Directional_Sign_-_7.png",
+    "name": "Rambu petunjuk 2 (Kode warna putih untuk Jalan tol & biru untuk fasilitas umum )",
+    "type": "GUIDE",
+    "description": "Rambu petunjuk ini memberikan informasi mengenai jalan tol dan fasilitas umum. Kode warna putih digunakan untuk jalan tol, sementara warna biru menunjukkan fasilitas umum yang mungkin ada di sekitar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Indonesian_Directional_Sign_-_4.png/300px-Indonesian_Directional_Sign_-_4.png",
+    "name": "Pemanda jarak",
+    "type": "GUIDE",
+    "description": "Rambu Pemanda Jarak memberikan informasi mengenai jarak ke suatu lokasi atau tujuan tertentu. Pengemudi dapat menggunakan informasi ini untuk merencanakan perjalanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesian_Directional_Sign_-_1.png/300px-Indonesian_Directional_Sign_-_1.png",
+    "name": "Rambu petunjuk rute Jalan nasional",
+    "type": "GUIDE",
+    "description": "Rambu petunjuk ini memberikan informasi mengenai rute jalan nasional. Pengemudi diharapkan untuk mengikuti petunjuk ini untuk mencapai tujuan yang terletak di jalan nasional."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indonesian_Directional_Sign_-_5.svg/300px-Indonesian_Directional_Sign_-_5.svg.png",
+    "name": "Masuk tol",
+    "type": "GUIDE",
+    "description": "Rambu Masuk Tol memberikan petunjuk bahwa pengemudi sedang mendekati area masuk tol. Perhatikan aturan dan tarif tol yang berlaku saat menggunakan jalan tol."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Indonesian_Directional_Sign_-_3.png/300px-Indonesian_Directional_Sign_-_3.png",
+    "name": "Keluar tol",
+    "type": "GUIDE",
+    "description": "Rambu Keluar Tol memberikan petunjuk bahwa pengemudi dapat keluar dari jalan tol pada lokasi tersebut. Pastikan untuk menggunakan jalur keluar yang sesuai dan mengikuti aturan yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Indonesian_Directional_Sign_-_2.png/300px-Indonesian_Directional_Sign_-_2.png",
+    "name": "Simpang susun dengan jalan tol lain",
+    "type": "GUIDE",
+    "description": "Rambu Simpang Susun dengan Jalan Tol Lain memberikan petunjuk bahwa terdapat simpang susun dengan jalan tol lain di depan. Pengemudi harus memilih jalur yang sesuai dengan tujuan mereka."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_2a.png/300px-Indonesia_New_Road_Sign_2a.png",
+    "name": "Jalan menurun landai",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa jalan akan menurun dengan kemiringan yang landai. Pengemudi diharapkan untuk mengurangi kecepatan dan memperhatikan kondisi jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indonesian_New_Road_sign_2B.png/300px-Indonesian_New_Road_sign_2B.png",
+    "name": "Jalan menurun curam",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan bahwa pengemudi akan melewati jalan menurun dengan kemiringan curam. Keamanan dan pengurangan kecepatan sangat penting."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indonesia_New_Road_Sign_2c.png/117px-Indonesia_New_Road_Sign_2c.png",
+    "name": "Jalan memanjak landai",
+    "type": "WARNING",
+    "description": "Rambu ini mengindikasikan bahwa pengemudi akan melewati jalan memanjak dengan kemiringan yang landai. Tetap waspada terhadap perubahan kecepatan dan kontrol kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Indonesian_New_Road_Sign_2d.png/300px-Indonesian_New_Road_Sign_2d.png",
+    "name": "Jalan memanjak curam",
+    "type": "WARNING",
+    "description": "Rambu ini memberi tahu pengemudi bahwa jalan akan memanjak dengan kemiringan curam. Pengemudi diharapkan untuk menggunakan rem dengan hati-hati dan menjaga kendali kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Indonesian_Road_Sign_7.png/300px-Indonesian_Road_Sign_7.png",
+    "name": "Jalan licin",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa jalan dapat menjadi licin. Pengemudi harus meningkatkan kewaspadaan, mengurangi kecepatan, dan menjaga jarak aman antara kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Indonesia_New_Road_Sign_3e.png/300px-Indonesia_New_Road_Sign_3e.png",
+    "name": "Cekungan",
+    "type": "WARNING",
+    "description": "Rambu ini mengidentifikasi adanya cekungan di jalan. Pengemudi diharapkan untuk mengurangi kecepatan dan tetap waspada terhadap perubahan permukaan jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Indonesia_New_Road_Sign_3f.png/300px-Indonesia_New_Road_Sign_3f.png",
+    "name": "Jalan cembung Alat pembatas/Kecepatan",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya jalan cembung dengan adanya alat pembatas atau pembatas kecepatan. Pengemudi diharapkan untuk mengikuti petunjuk kecepatan dan memperhatikan batasan jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesia_New_Road_Sign_3g.png/300px-Indonesia_New_Road_Sign_3g.png",
+    "name": "Jalan bergelombang",
+    "type": "WARNING",
+    "description": "Rambu ini memberi tahu pengemudi bahwa jalan akan bergelombang. Kendaraan harus melalui rintangan ini dengan hati-hati untuk menjaga stabilitas dan kenyamanan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesian_Road_Sign_8.png/117px-Indonesian_Road_Sign_8.png",
+    "name": "Lontaran kerikil",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang adanya lontaran kerikil di jalan. Pengemudi diharapkan untuk mengurangi kecepatan dan menghindari manuver yang tiba-tiba."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Indonesia_New_Road_Sign_3i.png/300px-Indonesia_New_Road_Sign_3i.png",
+    "name": "Bagian tepi Rawan runtuh (Longsor)",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan bahwa bagian tepi jalan rawan runtuh atau longsor. Pengemudi diharapkan untuk melalui area ini dengan hati-hati dan memperhatikan perubahan kondisi jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Indonesia_New_Road_Sign_4a1.png/300px-Indonesia_New_Road_Sign_4a1.png",
+    "name": "Lampu lalu Lintas",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa ada lampu lalu lintas di depan. Pengemudi diharapkan untuk mematuhi aturan lalu lintas, menghentikan kendaraan saat lampu merah, dan melanjutkan perjalanan saat lampu hijau."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesia_New_Road_Sign_4b1.png/117px-Indonesia_New_Road_Sign_4b1.png",
+    "name": "Persimpangan 4 arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di depan akan ada persimpangan empat arah. Pengemudi diharapkan untuk mematuhi aturan lalu lintas dan memberikan hak prioritas kepada kendaraan yang datang dari arah lain."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Indonesia_New_Road_Sign_4b10.png/300px-Indonesia_New_Road_Sign_4b10.png",
+    "name": "Persimpangan tiga berganda",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan persimpangan tiga berganda di depan. Pengemudi diharapkan untuk mengurangi kecepatan, memberikan hak prioritas, dan mengikuti tanda arah yang benar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Indonesia_New_Road_Sign_4b11.png/300px-Indonesia_New_Road_Sign_4b11.png",
+    "name": "Persimpangan tiga berganda",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya persimpangan tiga berganda di depan. Pengemudi harus memperhatikan dan mengikuti tanda arah yang benar untuk memastikan keselamatan lalu lintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Indonesia_New_Road_Sign_4b13.png/111px-Indonesia_New_Road_Sign_4b13.png",
+    "name": "Persimpangan tiga serong",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya persimpangan tiga serong di depan. Pengemudi diharapkan untuk memperlambat kendaraan, memberikan hak prioritas, dan berhati-hati saat melintasi persimpangan."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Indonesian_Road_Sign_Info_5h4.png/90px-Indonesian_Road_Sign_Info_5h4.png",
+    "name": "Lokasi berkumpul darurat",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi tempat berkumpul darurat. Tempat ini biasanya digunakan sebagai titik pertemuan aman dalam situasi darurat atau evakuasi."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Indonesian_Road_Sign_Info_5h5.png/90px-Indonesian_Road_Sign_Info_5h5.png",
+    "name": "Kamp pengungsian",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi kamp pengungsian. Tempat ini digunakan sebagai tempat perlindungan sementara untuk orang-orang yang mengungsi dari bencana atau situasi darurat lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Indonesian_Road_Sign_Info_5h6.png/90px-Indonesian_Road_Sign_Info_5h6.png",
+    "name": "Pusat pengungsian",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pusat pengungsian. Tempat ini merupakan pusat koordinasi dan bantuan untuk orang-orang yang membutuhkan perlindungan dan bantuan dalam situasi darurat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Indonesian_Road_Sign_Info_6a1.png/90px-Indonesian_Road_Sign_Info_6a1.png",
+    "name": "Masjid",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi masjid. Tempat ini adalah tempat ibadah bagi umat Islam untuk melaksanakan salat dan kegiatan keagamaan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Indonesian_Road_Sign_Info_6a2.png/90px-Indonesian_Road_Sign_Info_6a2.png",
+    "name": "Gereja",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi gereja. Tempat ini adalah tempat ibadah bagi umat Kristen untuk melaksanakan kegiatan keagamaan dan peribadatan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6a3.png/90px-Indonesian_Road_Sign_Info_6a3.png",
+    "name": "Wihara",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi wihara. Tempat ini adalah tempat ibadah bagi umat Buddha untuk melaksanakan kegiatan keagamaan dan meditasi."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Indonesian_Road_Sign_Info_6a4.png/90px-Indonesian_Road_Sign_Info_6a4.png",
+    "name": "Pura",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pura. Tempat ini adalah tempat ibadah bagi umat Hindu untuk melaksanakan upacara keagamaan dan peribadatan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Indonesian_Road_Sign_Info_6b1.png/90px-Indonesian_Road_Sign_Info_6b1.png",
+    "name": "Rumah Sakit",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi rumah sakit. Tempat ini adalah fasilitas kesehatan yang menyediakan pelayanan medis dan perawatan bagi orang-orang yang membutuhkan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6b2.png/90px-Indonesian_Road_Sign_Info_6b2.png",
+    "name": "Klinik/Puskesmas",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi klinik atau puskesmas. Tempat ini adalah fasilitas kesehatan yang menyediakan pelayanan medis dasar dan perawatan kesehatan masyarakat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Indonesian_Road_Sign_Info_6b3.png/90px-Indonesian_Road_Sign_Info_6b3.png",
+    "name": "Apotek",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi apotek. Tempat ini adalah tempat di mana orang dapat membeli obat-obatan dan produk kesehatan lainnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Indonesian_Road_Sign_Info_6b4.png/90px-Indonesian_Road_Sign_Info_6b4.png",
+    "name": "Pompa Bahan Bakar",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi pompa bahan bakar. Tempat ini adalah fasilitas untuk mengisi ulang bahan bakar kendaraan bermotor."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Indonesia_New_Road_Sign_Info_6b5.png/90px-Indonesia_New_Road_Sign_Info_6b5.png",
+    "name": "Stasiun uji berkala",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi stasiun uji berkala. Tempat ini digunakan untuk melakukan uji berkala terhadap kendaraan bermotor guna memastikan keamanan dan kelayakan operasionalnya."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indonesia_New_Road_Sign_Info_6b6.png/90px-Indonesia_New_Road_Sign_Info_6b6.png",
+    "name": "Stasiun uji emisi",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi stasiun uji emisi. Tempat ini digunakan untuk mengukur emisi gas buang kendaraan bermotor untuk memastikan kepatuhan terhadap standar lingkungan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Indonesian_Road_Sign_Info_6b7.png/90px-Indonesian_Road_Sign_Info_6b7.png",
+    "name": "Jembatan timbang",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi jembatan timbang. Tempat ini digunakan untuk menimbang kendaraan bermotor guna memastikan kesesuaian dengan batas berat yang ditetapkan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indonesian_Road_Sign_Info_6b8.png/90px-Indonesian_Road_Sign_Info_6b8.png",
+    "name": "Museum",
+    "type": "INSTRUCTION",
+    "description": "Rambu ini menunjukkan lokasi museum. Tempat ini adalah tempat untuk melestarikan dan menampilkan koleksi seni, sejarah, dan budaya bagi masyarakat umum."
+  }
+]

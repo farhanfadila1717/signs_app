@@ -1,0 +1,31 @@
+[
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Indonesia_New_Road_Sign_1a.png/300px-Indonesia_New_Road_Sign_1a.png","name":"Tikungan ke kiri","type":"WARNING","description":"Rambu ini menandakan adanya tikungan ke kiri pada jalan. Pengemudi diharapkan untuk memperlambat laju kendaraan dan berhati-hati saat melewati tikungan."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Indonesia_New_Road_Sign_1b.png/300px-Indonesia_New_Road_Sign_1b.png","name":"Tikungan ke kanan","type":"WARNING","description":"Rambu ini mengindikasikan keberadaan tikungan ke kanan di jalan. Para pengendara diharapkan untuk mengurangi kecepatan dan mengemudikan kendaraan dengan hati-hati melalui tikungan tersebut."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Indonesia_New_Road_Sign_1c.png/300px-Indonesia_New_Road_Sign_1c.png","name":"Tikungan ganda","type":"WARNING","description":"Rambu ini menunjukkan bahwa di depan akan ada dua tikungan berurutan. Pengemudi sebaiknya waspada dan mengurangi kecepatan untuk menghadapi kedua tikungan tersebut."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Indonesia_New_Road_Sign_1d.png/300px-Indonesia_New_Road_Sign_1d.png","name":"Tikungan ganda","type":"WARNING","description":"Rambu ini memberitahu pengendara bahwa di depan terdapat dua tikungan berurutan. Disarankan untuk mengurangi kecepatan dan mengemudi dengan hati-hati."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Indonesia_New_Road_Sign_1e.png/300px-Indonesia_New_Road_Sign_1e.png","name":"Tikungan tajam","type":"WARNING","description":"Rambu ini menandakan adanya tikungan tajam di jalan. Pengemudi harus merespons dengan mengurangi kecepatan dan memperhatikan dengan lebih cermat saat melalui tikungan tersebut."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Indonesia_New_Road_Sign_1f.png/300px-Indonesia_New_Road_Sign_1f.png","name":"Tikungan tajam","type":"WARNING","description":"Rambu ini menginformasikan tentang keberadaan tikungan tajam di depan. Para pengendara diharapkan untuk mengurangi kecepatan dan berkendara dengan hati-hati."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_1g.png/300px-Indonesia_New_Road_Sign_1g.png","name":"Tikungan tajam ganda","type":"WARNING","description":"Rambu ini menunjukkan bahwa di depan akan ada dua tikungan tajam berurutan. Pengemudi diharapkan untuk memperlambat kendaraan dan menjaga kewaspadaan saat melewati kedua tikungan tersebut."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Indonesia_New_Road_Sign_1h.png/300px-Indonesia_New_Road_Sign_1h.png","name":"Tikungan tajam ganda","type":"WARNING","description":"Rambu ini memberitahu pengendara tentang keberadaan dua tikungan tajam berurutan. Disarankan untuk memperlambat laju kendaraan dan mengemudi dengan hati-hati."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indonesia_New_Road_Sign_1i.png/300px-Indonesia_New_Road_Sign_1i.png","name":"Banyak tikungan","type":"WARNING","description":"Rambu ini mengindikasikan bahwa di depan terdapat banyak tikungan. Pengemudi sebaiknya mengurangi kecepatan dan memperhatikan rambu-rambu tambahan yang mungkin memberikan petunjuk lebih lanjut."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Indonesia_New_Road_Sign_1j.png/300px-Indonesia_New_Road_Sign_1j.png","name":"Banyak tikungan","type":"WARNING","description":"Rambu ini menandakan bahwa di depan terdapat sejumlah tikungan. Para pengendara diharapkan untuk memperlambat kendaraan dan berkendara dengan hati-hati melalui area dengan banyak tikungan."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Indonesia_New_Road_Sign_1k.png/300px-Indonesia_New_Road_Sign_1k.png","name":"Tikungan memutar","type":"WARNING","description":"Rambu ini menginformasikan adanya tikungan memutar di depan. Pengemudi diwajibkan untuk mengurangi kecepatan dan mengikuti jalan melingkar dengan hati-hati."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Indonesia_New_Road_Sign_1l.png/300px-Indonesia_New_Road_Sign_1l.png","name":"Tikungan memutar","type":"WARNING","description":"Rambu ini memberitahu pengendara tentang keberadaan tikungan memutar di jalan. Disarankan untuk melambat dan mengemudi dengan hati-hati melewati tikungan tersebut."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Indonesia_New_Road_Sign_1m.png/300px-Indonesia_New_Road_Sign_1m.png","name":"Pelebaran badan jalan","type":"WARNING","description":"Rambu ini menunjukkan bahwa di depan akan ada pelebaran badan jalan. Para pengemudi sebaiknya memperhatikan perubahan lebar jalan dan menjaga laju kendaraan."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_1p.png/116px-Indonesia_New_Road_Sign_1p.png","name":"Penyempitan badan Jalan di bagian kanan","type":"WARNING","description":"Rambu ini memberitahu pengendara bahwa badan jalan akan menyempit di sebelah kanan. Disarankan untuk memberikan prioritas kepada kendaraan yang datang dari arah sebelah kiri."},
+  
+  {"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Indonesia_New_Road_Sign_1w.png/300px-Indonesia_New_Road_Sign_1w.png","name":"Jembatan","type":"WARNING","description":"Rambu ini menandakan bahwa di depan terdapat sebuah jembatan. Para pengendara sebaiknya memperlambat laju kendaraan dan memperhatikan kondisi jalan yang mungkin berbeda di atas jembatan."}
+]

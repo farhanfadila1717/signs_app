@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Indonesia_New_Road_Sign_6c.png/300px-Indonesia_New_Road_Sign_6c.png",
+    "name": "Area pejalan kaki anak-anak",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di area ini terdapat pejalan kaki anak-anak. Pengemudi diharapkan untuk lebih berhati-hati dan memperhatikan keberadaan anak-anak yang mungkin melintas di sekitar area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indonesia_New_Road_Sign_6e.png/106px-Indonesia_New_Road_Sign_6e.png",
+    "name": "Pesepeda",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan kepada pengemudi bahwa di sekitar area ini sering dilalui oleh pesepeda. Pengemudi diharapkan untuk memberi keutamaan dan menjaga jarak aman dengan pesepeda."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Indonesia_New_Road_Sign_6f.png/300px-Indonesia_New_Road_Sign_6f.png",
+    "name": "Binatang ternak",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya potensi lintasan binatang ternak di sekitar jalan. Pengemudi diharapkan untuk mengurangi kecepatan dan tetap waspada terhadap kemungkinan adanya binatang ternak yang melintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Indonesia_New_Road_Sign_6g.png/300px-Indonesia_New_Road_Sign_6g.png",
+    "name": "Binatang liar",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengemudi bahwa di daerah ini terdapat kemungkinan adanya binatang liar. Pengemudi diharapkan untuk berkendara dengan hati-hati dan waspada terhadap kemungkinan lintasan binatang liar."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Indonesia_New_Road_Sign_8a.png/107px-Indonesia_New_Road_Sign_8a.png",
+    "name": "Hati-hati",
+    "type": "WARNING",
+    "description": "Rambu ini mengingatkan pengemudi untuk lebih berhati-hati di sekitar area tersebut. Mungkin terdapat kondisi jalan yang berbahaya atau perubahan keadaan yang memerlukan perhatian ekstra dari pengemudi."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Indonesia_New_Road_Sign_8b.png/110px-Indonesia_New_Road_Sign_8b.png",
+    "name": "Pekerjaan di depan",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya pekerjaan atau konstruksi di depan. Pengemudi diharapkan untuk mengurangi kecepatan, mengikuti petunjuk arah, dan tetap waspada terhadap pekerjaan yang sedang berlangsung."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indonesia_New_Road_Sign_8c.png/300px-Indonesia_New_Road_Sign_8c.png",
+    "name": "Batas tinggi ruang bebas",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan batas tinggi ruang bebas di sekitar area tersebut. Pengemudi yang mengangkut kendaraan besar perlu memperhatikan batas tinggi ini untuk menghindari tabrakan atau kerusakan pada kendaraan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Indonesia_New_Road_Sign_8d.png/300px-Indonesia_New_Road_Sign_8d.png",
+    "name": "Batas lebar ruang bebas",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan batas lebar ruang bebas di sekitar area tersebut. Pengemudi yang membawa kendaraan besar perlu memperhatikan batas lebar ini untuk menghindari masalah saat melintasi area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Indonesia_New_Road_Sign_8g.png/300px-Indonesia_New_Road_Sign_8g.png",
+    "name": "Daerah pesawat terbang rendah",
+    "type": "WARNING",
+    "description": "Rambu ini memberi tahu pengemudi bahwa daerah tersebut merupakan jalur pesawat terbang rendah. Pengemudi diharapkan untuk tetap waspada terhadap pesawat yang mungkin melintas rendah di area tersebut."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Indonesia_New_Road_Sign_8h.png/300px-Indonesia_New_Road_Sign_8h.png",
+    "name": "Angin samping",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan kepada pengemudi tentang kemungkinan angin samping di area tersebut. Pengemudi diharapkan untuk memegang kendali dengan lebih hati-hati untuk menghindari gangguan akibat angin samping."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Indonesia_New_Road_Sign_8i.png/300px-Indonesia_New_Road_Sign_8i.png",
+    "name": "Lalu lintas dua arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa di area ini terdapat lalu lintas dari dua arah yang bertemu. Pengemudi diharapkan untuk berhati-hati dan mematuhi aturan lalu lintas untuk menghindari kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Indonesia_New_Road_Sign_8j.png/300px-Indonesia_New_Road_Sign_8j.png",
+    "name": "Jembatan angkat",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya jembatan angkat di depan. Pengemudi diharapkan untuk mengurangi kecepatan dan mematuhi petunjuk lalu lintas yang mungkin diberikan terkait pengoperasian jembatan angkat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesia_New_Road_Sign_8e.png/300px-Indonesia_New_Road_Sign_8e.png",
+    "name": "Perlintasan kereta api dengan palang pintu",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya perlintasan kereta api dengan palang pintu. Pengemudi diharapkan untuk berhenti dan menunggu saat palang pintu ditutup dan memastikan bahwa tidak ada kereta yang akan melintas sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Indonesia_New_Road_Sign_8f.png/300px-Indonesia_New_Road_Sign_8f.png",
+    "name": "Perlintasan kereta api tanpa palang pintu",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya perlintasan kereta api tanpa palang pintu. Pengemudi diharapkan untuk berhenti, memastikan bahwa jalur kereta aman, dan melanjutkan perjalanan dengan hati-hati."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesia_Road_Sign_Toll_Road_fog.svg/300px-Indonesia_Road_Sign_Toll_Road_fog.svg.png",
+    "name": "Hati-hati terjadi kabut",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan kepada pengemudi bahwa di daerah ini sering terjadi kabut. Pengemudi diharapkan untuk mengurangi kecepatan, menggunakan lampu kabut, dan menjaga jarak aman untuk keselamatan berkendara."
+  }
+]

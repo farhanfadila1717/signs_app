@@ -17,6 +17,7 @@ class App extends StatelessWidget {
         locale: const Locale('id-ID'),
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
+          useMaterial3: false,
           colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.orange,
           ),

@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_Road_Sign_Toll_Road_tailwind.png/300px-Indonesia_Road_Sign_Toll_Road_tailwind.png",
+    "name": "Hati-hati angin kencang dari samping",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengendara untuk berhati-hati terhadap angin kencang yang bisa datang dari samping. Pengemudi disarankan untuk mengurangi kecepatan dan mempertahankan kendali kendaraan agar tidak terpengaruh oleh angin yang kuat."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/b/bd/Arahbelok.png/300px-Arahbelok.png",
+    "name": "Pengarah tikungan ke kiri atau ke kanan",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan petunjuk kepada pengendara bahwa ada tikungan mendekat ke arah kiri atau kanan. Pengemudi disarankan untuk mempersiapkan diri, mengurangi kecepatan, dan mengikuti arah tikungan yang ditunjukkan oleh rambu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/4/4c/Ramburintang.png/94px-Ramburintang.png",
+    "name": "Rambu peringatan rintangan atau objek berbahaya di sisi kiri jalan (rambu kiri) atau sisi kanan jalan (rambu kanan)",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengendara tentang adanya rintangan atau objek berbahaya di sisi kiri atau kanan jalan. Pengemudi diharapkan untuk tetap waspada dan berhati-hati saat melintasi area yang ditunjuk oleh rambu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/3/38/Ramburintang2.png/45px-Ramburintang2.png",
+    "name": "Rambu peringatan rintangan atau objek berbahaya pada pemisal lajur atau jalur",
+    "type": "WARNING",
+    "description": "Rambu ini memberikan peringatan kepada pengendara tentang adanya rintangan atau objek berbahaya di jalur atau lajur tertentu. Pengemudi diharapkan untuk memperhatikan rambu ini dan mengambil tindakan yang diperlukan untuk menghindari risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Indonesian_Road_Sign_b3c.png/117px-Indonesian_Road_Sign_b3c.png",
+    "name": "Sepeda motor dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa sepeda motor dilarang masuk ke area yang ditunjuk. Pengemudi sepeda motor diharapkan untuk mengikuti aturan tersebut dan mencari rute alternatif jika perlu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Indonesian_Road_Sign_b3a.png/300px-Indonesian_Road_Sign_b3a.png",
+    "name": "Mobil dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa mobil dilarang masuk ke area yang ditunjuk. Pengemudi mobil diharapkan untuk mengikuti aturan tersebut dan mencari rute alternatif jika perlu."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Indonesian_Road_Sign_b3d.png/300px-Indonesian_Road_Sign_b3d.png",
+    "name": "Kendaraan bermotor dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa kendaraan bermotor dilarang masuk ke area yang ditunjuk. Pengemudi diharapkan untuk mematuhi aturan tersebut dan mencari jalur lain sesuai kebutuhan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Indonesia_New_Road_Sign_Pro_2c3.png/105px-Indonesia_New_Road_Sign_Pro_2c3.png",
+    "name": "Sepeda dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini melarang masuknya sepeda ke area yang ditunjuk. Pengendara sepeda diharapkan untuk mematuhi peraturan tersebut dan mencari jalur yang sesuai untuk perjalanan mereka."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Indonesia_New_Road_Sign_Pro_2d1.png/300px-Indonesia_New_Road_Sign_Pro_2d1.png",
+    "name": "Larangan untuk truk dengan panjang tertentu",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa truk dengan panjang tertentu dilarang masuk. Pengemudi truk diharapkan untuk memahami batasan panjang yang ditetapkan dan memilih jalur alternatif jika diperlukan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Indonesia_New_Road_Sign_Pro_2d2.png/300px-Indonesia_New_Road_Sign_Pro_2d2.png",
+    "name": "Batas ketinggian",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan ketinggian yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memastikan bahwa kendaraan mereka memenuhi batasan tersebut untuk mencegah kerusakan atau risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Indonesia_New_Road_Sign_Pro_2d3.png/300px-Indonesia_New_Road_Sign_Pro_2d3.png",
+    "name": "Batas ruang lebar",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan ruang lebar yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memastikan bahwa kendaraan mereka memenuhi batasan tersebut untuk mencegah masalah di jalan atau risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Indonesia_New_Road_Sign_Pro_2d5.png/300px-Indonesia_New_Road_Sign_Pro_2d5.png",
+    "name": "Batas tonase",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan tonase yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memahami batasan tersebut dan memastikan bahwa kendaraan mereka memenuhi persyaratan yang ditetapkan untuk meminimalkan risiko kerusakan jalan atau kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Indonesia_New_Road_Sign_Pro_2d6.png/300px-Indonesia_New_Road_Sign_Pro_2d6.png",
+    "name": "Batas tonase sumbu muatan",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini menunjukkan batasan tonase sumbu muatan yang diperbolehkan untuk kendaraan yang masuk. Pengemudi diharapkan untuk memahami batasan tersebut dan memastikan bahwa kendaraan mereka memenuhi persyaratan yang ditetapkan untuk mencegah kerusakan jalan atau risiko kecelakaan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Indonesia_New_Road_Sign_Pro_3a.png/300px-Indonesia_New_Road_Sign_Pro_3a.png",
+    "name": "Dilarang berhenti",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa berhenti di area yang ditunjuk dilarang. Pengendara diharapkan untuk terus melanjutkan perjalanan mereka dan mencari tempat berhenti yang sesuai jika diperlukan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Indonesia_New_Road_Sign_Pro_3b.png/300px-Indonesia_New_Road_Sign_Pro_3b.png",
+    "name": "Dilarang parkir",
+    "type": "FORBIDDEN",
+    "description": "Rambu ini memberitahu bahwa parkir di area yang ditunjuk dilarang. Pengendara diharapkan untuk mencari tempat parkir yang sesuai dengan aturan lalu lintas dan menghindari parkir di lokasi yang dilarang."
+  }
+]

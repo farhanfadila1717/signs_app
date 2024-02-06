@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +8,7 @@ import 'package:signs_app/core/models/sign/type_sign.dart';
 import 'package:signs_app/core/redux/action_mapper.dart';
 import 'package:flutter/material.dart';
 import 'package:signs_app/core/redux/actions/navigation_action.dart';
+import 'package:signs_app/core/redux/middlewares/app_middleware.dart';
 import 'package:signs_app/ui/components/audio_controll.dart';
 import 'package:signs_app/ui/components/scaffold_animation.dart';
 import 'package:signs_app/ui/components/tts_mixin.dart';
@@ -160,6 +162,23 @@ class _SignsGroupPageState extends State<SignsGroupPage> with TtsMixin {
                                 ),
                               ),
                             ),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              FirebaseFirestore.instance
+                                  .collection('signs')
+                                  .doc(item.id)
+                                  .delete()
+                                  .then(
+                                    (value) => widget.dispatch(
+                                      ShowSnackBarAction(
+                                        message:
+                                            'Remove ${item.name} success ${generateRandomString(2)}',
+                                      ),
+                                    ),
+                                  );
+                            },
+                            icon: const Icon(Icons.close_rounded),
                           ),
                         ],
                       ),

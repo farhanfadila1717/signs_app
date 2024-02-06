@@ -1,0 +1,896 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Indonesia_New_Road_Sign_1a.png/300px-Indonesia_New_Road_Sign_1a.png",
+    "name": "Tikungan ke kiri",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Indonesia_New_Road_Sign_1b.png/300px-Indonesia_New_Road_Sign_1b.png",
+    "name": "Tikungan ke kanan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Indonesia_New_Road_Sign_1c.png/300px-Indonesia_New_Road_Sign_1c.png",
+    "name": "Tikungan ganda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Indonesia_New_Road_Sign_1d.png/300px-Indonesia_New_Road_Sign_1d.png",
+    "name": "Tikungan ganda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Indonesia_New_Road_Sign_1e.png/300px-Indonesia_New_Road_Sign_1e.png",
+    "name": "Tikungan tajam",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Indonesia_New_Road_Sign_1f.png/300px-Indonesia_New_Road_Sign_1f.png",
+    "name": "Tikungan tajam",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_1g.png/300px-Indonesia_New_Road_Sign_1g.png",
+    "name": "Tikungan tajam ganda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Indonesia_New_Road_Sign_1h.png/300px-Indonesia_New_Road_Sign_1h.png",
+    "name": "Tikungan tajam ganda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indonesia_New_Road_Sign_1i.png/300px-Indonesia_New_Road_Sign_1i.png",
+    "name": "Banyak tikungan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Indonesia_New_Road_Sign_1j.png/300px-Indonesia_New_Road_Sign_1j.png",
+    "name": "Banyak tikungan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Indonesia_New_Road_Sign_1k.png/300px-Indonesia_New_Road_Sign_1k.png",
+    "name": "Tikungan memutar",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Indonesia_New_Road_Sign_1l.png/300px-Indonesia_New_Road_Sign_1l.png",
+    "name": "Tikungan memutar",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Indonesia_New_Road_Sign_1m.png/300px-Indonesia_New_Road_Sign_1m.png",
+    "name": "Pelebaran badan jalan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_1p.png/116px-Indonesia_New_Road_Sign_1p.png",
+    "name": "Penyempitan badan Jalan di bagian kanan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Indonesia_New_Road_Sign_1w.png/300px-Indonesia_New_Road_Sign_1w.png",
+    "name": "Jembatan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesia_New_Road_Sign_2a.png/300px-Indonesia_New_Road_Sign_2a.png",
+    "name": "Jalan menurun landai",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indonesian_New_Road_sign_2B.png/300px-Indonesian_New_Road_sign_2B.png",
+    "name": "Jalan menurun curam",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indonesia_New_Road_Sign_2c.png/117px-Indonesia_New_Road_Sign_2c.png",
+    "name": "Jalan memanjak landai",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Indonesian_New_Road_Sign_2d.png/300px-Indonesian_New_Road_Sign_2d.png",
+    "name": "Jalan memanjak curam",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Indonesian_Road_Sign_7.png/300px-Indonesian_Road_Sign_7.png",
+    "name": "Jalan licin",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Indonesia_New_Road_Sign_3e.png/300px-Indonesia_New_Road_Sign_3e.png",
+    "name": "Cekungan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Indonesia_New_Road_Sign_3f.png/300px-Indonesia_New_Road_Sign_3f.png",
+    "name": "Jalan cembung Alat pembatas/Kecepatan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesia_New_Road_Sign_3g.png/300px-Indonesia_New_Road_Sign_3g.png",
+    "name": "Jalan bergelombang",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesian_Road_Sign_8.png/117px-Indonesian_Road_Sign_8.png",
+    "name": "Lontaran kerikil",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Indonesia_New_Road_Sign_3i.png/300px-Indonesia_New_Road_Sign_3i.png",
+    "name": "Bagian tepi Rawan runtuh (Longsor)",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Indonesia_New_Road_Sign_4a1.png/300px-Indonesia_New_Road_Sign_4a1.png",
+    "name": "Lampu lalu Lintas",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesia_New_Road_Sign_4b1.png/117px-Indonesia_New_Road_Sign_4b1.png",
+    "name": "Persimpangan 4 arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Indonesia_New_Road_Sign_4b10.png/300px-Indonesia_New_Road_Sign_4b10.png",
+    "name": "Persimpangan tiga berganda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Indonesia_New_Road_Sign_4b11.png/300px-Indonesia_New_Road_Sign_4b11.png",
+    "name": "Persimpangan tiga berganda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Indonesia_New_Road_Sign_4b13.png/111px-Indonesia_New_Road_Sign_4b13.png",
+    "name": "Persimpangan tiga serong",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indonesia_New_Road_Sign_4b17.png/300px-Indonesia_New_Road_Sign_4b17.png",
+    "name": "Persimpangan tiga",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Indonesia_New_Road_Sign_4b18.png/110px-Indonesia_New_Road_Sign_4b18.png",
+    "name": "Persimpangan tiga",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Indonesia_New_Road_Sign_4b19.png/300px-Indonesia_New_Road_Sign_4b19.png",
+    "name": "Persimpangan tiga serong",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Indonesia_New_Road_Sign_4b2.png/118px-Indonesia_New_Road_Sign_4b2.png",
+    "name": "Persimpangan 4 arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indonesia_New_Road_Sign_4b3.png/300px-Indonesia_New_Road_Sign_4b3.png",
+    "name": "Bundaran",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indonesia_New_Road_Sign_4b5.png/111px-Indonesia_New_Road_Sign_4b5.png",
+    "name": "Persimpangan tiga lengan serong",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Indonesia_New_Road_Sign_4b6.png/300px-Indonesia_New_Road_Sign_4b6.png",
+    "name": "Penggabungan jalan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indonesia_New_Road_Sign_4b7.png/300px-Indonesia_New_Road_Sign_4b7.png",
+    "name": "Penggabungan jalan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Indonesia_New_Road_Sign_4b8.png/116px-Indonesia_New_Road_Sign_4b8.png",
+    "name": "Persimpangan 3 arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Indonesia_New_Road_Sign_4b9.png/111px-Indonesia_New_Road_Sign_4b9.png",
+    "name": "Persimpangan 3 arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesia_New_Road_Sign_4c1.png/300px-Indonesia_New_Road_Sign_4c1.png",
+    "name": "Awal bangunan pemisah untuk lalulintas dua arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Indonesia_New_Road_Sign_4c2.png/300px-Indonesia_New_Road_Sign_4c2.png",
+    "name": "Akhir bangunan pemisah untuk lalulintas dua arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Indonesia_New_Road_Sign_4c3.png/300px-Indonesia_New_Road_Sign_4c3.png",
+    "name": "Awal bangunan pemisah untuk lalulintas satu arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Indonesia_New_Road_Sign_6a.png/300px-Indonesia_New_Road_Sign_6a.png",
+    "name": "Penyebrangan pejalan kaki",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Indonesia_New_Road_Sign_6b.png/300px-Indonesia_New_Road_Sign_6b.png",
+    "name": "Area banyak pejalan kaki",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Indonesia_New_Road_Sign_6c.png/300px-Indonesia_New_Road_Sign_6c.png",
+    "name": "Area pejalan kaki anak-anak",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indonesia_New_Road_Sign_6e.png/106px-Indonesia_New_Road_Sign_6e.png",
+    "name": "Pesepeda",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Indonesia_New_Road_Sign_6f.png/300px-Indonesia_New_Road_Sign_6f.png",
+    "name": "Binatang ternak",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Indonesia_New_Road_Sign_6g.png/300px-Indonesia_New_Road_Sign_6g.png",
+    "name": "Binatang liar",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Indonesia_New_Road_Sign_8a.png/107px-Indonesia_New_Road_Sign_8a.png",
+    "name": "Hati-hati",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Indonesia_New_Road_Sign_8b.png/110px-Indonesia_New_Road_Sign_8b.png",
+    "name": "Pekerjaan di depan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indonesia_New_Road_Sign_8c.png/300px-Indonesia_New_Road_Sign_8c.png",
+    "name": "Batas tinggi ruang bebas",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Indonesia_New_Road_Sign_8d.png/300px-Indonesia_New_Road_Sign_8d.png",
+    "name": "Batas lebar ruang bebas",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Indonesia_New_Road_Sign_8g.png/300px-Indonesia_New_Road_Sign_8g.png",
+    "name": "Daerah pesawat terbang rendah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Indonesia_New_Road_Sign_8h.png/300px-Indonesia_New_Road_Sign_8h.png",
+    "name": "Angin samping",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Indonesia_New_Road_Sign_8i.png/300px-Indonesia_New_Road_Sign_8i.png",
+    "name": "Lalu lintas dua arah",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Indonesia_New_Road_Sign_8j.png/300px-Indonesia_New_Road_Sign_8j.png",
+    "name": "Jembatan angkat",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesia_New_Road_Sign_8e.png/300px-Indonesia_New_Road_Sign_8e.png",
+    "name": "Perlintasan kereta api dengan palang pintu",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Indonesia_New_Road_Sign_8f.png/300px-Indonesia_New_Road_Sign_8f.png",
+    "name": "Perlintasan kereta api tanpa palang pintu",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesia_Road_Sign_Toll_Road_fog.svg/300px-Indonesia_Road_Sign_Toll_Road_fog.svg.png",
+    "name": "Hati-hati terjadi kabut",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_Road_Sign_Toll_Road_tailwind.png/300px-Indonesia_Road_Sign_Toll_Road_tailwind.png",
+    "name": "Hati-hati angin kencang dari samping",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/b/bd/Arahbelok.png/300px-Arahbelok.png",
+    "name": "Pengarah tikungan ke kiri atau ke kanan",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/4/4c/Ramburintang.png/94px-Ramburintang.png",
+    "name": "Rambu peringatan rintangan atau objek berbahaya di sisi kiri jalan (rambu kiri) atau sisi kanan jalan (rambu kanan)",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/3/38/Ramburintang2.png/45px-Ramburintang2.png",
+    "name": "Rambu peringatan rintangan atau objek berbahaya pada pemisal lajur atau jalur",
+    "type": "WARNING",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Indonesian_Road_Sign_b3c.png/117px-Indonesian_Road_Sign_b3c.png",
+    "name": "Sepeda motor dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Indonesian_Road_Sign_b3a.png/300px-Indonesian_Road_Sign_b3a.png",
+    "name": "Mobil dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Indonesian_Road_Sign_b3d.png/300px-Indonesian_Road_Sign_b3d.png",
+    "name": "Kendaraan bermotor dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Indonesia_New_Road_Sign_Pro_2c3.png/105px-Indonesia_New_Road_Sign_Pro_2c3.png",
+    "name": "Sepeda dilarang masuk",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Indonesia_New_Road_Sign_Pro_2d1.png/300px-Indonesia_New_Road_Sign_Pro_2d1.png",
+    "name": "Larangan untuk truk dengan panjang tertentu",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Indonesia_New_Road_Sign_Pro_2d2.png/300px-Indonesia_New_Road_Sign_Pro_2d2.png",
+    "name": "Batas ketinggian",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Indonesia_New_Road_Sign_Pro_2d3.png/300px-Indonesia_New_Road_Sign_Pro_2d3.png",
+    "name": "Batas ruang lebar",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Indonesia_New_Road_Sign_Pro_2d5.png/300px-Indonesia_New_Road_Sign_Pro_2d5.png",
+    "name": "Batas tonase",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Indonesia_New_Road_Sign_Pro_2d6.png/300px-Indonesia_New_Road_Sign_Pro_2d6.png",
+    "name": "Batas tonase sumbu muatan",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Indonesia_New_Road_Sign_Pro_3a.png/300px-Indonesia_New_Road_Sign_Pro_3a.png",
+    "name": "Dilarang berhenti",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Indonesia_New_Road_Sign_Pro_3b.png/300px-Indonesia_New_Road_Sign_Pro_3b.png",
+    "name": "Dilarang parkir",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Indonesia_New_Road_Sign_Pro_4h.png/300px-Indonesia_New_Road_Sign_Pro_4h.png",
+    "name": "Batas maksimal kecepatan",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Indonesia_new_road_sign_pro_4g.png/300px-Indonesia_new_road_sign_pro_4g.png",
+    "name": "Batas jarak antar kendaraan",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Indonesia_New_Road_Sign_Pro_1a.png/119px-Indonesia_New_Road_Sign_Pro_1a.png",
+    "name": "Berhenti",
+    "type": "FORBIDDEN",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Indonesia_New_Road_Sign_Pro_1b.png/300px-Indonesia_New_Road_Sign_Pro_1b.png",
+    "name": "Beri jalan",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Indonesia_Road_Sign_Mandatory_5.png/300px-Indonesia_Road_Sign_Mandatory_5.png",
+    "name": "Wajib memakai rantai pada ban",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indonesia_Road_Sign_Mandatory_7B.png/300px-Indonesia_Road_Sign_Mandatory_7B.png",
+    "name": "Batas akhir wajib memakai rantai pada ban",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Indonesian_Road_sign_info_3a.png/300px-Indonesian_Road_sign_info_3a.png",
+    "name": "Awal batas wilayah kota ubud",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Indonesian_Road_Sign_info_3b.png/300px-Indonesian_Road_Sign_info_3b.png",
+    "name": "Keluar batas wilayah kota ubud",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indonesia_New_Road_Sign_Info_4a.png/93px-Indonesia_New_Road_Sign_Info_4a.png",
+    "name": "Jalan tol",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Indonesian_road_sign_info_4c.png/300px-Indonesian_road_sign_info_4c.png",
+    "name": "Nama Jalan tol (bermula)",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Indonesian_road_sign_info_4d.png/300px-Indonesian_road_sign_info_4d.png",
+    "name": "Nama Jalan tol  (berakhir)",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Indonesian_Road_Sign_Info_5a1.png/90px-Indonesian_Road_Sign_Info_5a1.png",
+    "name": "Terminal bus",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Indonesia_New_Road_Sign_Info_5A2.png/90px-Indonesia_New_Road_Sign_Info_5A2.png",
+    "name": "Stasiun kereta api",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Indonesian_Road_Sign_Info_5a3.png/90px-Indonesian_Road_Sign_Info_5a3.png",
+    "name": "Pelabuhan",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Indonesia_New_Road_Sign_Info_5a4.svg/90px-Indonesia_New_Road_Sign_Info_5a4.svg.png",
+    "name": "Bandara udara",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Indonesian_Road_Sign_Info_5b1.png/90px-Indonesian_Road_Sign_Info_5b1.png",
+    "name": "Tempat pembuangan Sementara",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Indonesian_Road_Sign_Info_5b2.png/90px-Indonesian_Road_Sign_Info_5b2.png",
+    "name": "Tempat Pembuangan Akhir",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Indonesian_Road_Sign_Info_5c1.png/90px-Indonesian_Road_Sign_Info_5c1.png",
+    "name": "Kantor pos",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Indonesian_Road_Sign_Info_5c2.png/90px-Indonesian_Road_Sign_Info_5c2.png",
+    "name": "Telepon umum",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Indonesia_New_Road_Sign_Info_5d1.png/90px-Indonesia_New_Road_Sign_Info_5d1.png",
+    "name": "Halte bus",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Indonesia_New_Road_Sign_Info_5d2.png/90px-Indonesia_New_Road_Sign_Info_5d2.png",
+    "name": "Stand taksi",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Indonesian_Road_Sign_Info_5d3.png/90px-Indonesian_Road_Sign_Info_5d3.png",
+    "name": "Kendaraan umum selain bus dan taksi",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indonesian_Road_Sign_Info_5e.png/90px-Indonesian_Road_Sign_Info_5e.png",
+    "name": "Penyebrangan pejalan kaki",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Indonesian_Road_Sign_Info_5F1.png/89px-Indonesian_Road_Sign_Info_5F1.png",
+    "name": "Zona parkir",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Indonesian_Road_Sign_Info_5f2.png/90px-Indonesian_Road_Sign_Info_5f2.png",
+    "name": "Zona parkir untuk penyadangan cacat",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Indonesia_New_Road_Sign_Info_5g1.png/90px-Indonesia_New_Road_Sign_Info_5g1.png",
+    "name": "Terowongan bermula",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Indonesian_Road_Sign_Info_5g2.png/90px-Indonesian_Road_Sign_Info_5g2.png",
+    "name": "Terowongan berakhir",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Indonesian_Road_Sign_Info_5h1.png/90px-Indonesian_Road_Sign_Info_5h1.png",
+    "name": "Rute evakuasi tsunami",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indonesian_Road_Sign_Info_5h2.png/90px-Indonesian_Road_Sign_Info_5h2.png",
+    "name": "Rute evakuasi gempabumi",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Indonesian_Road_Sign_Info_5h3.png/90px-Indonesian_Road_Sign_Info_5h3.png",
+    "name": "Rute evakuasi letusan gunungapi",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Indonesian_Road_Sign_Info_5h4.png/90px-Indonesian_Road_Sign_Info_5h4.png",
+    "name": "Lokasi berkumpul darurat",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Indonesian_Road_Sign_Info_5h5.png/90px-Indonesian_Road_Sign_Info_5h5.png",
+    "name": "Kamp pengungsian",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Indonesian_Road_Sign_Info_5h6.png/90px-Indonesian_Road_Sign_Info_5h6.png",
+    "name": "Pusat pengungsian",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Indonesian_Road_Sign_Info_6a1.png/90px-Indonesian_Road_Sign_Info_6a1.png",
+    "name": "Masjid",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Indonesian_Road_Sign_Info_6a2.png/90px-Indonesian_Road_Sign_Info_6a2.png",
+    "name": "Gereja",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6a3.png/90px-Indonesian_Road_Sign_Info_6a3.png",
+    "name": "Wihara",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Indonesian_Road_Sign_Info_6a4.png/90px-Indonesian_Road_Sign_Info_6a4.png",
+    "name": "Pura",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Indonesian_Road_Sign_Info_6b1.png/90px-Indonesian_Road_Sign_Info_6b1.png",
+    "name": "Rumah Sakit",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6b2.png/90px-Indonesian_Road_Sign_Info_6b2.png",
+    "name": "Klinik/Puskesmas",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Indonesian_Road_Sign_Info_6b3.png/90px-Indonesian_Road_Sign_Info_6b3.png",
+    "name": "Apotek",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Indonesian_Road_Sign_Info_6b4.png/90px-Indonesian_Road_Sign_Info_6b4.png",
+    "name": "Pompa Bahan Bakar",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Indonesia_New_Road_Sign_Info_6b5.png/90px-Indonesia_New_Road_Sign_Info_6b5.png",
+    "name": "Stasiun uji berkala",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indonesia_New_Road_Sign_Info_6b6.png/90px-Indonesia_New_Road_Sign_Info_6b6.png",
+    "name": "Stasiun uji emisi",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Indonesian_Road_Sign_Info_6b7.png/90px-Indonesian_Road_Sign_Info_6b7.png",
+    "name": "Jembatan timbang",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indonesian_Road_Sign_Info_6b8.png/90px-Indonesian_Road_Sign_Info_6b8.png",
+    "name": "Museum",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Indonesian_Road_Sign_Info_6c1.png/90px-Indonesian_Road_Sign_Info_6c1.png",
+    "name": "Pasar",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Indonesia_Road_Sign_Info_6c2.png/90px-Indonesia_Road_Sign_Info_6c2.png",
+    "name": "Toko restoran",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Indonesian_Road_Sign_Info_6c3.png/90px-Indonesian_Road_Sign_Info_6c3.png",
+    "name": "Toko kafe",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Indonesian_Road_Sign_Info_6c4.png/90px-Indonesian_Road_Sign_Info_6c4.png",
+    "name": "Penginapan",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Indonesian_Road_Sign_Info_6c5.png/90px-Indonesian_Road_Sign_Info_6c5.png",
+    "name": "Bengkel",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesian_Road_Sign_Info_6d1.png/90px-Indonesian_Road_Sign_Info_6d1.png",
+    "name": "Taman",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Indonesian_Road_Sign_Info_6d2.png/90px-Indonesian_Road_Sign_Info_6d2.png",
+    "name": "Rute jelajahi alam",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Indonesian_Road_Sign_Info_6d3.png/90px-Indonesian_Road_Sign_Info_6d3.png",
+    "name": "Kemah tenda",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Indonesian_Road_Sign_Info_6d4.png/90px-Indonesian_Road_Sign_Info_6d4.png",
+    "name": "Kemah karvan",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indonesian_Road_Sign_Info_6d5.png/90px-Indonesian_Road_Sign_Info_6d5.png",
+    "name": "Perkemahan",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Indonesian_Road_Sign_Info_6d6.png/90px-Indonesian_Road_Sign_Info_6d6.png",
+    "name": "Vila",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Indonesian_Road_Sign_Info_6d7.png/90px-Indonesian_Road_Sign_Info_6d7.png",
+    "name": "Pantai",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Indonesian_Road_Sign_Info_6e1.png/90px-Indonesian_Road_Sign_Info_6e1.png",
+    "name": "Lapangan olahraga terbuka",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Indonesian_Road_Sign_Info_6e2.png/90px-Indonesian_Road_Sign_Info_6e2.png",
+    "name": "Gelanggang olahraga",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Indonesian_Road_Sign_Info_6e3.png/90px-Indonesian_Road_Sign_Info_6e3.png",
+    "name": "Kolam renang",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Indonesian_Road_Sign_Info_6e4.png/90px-Indonesian_Road_Sign_Info_6e4.png",
+    "name": "Stadion",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Indonesian_Road_Sign_Info_6f1.png/90px-Indonesian_Road_Sign_Info_6f1.png",
+    "name": "Sekolah",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Indonesian_Road_Sign_Info_6f2.png/90px-Indonesian_Road_Sign_Info_6f2.png",
+    "name": "Perpustakaan",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indonesia_New_Road_Sign_Info_7b.png/300px-Indonesia_New_Road_Sign_Info_7b.png",
+    "name": "Satu arah",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Indonesia_New_Road_Sign_Info_7d.png/92px-Indonesia_New_Road_Sign_Info_7d.png",
+    "name": "Buntu",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Indonesia_New_Road_Sign_Info_7g.png/80px-Indonesia_New_Road_Sign_Info_7g.png",
+    "name": "Area putaran",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Indonesia_New_Road_Sign_Info_7h.png/92px-Indonesia_New_Road_Sign_Info_7h.png",
+    "name": "Jalan kendaraan bermotor",
+    "type": "INSTRUCTION",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Indonesian_Directional_Sign_-_6.png/300px-Indonesian_Directional_Sign_-_6.png",
+    "name": "Rambu petunjuk 1 (Kode warna coklat untuk tunjuan wisata)",
+    "type": "GUIDE",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Indonesian_Directional_Sign_-_7.png/300px-Indonesian_Directional_Sign_-_7.png",
+    "name": "Rambu petunjuk 2 (Kode warna putih untuk Jalan tol & biru untuk fasilitas umum )",
+    "type": "GUIDE",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Indonesian_Directional_Sign_-_4.png/300px-Indonesian_Directional_Sign_-_4.png",
+    "name": "Pemanda jarak",
+    "type": "GUIDE",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Indonesian_Directional_Sign_-_1.png/300px-Indonesian_Directional_Sign_-_1.png",
+    "name": "Rambu petunjuk rute Jalan nasional",
+    "type": "GUIDE",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indonesian_Directional_Sign_-_5.svg/300px-Indonesian_Directional_Sign_-_5.svg.png",
+    "name": "Masuk tol",
+    "type": "GUIDE",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Indonesian_Directional_Sign_-_3.png/300px-Indonesian_Directional_Sign_-_3.png",
+    "name": "Keluar tol",
+    "type": "GUIDE",
+    "description": ""
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Indonesian_Directional_Sign_-_2.png/300px-Indonesian_Directional_Sign_-_2.png",
+    "name": "Simpang susun dengan jalan tol lain",
+    "type": "GUIDE",
+    "description": ""
+  }
+]

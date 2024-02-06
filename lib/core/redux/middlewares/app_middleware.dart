@@ -84,15 +84,6 @@ class AppMiddleware extends MiddlewareClass<AppState> {
       final signsCollection = firestore.collection('signs');
       final typesCollection = firestore.collection('types');
 
-      // for (var i in upload) {
-      //   signsCollection
-      //       .doc(
-      //           '${i.type}_${i.name.replaceAll(" ", "_")}_${generateRandomString(3)}')
-      //       .set(
-      //         i.toJson(),
-      //       );
-      // }
-
       final responseSigns = await signsCollection.get();
       final responseType = await typesCollection.get();
 
@@ -104,7 +95,9 @@ class AppMiddleware extends MiddlewareClass<AppState> {
       }
 
       for (var i in responseSigns.docs) {
-        final sign = Sign.fromJson(i.data());
+        final map = i.data();
+        map.putIfAbsent('id', () => i.id);
+        final sign = Sign.fromJson(map);
         signs.add(sign);
       }
 
@@ -165,36 +158,3 @@ String generateRandomString(int length) {
 
   return temp;
 }
-
-final upload = [
-  Sign(
-    name: 'Parkir',
-    image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_parkir_2.png?alt=media&token=c4cbe941-59a7-41b3-ac61-6db066c5f9a9&_gl=1*wss453*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5OTAxNjcyOS4xMDQuMS4xNjk5MDE3MTk3LjQzLjAuMA..',
-    description: '''
-Rambu dengan warna dasar biru serta piktogram berupa huruf P berwarna putih ini termasuk rambu petunjuk. Digunakan untuk memberikan informasi mengenai lokasi fasilitas parkir.
-'''
-        .trim(),
-    type: 'INSTRUCTION',
-  ),
-  Sign(
-    name: 'Bundaran',
-    image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_bundaran_2.png?alt=media&token=5b126304-e469-4e29-9ede-87ac507f764b&_gl=1*g2uxh7*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5OTAxNjcyOS4xMDQuMS4xNjk5MDE3Mjc3LjUwLjAuMA..',
-    description: '''
-Rambu lalu lintas ini menyatakan perintah kepada pengguna jalan untuk mengikuti arah yang ditunjukkan saat memasuki bundaran.
-'''
-        .trim(),
-    type: 'INSTRUCTION',
-  ),
-  Sign(
-    name: 'Rumah Sakit',
-    image:
-        'https://firebasestorage.googleapis.com/v0/b/signs-app-c725a.appspot.com/o/r_rumah_sakit_2.png?alt=media&token=7e6d582d-5eda-49a4-bf7a-a6d2b71880fb&_gl=1*zzefyb*_ga*MTYzODY5NDQwLjE2NjUwMzY2MTE.*_ga_CW55HF8NVT*MTY5OTAxNjcyOS4xMDQuMS4xNjk5MDE3NDg5LjM3LjAuMA..',
-    description: '''
-Rambu dengan warna dasar biru serta piktogram berupa tempat tidur dan palang merah di pojok kanan atasnya ini termasuk rambu petunjuk. Digunakan untuk memberikan informasi mengenai salah satu lokasi pelayanan umum, yaitu rumah sakit.
-'''
-        .trim(),
-    type: 'INSTRUCTION',
-  ),
-];

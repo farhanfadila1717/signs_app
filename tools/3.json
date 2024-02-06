@@ -1,0 +1,92 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indonesia_New_Road_Sign_4b17.png/300px-Indonesia_New_Road_Sign_4b17.png",
+    "name": "Persimpangan tiga",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan bahwa Anda akan segera mencapai persimpangan tiga di jalan. Pastikan untuk mengurangi kecepatan dan berhati-hati saat mendekati persimpangan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Indonesia_New_Road_Sign_4b18.png/110px-Indonesia_New_Road_Sign_4b18.png",
+    "name": "Persimpangan tiga",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang adanya persimpangan tiga di depan. Harap berhati-hati dan patuhi aturan lalu lintas yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Indonesia_New_Road_Sign_4b19.png/300px-Indonesia_New_Road_Sign_4b19.png",
+    "name": "Persimpangan tiga serong",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan bahwa ada persimpangan tiga dengan sudut miring di sepanjang jalan. Pastikan untuk mengamati lalu lintas dari semua arah sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Indonesia_New_Road_Sign_4b2.png/118px-Indonesia_New_Road_Sign_4b2.png",
+    "name": "Persimpangan 4 arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya persimpangan empat arah di depan. Harap berhenti atau mengurangi kecepatan, dan pastikan area persimpangan aman sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indonesia_New_Road_Sign_4b3.png/300px-Indonesia_New_Road_Sign_4b3.png",
+    "name": "Bundaran",
+    "type": "WARNING",
+    "description": "Rambu ini mengindikasikan bahwa Anda akan menghadapi bundaran di jalan. Patuhi aturan lalu lintas bundaran dan berikan prioritas kepada kendaraan yang sudah ada di dalam bundaran."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indonesia_New_Road_Sign_4b5.png/111px-Indonesia_New_Road_Sign_4b5.png",
+    "name": "Persimpangan tiga lengan serong",
+    "type": "WARNING",
+    "description": "Rambu ini memberitahu Anda bahwa akan ada persimpangan tiga lengan dengan sudut miring di sepanjang jalan. Pastikan untuk memperhatikan lalu lintas dari semua arah sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Indonesia_New_Road_Sign_4b6.png/300px-Indonesia_New_Road_Sign_4b6.png",
+    "name": "Penggabungan jalan",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan area di mana dua jalan bergabung. Perhatikan dan berikan prioritas kepada kendaraan dari kedua arah untuk memastikan keamanan lalu lintas."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indonesia_New_Road_Sign_4b7.png/300px-Indonesia_New_Road_Sign_4b7.png",
+    "name": "Penggabungan jalan",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang adanya penggabungan jalan. Pastikan untuk mengurangi kecepatan dan memperhatikan lalu lintas sebelum memasuki area penggabungan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Indonesia_New_Road_Sign_4b8.png/116px-Indonesia_New_Road_Sign_4b8.png",
+    "name": "Persimpangan 3 arah",
+    "type": "WARNING",
+    "description": "Rambu ini menandakan adanya persimpangan tiga arah di depan. Berhenti atau mengurangi kecepatan sebelum mencapai persimpangan, dan pastikan lalu lintas aman sebelum melanjutkan perjalanan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Indonesia_New_Road_Sign_4b9.png/111px-Indonesia_New_Road_Sign_4b9.png",
+    "name": "Persimpangan 3 arah",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan akan adanya persimpangan tiga arah di jalan. Pastikan untuk berhenti atau mengurangi kecepatan sebelum mencapai persimpangan dan amati lalu lintas dari semua arah."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Indonesia_New_Road_Sign_4c1.png/300px-Indonesia_New_Road_Sign_4c1.png",
+    "name": "Awal bangunan pemisah untuk lalulintas dua arah",
+    "type": "WARNING",
+    "description": "Rambu ini menandai awal dari sebuah bangunan pemisah untuk lalu lintas dua arah. Pastikan untuk tetap berada pada jalur Anda dan mengikuti aturan lalu lintas yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Indonesia_New_Road_Sign_4c2.png/300px-Indonesia_New_Road_Sign_4c2.png",
+    "name": "Akhir bangunan pemisah untuk lalulintas dua arah",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan akhir dari sebuah bangunan pemisah untuk lalu lintas dua arah. Pastikan untuk menyesuaikan kecepatan Anda dan bersiap untuk menggabungkan diri dengan lalu lintas lain."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Indonesia_New_Road_Sign_4c3.png/300px-Indonesia_New_Road_Sign_4c3.png",
+    "name": "Awal bangunan pemisah untuk lalulintas satu arah",
+    "type": "WARNING",
+    "description": "Rambu ini menandai awal dari sebuah bangunan pemisah untuk lalu lintas satu arah. Harap ikuti jalur yang ditentukan dan patuhi aturan lalu lintas yang berlaku."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Indonesia_New_Road_Sign_6a.png/300px-Indonesia_New_Road_Sign_6a.png",
+    "name": "Penyebrangan pejalan kaki",
+    "type": "WARNING",
+    "description": "Rambu ini menunjukkan adanya penyebrangan pejalan kaki di depan. Harap berhenti dan berikan prioritas kepada pejalan kaki yang akan menyeberang jalan."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Indonesia_New_Road_Sign_6b.png/300px-Indonesia_New_Road_Sign_6b.png",
+    "name": "Area banyak pejalan kaki",
+    "type": "WARNING",
+    "description": "Rambu ini memberi peringatan tentang area di mana terdapat banyak pejalan kaki. Harap perhatikan dan mengurangi kecepatan untuk keamanan mereka."
+  }
+]
